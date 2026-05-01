@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Memorize the Unit Circle</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f1eb;
+    --ink: #1a1714;
+    --rust: #b5401c;
+    --gold: #c4962a;
+    --muted: #7a7065;
+    --border: #d9d0c4;
+    --sin-color: #2a4a7f;
+    --cos-color: #b5401c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'EB Garamond', serif;
+    font-size: 19px;
+    line-height: 1.78;
+  }
+
+  header {
+    border-bottom: 2px solid var(--ink);
+    padding: 1.6rem 0;
+    text-align: center;
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .site-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .hero {
+    max-width: 780px;
+    margin: 5rem auto 3rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .category-tag {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 1.6rem;
+    display: block;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .subtitle {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 540px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+  }
+
+  .hero-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto;
+  }
+
+  .article {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 7rem;
+  }
+
+  .intro {
+    font-size: 1.18rem;
+    line-height: 1.82;
+    color: var(--ink);
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .intro::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.4rem;
+    font-weight: 900;
+    float: left;
+    line-height: 0.82;
+    margin-right: 0.1em;
+    margin-top: 0.08em;
+    color: var(--rust);
+  }
+
+  .section { margin-bottom: 4.5rem; }
+
+  .step-label {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+  }
+
+  p { margin-bottom: 1.2rem; }
+
+  strong { font-weight: 600; }
+
+  blockquote {
+    border-left: 3px solid var(--gold);
+    margin: 2rem 0;
+    padding: 0.6rem 0 0.6rem 1.6rem;
+    font-style: italic;
+    font-size: 1.12rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .visual-wrap {
+    margin: 2.5rem 0;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 2.2rem 2rem;
+    box-shadow: 4px 4px 0 var(--border);
+  }
+
+  .visual-caption {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 1rem;
+  }
+
+  svg { display: block; margin: 0 auto; overflow: visible; }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 580px) { .tips-grid { grid-template-columns: 1fr; } }
+
+  .tip-card {
+    border: 1px solid var(--border);
+    padding: 1.3rem 1.5rem;
+    background: white;
+  }
+
+  .tip-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: var(--border);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+
+  .tip-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 0.45rem;
+  }
+
+  .tip-body {
+    font-size: 0.94rem;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .summary {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 2.5rem 3rem;
+    margin: 3rem 0;
+  }
+
+  .summary h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.6rem;
+    font-weight: 400;
+  }
+
+  .summary-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 0.95rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  .summary-item:last-child { margin-bottom: 0; }
+
+  .summary-icon { color: var(--gold); flex-shrink: 0; margin-top: 0.18rem; font-size: 0.8rem; }
+
+  footer {
+    border-top: 2px solid var(--ink);
+    text-align: center;
+    padding: 2.5rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 0.88rem;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero > * { animation: fadeUp 0.7s ease both; }
+  .hero > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero > *:nth-child(2) { animation-delay: 0.15s; }
+  .hero > *:nth-child(3) { animation-delay: 0.25s; }
+  .hero > *:nth-child(4) { animation-delay: 0.35s; }
+  .hero > *:nth-child(5) { animation-delay: 0.42s; }
+
+  .article > .section {
+    animation: fadeUp 0.6s ease both;
+    animation-play-state: paused;
+  }
+
+  .article > .section.visible { animation-play-state: running; }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="site-name">Mathematics · Trigonometry</span>
+</header>
+
+<div class="hero">
+  <span class="category-tag">Geometry &amp; Trigonometry</span>
+  <h1>How to Memorize<br>the Unit Circle<br><em>Easily</em></h1>
+  <p class="subtitle">Not a chart to memorize — a pattern to understand. Once you see it, you never forget it.</p>
+  <div class="hero-rule"></div>
+</div>
+
+<article class="article">
+
+  <p class="intro">
+    If you've ever sat in a trigonometry class and felt your brain go blank staring at the unit circle, you're not alone. Angles, coordinates, Greek letters — it looks designed to confuse. But here's the secret: the unit circle doesn't require brute-force memorization. Once you understand the pattern behind it, you can reconstruct the whole thing from scratch, anytime, anywhere.
+  </p>
+
+  <!-- WHAT IS IT -->
+  <div class="section">
+    <span class="step-label">The Core Idea</span>
+    <h2>What the Unit Circle Actually Is</h2>
+    <p>The unit circle is a circle of radius 1, centered at the origin. Every point on it corresponds to an angle, and the coordinates of that point are exactly the cosine and sine of the angle — nothing more.</p>
+    <p>Know the coordinates, you know everything: sine, cosine, and tangent (which is just sine divided by cosine).</p>
+
+    <div class="visual-wrap">
+      <svg viewBox="0 0 400 400" width="360" height="360">
+        <!-- Subtle grid -->
+        <line x1="200" y1="28" x2="200" y2="372" stroke="#e8e2d8" stroke-width="1"/>
+        <line x1="28" y1="200" x2="372" y2="200" stroke="#e8e2d8" stroke-width="1"/>
+
+        <!-- Circle -->
+        <circle cx="200" cy="200" r="148" fill="none" stroke="#1a1714" stroke-width="2"/>
+
+        <!-- Quadrant shading -->
+        <path d="M200,200 L348,200 A148,148 0 0,0 200,52 Z" fill="#2a4a7f" opacity="0.05"/>
+
+        <!-- Angle line for 30° -->
+        <line x1="200" y1="200" x2="328" y2="126" stroke="#2a4a7f" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.7"/>
+        <!-- sin projection (vertical) -->
+        <line x1="328" y1="126" x2="328" y2="200" stroke="#b5401c" stroke-width="2" opacity="0.85"/>
+        <!-- cos projection (horizontal) -->
+        <line x1="200" y1="200" x2="328" y2="200" stroke="#2a4a7f" stroke-width="2" opacity="0.85"/>
+
+        <!-- Point at 30° -->
+        <circle cx="328" cy="126" r="5.5" fill="#1a1714"/>
+
+        <!-- Labels -->
+        <text x="336" y="166" font-family="EB Garamond, serif" font-style="italic" font-size="14" fill="#b5401c">sin θ</text>
+        <text x="254" y="218" font-family="EB Garamond, serif" font-style="italic" font-size="14" fill="#2a4a7f">cos θ</text>
+
+        <!-- Angle arc -->
+        <path d="M 226 200 A 26 26 0 0 0 222.5 179" fill="none" stroke="#c4962a" stroke-width="1.8"/>
+        <text x="230" y="192" font-family="EB Garamond, serif" font-style="italic" font-size="14" fill="#c4962a">θ</text>
+
+        <!-- Radius label -->
+        <text x="248" y="168" font-family="EB Garamond, serif" font-style="italic" font-size="13" fill="#7a7065">r = 1</text>
+
+        <!-- Axis labels -->
+        <text x="358" y="194" font-family="EB Garamond, serif" font-size="14" fill="#7a7065">x</text>
+        <text x="194" y="24" font-family="EB Garamond, serif" font-size="14" fill="#7a7065">y</text>
+
+        <!-- Key points -->
+        <circle cx="348" cy="200" r="4.5" fill="#1a1714"/>
+        <text x="352" y="192" font-family="EB Garamond, serif" font-size="12" fill="#1a1714">(1, 0)</text>
+
+        <circle cx="200" cy="52" r="4.5" fill="#1a1714"/>
+        <text x="207" y="50" font-family="EB Garamond, serif" font-size="12" fill="#1a1714">(0, 1)</text>
+
+        <circle cx="52" cy="200" r="4.5" fill="#1a1714"/>
+        <text x="14" y="196" font-family="EB Garamond, serif" font-size="12" fill="#1a1714">(−1, 0)</text>
+
+        <circle cx="200" cy="348" r="4.5" fill="#1a1714"/>
+        <text x="207" y="362" font-family="EB Garamond, serif" font-size="12" fill="#1a1714">(0, −1)</text>
+
+        <!-- Origin -->
+        <circle cx="200" cy="200" r="3.5" fill="#1a1714"/>
+        <text x="205" y="216" font-family="EB Garamond, serif" font-size="13" fill="#7a7065">O</text>
+
+        <!-- Coord label at 30° point -->
+        <text x="335" y="120" font-family="EB Garamond, serif" font-size="12" fill="#1a1714">(cos θ, sin θ)</text>
+      </svg>
+      <p class="visual-caption">Every point on the unit circle is (cos θ, sin θ)</p>
+    </div>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="section">
+    <span class="step-label">Step 1</span>
+    <h2>Draw the Framework</h2>
+    <p>Start with a small table: two columns, five rows. Label the columns <em>sin</em> and <em>cos</em>. Write these five angles down the side:</p>
+    <p><strong>0° = 0 &nbsp;·&nbsp; 30° = π/6 &nbsp;·&nbsp; 45° = π/4 &nbsp;·&nbsp; 60° = π/3 &nbsp;·&nbsp; 90° = π/2</strong></p>
+    <p>These five angles unlock the entire circle. Everything else is derived from them.</p>
+
+    <div class="visual-wrap">
+      <svg viewBox="0 0 430 290" width="400" height="270">
+        <rect x="25" y="18" width="380" height="254" fill="white" stroke="#d9d0c4" stroke-width="1.5"/>
+        <rect x="25" y="18" width="380" height="50" fill="#f5f1eb"/>
+        <line x1="145" y1="18" x2="145" y2="272" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="285" y1="18" x2="285" y2="272" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="25" y1="68" x2="405" y2="68" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="25" y1="108" x2="405" y2="108" stroke="#d9d0c4" stroke-width="1.2"/>
+        <line x1="25" y1="148" x2="405" y2="148" stroke="#d9d0c4" stroke-width="1.2"/>
+        <line x1="25" y1="188" x2="405" y2="188" stroke="#d9d0c4" stroke-width="1.2"/>
+        <line x1="25" y1="228" x2="405" y2="228" stroke="#d9d0c4" stroke-width="1.2"/>
+
+        <!-- Headers -->
+        <text x="85" y="50" font-family="EB Garamond, serif" font-style="italic" font-size="24" fill="#c4962a" text-anchor="middle">θ</text>
+        <text x="213" y="50" font-family="EB Garamond, serif" font-size="20" fill="#2a4a7f" text-anchor="middle">sin θ</text>
+        <text x="343" y="50" font-family="EB Garamond, serif" font-size="20" fill="#b5401c" text-anchor="middle">cos θ</text>
+
+        <!-- Angles -->
+        <text x="85" y="96" font-family="EB Garamond, serif" font-size="21" fill="#1a1714" text-anchor="middle">0</text>
+        <text x="85" y="136" font-family="EB Garamond, serif" font-size="18" fill="#2a4a7f" text-anchor="middle">π / 6</text>
+        <text x="85" y="176" font-family="EB Garamond, serif" font-size="18" fill="#1f7a6e" text-anchor="middle">π / 4</text>
+        <text x="85" y="216" font-family="EB Garamond, serif" font-size="18" fill="#c4612a" text-anchor="middle">π / 3</text>
+        <text x="85" y="254" font-family="EB Garamond, serif" font-size="18" fill="#1a1714" text-anchor="middle">π / 2</text>
+
+        <!-- Empty placeholders -->
+        <text x="213" y="96" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+        <text x="213" y="136" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+        <text x="213" y="176" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+        <text x="213" y="216" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+        <text x="213" y="254" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+        <text x="343" y="96" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+        <text x="343" y="136" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+        <text x="343" y="176" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+        <text x="343" y="216" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+        <text x="343" y="254" font-family="EB Garamond, serif" font-size="14" fill="#d9d0c4" text-anchor="middle">· · ·</text>
+      </svg>
+      <p class="visual-caption">Step 1 — The skeleton: five angles, two columns, values to come</p>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="section">
+    <span class="step-label">Step 2</span>
+    <h2>Write the Denominators: All 2s</h2>
+    <p>In every single cell of both columns, write a denominator of <strong>2</strong>. Every sine and cosine value in the first quadrant has a denominator of 2. It's so simple you'd never notice it just copying from a textbook.</p>
+
+    <div class="visual-wrap">
+      <svg viewBox="0 0 430 290" width="400" height="270">
+        <rect x="25" y="18" width="380" height="254" fill="white" stroke="#d9d0c4" stroke-width="1.5"/>
+        <rect x="25" y="18" width="380" height="50" fill="#f5f1eb"/>
+        <line x1="145" y1="18" x2="145" y2="272" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="285" y1="18" x2="285" y2="272" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="25" y1="68" x2="405" y2="68" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="25" y1="108" x2="405" y2="108" stroke="#d9d0c4" stroke-width="1.2"/>
+        <line x1="25" y1="148" x2="405" y2="148" stroke="#d9d0c4" stroke-width="1.2"/>
+        <line x1="25" y1="188" x2="405" y2="188" stroke="#d9d0c4" stroke-width="1.2"/>
+        <line x1="25" y1="228" x2="405" y2="228" stroke="#d9d0c4" stroke-width="1.2"/>
+
+        <text x="85" y="50" font-family="EB Garamond, serif" font-style="italic" font-size="24" fill="#c4962a" text-anchor="middle">θ</text>
+        <text x="213" y="50" font-family="EB Garamond, serif" font-size="20" fill="#2a4a7f" text-anchor="middle">sin θ</text>
+        <text x="343" y="50" font-family="EB Garamond, serif" font-size="20" fill="#b5401c" text-anchor="middle">cos θ</text>
+
+        <text x="85" y="96" font-family="EB Garamond, serif" font-size="21" fill="#1a1714" text-anchor="middle">0</text>
+        <text x="85" y="136" font-family="EB Garamond, serif" font-size="18" fill="#2a4a7f" text-anchor="middle">π / 6</text>
+        <text x="85" y="176" font-family="EB Garamond, serif" font-size="18" fill="#1f7a6e" text-anchor="middle">π / 4</text>
+        <text x="85" y="216" font-family="EB Garamond, serif" font-size="18" fill="#c4612a" text-anchor="middle">π / 3</text>
+        <text x="85" y="254" font-family="EB Garamond, serif" font-size="18" fill="#1a1714" text-anchor="middle">π / 2</text>
+
+        <!-- / 2 in each cell -->
+        <g font-family="EB Garamond, serif" font-size="21">
+          <text x="213" y="96" fill="#2a4a7f" text-anchor="middle">/ 2</text>
+          <text x="213" y="136" fill="#2a4a7f" text-anchor="middle">/ 2</text>
+          <text x="213" y="176" fill="#2a4a7f" text-anchor="middle">/ 2</text>
+          <text x="213" y="216" fill="#2a4a7f" text-anchor="middle">/ 2</text>
+          <text x="213" y="254" fill="#2a4a7f" text-anchor="middle">/ 2</text>
+          <text x="343" y="96" fill="#b5401c" text-anchor="middle">/ 2</text>
+          <text x="343" y="136" fill="#b5401c" text-anchor="middle">/ 2</text>
+          <text x="343" y="176" fill="#b5401c" text-anchor="middle">/ 2</text>
+          <text x="343" y="216" fill="#b5401c" text-anchor="middle">/ 2</text>
+          <text x="343" y="254" fill="#b5401c" text-anchor="middle">/ 2</text>
+        </g>
+      </svg>
+      <p class="visual-caption">Step 2 — Every cell gets a denominator of 2</p>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="section">
+    <span class="step-label">Step 3</span>
+    <h2>Add the Square Roots: Count Up, Count Down</h2>
+    <p>Here is the elegant trick. In the <strong style="color:#2a4a7f">sine column</strong>, count <em>up</em> from 0 to 4, one per row. In the <strong style="color:#b5401c">cosine column</strong>, count <em>down</em> from 4 to 0. Place each number under a square root sign.</p>
+
+    <blockquote>Sine climbs from zero to four. Cosine descends from four to zero. That's the whole pattern.</blockquote>
+
+    <div class="visual-wrap">
+      <svg viewBox="0 0 490 320" width="450" height="294">
+        <rect x="18" y="15" width="454" height="294" fill="white" stroke="#d9d0c4" stroke-width="1.5"/>
+        <rect x="18" y="15" width="454" height="52" fill="#1a1714"/>
+        <line x1="148" y1="15" x2="148" y2="309" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="308" y1="15" x2="308" y2="309" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="18" y1="67" x2="472" y2="67" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="18" y1="113" x2="472" y2="113" stroke="#d9d0c4" stroke-width="1.1"/>
+        <line x1="18" y1="159" x2="472" y2="159" stroke="#d9d0c4" stroke-width="1.1"/>
+        <line x1="18" y1="205" x2="472" y2="205" stroke="#d9d0c4" stroke-width="1.1"/>
+        <line x1="18" y1="251" x2="472" y2="251" stroke="#d9d0c4" stroke-width="1.1"/>
+
+        <!-- Dark header text -->
+        <text x="83" y="49" font-family="EB Garamond, serif" font-style="italic" font-size="26" fill="#c4962a" text-anchor="middle">θ</text>
+        <text x="228" y="49" font-family="EB Garamond, serif" font-size="21" fill="#7ab0e8" text-anchor="middle">sin θ</text>
+        <text x="390" y="49" font-family="EB Garamond, serif" font-size="21" fill="#e8906a" text-anchor="middle">cos θ</text>
+
+        <!-- Angle labels -->
+        <text x="83" y="97" font-family="EB Garamond, serif" font-size="21" fill="#1a1714" text-anchor="middle">0</text>
+        <text x="83" y="143" font-family="EB Garamond, serif" font-size="19" fill="#2a4a7f" text-anchor="middle">π/6</text>
+        <text x="83" y="189" font-family="EB Garamond, serif" font-size="19" fill="#1f7a6e" text-anchor="middle">π/4</text>
+        <text x="83" y="235" font-family="EB Garamond, serif" font-size="19" fill="#c4612a" text-anchor="middle">π/3</text>
+        <text x="83" y="279" font-family="EB Garamond, serif" font-size="19" fill="#1a1714" text-anchor="middle">π/2</text>
+
+        <!-- SIN: √0 to √4 / 2 -->
+        <g font-family="EB Garamond, serif" font-size="20" fill="#2a4a7f">
+          <g transform="translate(178,77)">
+            <text>√0 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#2a4a7f" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(178,123)">
+            <text>√1 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#2a4a7f" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(178,169)">
+            <text>√2 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#2a4a7f" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(178,215)">
+            <text>√3 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#2a4a7f" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(178,261)">
+            <text>√4 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#2a4a7f" stroke-width="1.2"/>
+          </g>
+        </g>
+
+        <!-- COS: √4 to √0 / 2 -->
+        <g font-family="EB Garamond, serif" font-size="20" fill="#b5401c">
+          <g transform="translate(340,77)">
+            <text>√4 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#b5401c" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(340,123)">
+            <text>√3 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#b5401c" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(340,169)">
+            <text>√2 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#b5401c" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(340,215)">
+            <text>√1 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#b5401c" stroke-width="1.2"/>
+          </g>
+          <g transform="translate(340,261)">
+            <text>√0 / 2</text><line x1="0" y1="-16" x2="22" y2="-16" stroke="#b5401c" stroke-width="1.2"/>
+          </g>
+        </g>
+
+        <!-- Direction arrows -->
+        <text x="228" y="297" font-family="EB Garamond, serif" font-size="11" fill="#2a4a7f" opacity="0.55" text-anchor="middle">↑  counts 0 → 4</text>
+        <text x="390" y="297" font-family="EB Garamond, serif" font-size="11" fill="#b5401c" opacity="0.55" text-anchor="middle">↓  counts 4 → 0</text>
+      </svg>
+      <p class="visual-caption">Step 3 — Sine counts up, cosine counts down; everything over 2</p>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="section">
+    <span class="step-label">Step 4</span>
+    <h2>Simplify &amp; Read Off the Values</h2>
+    <p>Some values simplify immediately: √0 = 0, √1 = 1, √4 = 2. The others — √2 and √3 — stay as they are. The complete first quadrant:</p>
+
+    <div class="visual-wrap">
+      <svg viewBox="0 0 510 340" width="470" height="314">
+        <rect x="18" y="15" width="474" height="308" fill="white" stroke="#d9d0c4" stroke-width="1.5"/>
+        <rect x="18" y="15" width="474" height="52" fill="#1a1714"/>
+        <line x1="158" y1="15" x2="158" y2="323" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="326" y1="15" x2="326" y2="323" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="18" y1="67" x2="492" y2="67" stroke="#d9d0c4" stroke-width="1.5"/>
+        <line x1="18" y1="117" x2="492" y2="117" stroke="#d9d0c4" stroke-width="1.1"/>
+        <line x1="18" y1="167" x2="492" y2="167" stroke="#d9d0c4" stroke-width="1.1"/>
+        <line x1="18" y1="217" x2="492" y2="217" stroke="#d9d0c4" stroke-width="1.1"/>
+        <line x1="18" y1="267" x2="492" y2="267" stroke="#d9d0c4" stroke-width="1.1"/>
+
+        <text x="88" y="50" font-family="EB Garamond, serif" font-style="italic" font-size="26" fill="#c4962a" text-anchor="middle">θ</text>
+        <text x="242" y="50" font-family="EB Garamond, serif" font-size="21" fill="#7ab0e8" text-anchor="middle">sin θ</text>
+        <text x="408" y="50" font-family="EB Garamond, serif" font-size="21" fill="#e8906a" text-anchor="middle">cos θ</text>
+
+        <!-- Angles -->
+        <text x="88" y="100" font-family="EB Garamond, serif" font-size="22" fill="#1a1714" text-anchor="middle">0</text>
+        <text x="88" y="150" font-family="EB Garamond, serif" font-size="19" fill="#2a4a7f" text-anchor="middle">π / 6</text>
+        <text x="88" y="200" font-family="EB Garamond, serif" font-size="19" fill="#1f7a6e" text-anchor="middle">π / 4</text>
+        <text x="88" y="250" font-family="EB Garamond, serif" font-size="19" fill="#c4612a" text-anchor="middle">π / 3</text>
+        <text x="88" y="298" font-family="EB Garamond, serif" font-size="19" fill="#1a1714" text-anchor="middle">π / 2</text>
+
+        <!-- Sin values: 0, 1/2, √2/2, √3/2, 1 -->
+        <text x="242" y="100" font-family="EB Garamond, serif" font-size="21" fill="#2a4a7f" text-anchor="middle">0</text>
+        <text x="242" y="150" font-family="EB Garamond, serif" font-size="21" fill="#2a4a7f" text-anchor="middle">1 / 2</text>
+        <g transform="translate(212,168)" font-family="EB Garamond, serif" font-size="21" fill="#2a4a7f">
+          <text>√2 / 2</text><line x1="0" y1="-17" x2="24" y2="-17" stroke="#2a4a7f" stroke-width="1.2"/>
+        </g>
+        <g transform="translate(212,218)" font-family="EB Garamond, serif" font-size="21" fill="#2a4a7f">
+          <text>√3 / 2</text><line x1="0" y1="-17" x2="24" y2="-17" stroke="#2a4a7f" stroke-width="1.2"/>
+        </g>
+        <text x="242" y="298" font-family="EB Garamond, serif" font-size="21" fill="#2a4a7f" text-anchor="middle">1</text>
+
+        <!-- Cos values: 1, √3/2, √2/2, 1/2, 0 -->
+        <text x="408" y="100" font-family="EB Garamond, serif" font-size="21" fill="#b5401c" text-anchor="middle">1</text>
+        <g transform="translate(378,118)" font-family="EB Garamond, serif" font-size="21" fill="#b5401c">
+          <text>√3 / 2</text><line x1="0" y1="-17" x2="24" y2="-17" stroke="#b5401c" stroke-width="1.2"/>
+        </g>
+        <g transform="translate(378,168)" font-family="EB Garamond, serif" font-size="21" fill="#b5401c">
+          <text>√2 / 2</text><line x1="0" y1="-17" x2="24" y2="-17" stroke="#b5401c" stroke-width="1.2"/>
+        </g>
+        <text x="408" y="250" font-family="EB Garamond, serif" font-size="21" fill="#b5401c" text-anchor="middle">1 / 2</text>
+        <text x="408" y="298" font-family="EB Garamond, serif" font-size="21" fill="#b5401c" text-anchor="middle">0</text>
+      </svg>
+      <p class="visual-caption">Step 4 — The complete first quadrant, simplified</p>
+    </div>
+
+    <p>Notice that the two columns are mirror images of each other — what sine does at 30°, cosine does at 60°. They are the same numbers, just swapped.</p>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="section">
+    <span class="step-label">Step 5</span>
+    <h2>Mirror to the Other Quadrants</h2>
+    <p>The other three quadrants are reflections of the first, with sign changes only. The magnitudes stay identical — only the ± flips.</p>
+
+    <div class="visual-wrap">
+      <svg viewBox="0 0 430 400" width="400" height="372">
+        <!-- Axes -->
+        <line x1="215" y1="20" x2="215" y2="378" stroke="#1a1714" stroke-width="2"/>
+        <line x1="22" y1="200" x2="408" y2="200" stroke="#1a1714" stroke-width="2"/>
+        <!-- Arrowheads -->
+        <polygon points="215,16 211,27 219,27" fill="#1a1714"/>
+        <polygon points="412,200 401,196 401,204" fill="#1a1714"/>
+        <text x="398" y="193" font-family="EB Garamond, serif" font-size="15" fill="#7a7065">x</text>
+        <text x="220" y="16" font-family="EB Garamond, serif" font-size="15" fill="#7a7065">y</text>
+
+        <!-- Circle -->
+        <circle cx="215" cy="200" r="158" fill="none" stroke="#d9d0c4" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+        <!-- Q1 -->
+        <rect x="220" y="30" width="172" height="165" fill="#2a4a7f" opacity="0.06" rx="3"/>
+        <text x="296" y="95" font-family="Playfair Display, serif" font-weight="700" font-size="13" fill="#2a4a7f" text-anchor="middle">Quadrant I</text>
+        <text x="296" y="117" font-family="EB Garamond, serif" font-size="15" fill="#2a4a7f" text-anchor="middle">sin +,  cos +</text>
+        <text x="296" y="137" font-family="EB Garamond, serif" font-style="italic" font-size="12" fill="#7a7065" text-anchor="middle">both positive</text>
+
+        <!-- Q2 -->
+        <rect x="38" y="30" width="172" height="165" fill="#c4612a" opacity="0.06" rx="3"/>
+        <text x="124" y="95" font-family="Playfair Display, serif" font-weight="700" font-size="13" fill="#c4612a" text-anchor="middle">Quadrant II</text>
+        <text x="124" y="117" font-family="EB Garamond, serif" font-size="15" fill="#2a4a7f" text-anchor="middle">sin +</text>
+        <text x="124" y="138" font-family="EB Garamond, serif" font-size="15" fill="#b5401c" text-anchor="middle">cos −</text>
+        <text x="124" y="158" font-family="EB Garamond, serif" font-style="italic" font-size="12" fill="#7a7065" text-anchor="middle">only sin positive</text>
+
+        <!-- Q3 -->
+        <rect x="38" y="205" width="172" height="165" fill="#1a1714" opacity="0.04" rx="3"/>
+        <text x="124" y="268" font-family="Playfair Display, serif" font-weight="700" font-size="13" fill="#1a1714" text-anchor="middle">Quadrant III</text>
+        <text x="124" y="290" font-family="EB Garamond, serif" font-size="15" fill="#2a4a7f" text-anchor="middle">sin −</text>
+        <text x="124" y="311" font-family="EB Garamond, serif" font-size="15" fill="#b5401c" text-anchor="middle">cos −</text>
+        <text x="124" y="331" font-family="EB Garamond, serif" font-style="italic" font-size="12" fill="#7a7065" text-anchor="middle">both negative</text>
+
+        <!-- Q4 -->
+        <rect x="220" y="205" width="172" height="165" fill="#1f7a6e" opacity="0.06" rx="3"/>
+        <text x="296" y="268" font-family="Playfair Display, serif" font-weight="700" font-size="13" fill="#1f7a6e" text-anchor="middle">Quadrant IV</text>
+        <text x="296" y="290" font-family="EB Garamond, serif" font-size="15" fill="#2a4a7f" text-anchor="middle">sin −</text>
+        <text x="296" y="311" font-family="EB Garamond, serif" font-size="15" fill="#b5401c" text-anchor="middle">cos +</text>
+        <text x="296" y="331" font-family="EB Garamond, serif" font-style="italic" font-size="12" fill="#7a7065" text-anchor="middle">only cos positive</text>
+
+        <!-- Axis points -->
+        <circle cx="373" cy="200" r="4.5" fill="#1a1714"/>
+        <text x="377" y="193" font-family="EB Garamond, serif" font-size="12" fill="#7a7065">(1,0)</text>
+        <circle cx="57" cy="200" r="4.5" fill="#1a1714"/>
+        <text x="24" y="193" font-family="EB Garamond, serif" font-size="12" fill="#7a7065">(−1,0)</text>
+        <circle cx="215" cy="42" r="4.5" fill="#1a1714"/>
+        <text x="220" y="40" font-family="EB Garamond, serif" font-size="12" fill="#7a7065">(0,1)</text>
+        <circle cx="215" cy="358" r="4.5" fill="#1a1714"/>
+        <text x="220" y="373" font-family="EB Garamond, serif" font-size="12" fill="#7a7065">(0,−1)</text>
+
+        <circle cx="215" cy="200" r="3.5" fill="#1a1714"/>
+        <text x="220" y="215" font-family="EB Garamond, serif" font-size="13" fill="#7a7065">O</text>
+      </svg>
+      <p class="visual-caption">Step 5 — The sign rules for all four quadrants</p>
+    </div>
+
+    <p>For example: 150° is in Quadrant II, reference angle 30°. So sin 150° = +½ and cos 150° = −√3/2. You only changed the sign — the values came straight from your first-quadrant table.</p>
+  </div>
+
+  <!-- WHY IT WORKS -->
+  <div class="section">
+    <span class="step-label">Why It Works</span>
+    <h2>Your Brain Loves Patterns</h2>
+    <p>Random numbers are hard to hold. But patterns stick. Once you see that every sine and cosine in the first quadrant is simply a permutation of √0, √1, √2, √3, √4 — all divided by 2 — everything clicks into place.</p>
+    <p>You're not memorizing the unit circle anymore. You're rebuilding it. That's a completely different cognitive task, and a much easier one.</p>
+  </div>
+
+  <!-- TIPS -->
+  <div class="section">
+    <span class="step-label">Practice</span>
+    <h2>Five Ways to Lock It In</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <span class="tip-num">01</span>
+        <span class="tip-title">Draw it repeatedly</span>
+        <p class="tip-body">Five minutes of sketching does more than an hour of staring at a chart.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-num">02</span>
+        <span class="tip-title">Say it out loud</span>
+        <p class="tip-body">"Sine goes up, cosine goes down." It sounds obvious. That's the point.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-num">03</span>
+        <span class="tip-title">Use color</span>
+        <p class="tip-body">Blue for sine, red for cosine. Mark positive regions green, negative red.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-num">04</span>
+        <span class="tip-title">Practice with radians</span>
+        <p class="tip-body">Once degrees feel natural, rewrite using π/6, π/4, π/3. Same structure, new notation.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-num">05</span>
+        <span class="tip-title">Test yourself</span>
+        <p class="tip-body">Cover the values and reconstruct from scratch. You'll surprise yourself quickly.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-num">06</span>
+        <span class="tip-title">Connect to geometry</span>
+        <p class="tip-body">Think of it as a compass: every point is a direction. Spatial intuition beats rote memorization.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <h3>In Short</h3>
+    <div class="summary-item">
+      <span class="summary-icon">◆</span>
+      <span>All denominators are 2. Always.</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-icon">◆</span>
+      <span>Sine counts up: √0, √1, √2, √3, √4 — divided by 2.</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-icon">◆</span>
+      <span>Cosine counts down: √4, √3, √2, √1, √0 — divided by 2.</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-icon">◆</span>
+      <span>Other quadrants: same values, different signs.</span>
+    </div>
+  </div>
+
+  <p>Once you see the pattern, trigonometry stops being a list of rules and starts being a language you understand. The unit circle is not a table to survive — it's a structure to admire.</p>
+
+</article>
+
+<footer>
+  Mathematics &nbsp;·&nbsp; Trigonometry &nbsp;·&nbsp; Geometry
+</footer>
+
+<script>
+  // Gentle scroll-triggered fade for sections
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
