@@ -196,6 +196,37 @@ export function PiBooksList() {
       </header>
 
       <div className="mx-auto max-w-[min(48rem,100%)] px-[var(--page-pad)]">
+        {/* Cover strip */}
+        <div className="mb-8 flex items-end justify-center gap-2 sm:gap-3">
+          {piBooksEntries.map((book, i) => {
+            const rotations = [-3, 1.5, -2, 2.5, -1, 3];
+            const rotate = rotations[i % rotations.length];
+            return (
+              <a
+                key={book.id}
+                href={`#${book.id}`}
+                title={book.title}
+                className="group shrink-0 transition-transform duration-300 hover:-translate-y-2 hover:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)]"
+                style={{ transform: `rotate(${rotate}deg)` }}
+                aria-label={`Go to ${book.title}`}
+              >
+                <div
+                  className="relative overflow-hidden rounded-lg shadow-[0_8px_24px_-6px_rgba(33,35,36,0.35)] ring-1 ring-black/10 transition-shadow duration-300 group-hover:shadow-[0_16px_36px_-8px_rgba(33,35,36,0.45)]"
+                  style={{ width: "clamp(88px,16vw,136px)", aspectRatio: "2/3" }}
+                >
+                  <Image
+                    src={book.coverSrc}
+                    alt={book.coverAlt}
+                    fill
+                    className="object-cover"
+                    sizes="136px"
+                  />
+                </div>
+              </a>
+            );
+          })}
+        </div>
+
         <div
           className="max-w-full overflow-x-hidden rounded-2xl border border-[var(--line-soft)] bg-[color-mix(in_srgb,var(--pastel-sky)_28%,white)] px-3 py-3 shadow-[var(--shadow-soft)]"
           aria-hidden
