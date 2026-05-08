@@ -11,6 +11,7 @@ const nav = [
   { href: "#articles-curated", label: "Articles" },
   { href: "#books", label: "Books" },
   { href: "#questions", label: "Questions" },
+  { href: "/about", label: "About" },
 ];
 
 function IconSearch({ className }: { className?: string }) {

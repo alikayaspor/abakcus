@@ -11,6 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Home
     url("/", 1.0, "daily"),
 
+    // About
+    url("/about", 0.8, "monthly"),
+
     // Index pages
     url("/articles", 0.9, "weekly"),
     url("/books", 0.9, "weekly"),
