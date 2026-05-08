@@ -514,6 +514,10 @@ export function IndianaPiBillArticle() {
               <ArticleProseLink href="/articles/fibonacci-shelf">
                 A shelf built on a sequence
               </ArticleProseLink>
+              {" · "}
+              <ArticleProseLink href="/book-lists/books-about-pi">
+                Six books about π worth reading
+              </ArticleProseLink>
             </p>
           </section>
         </article>

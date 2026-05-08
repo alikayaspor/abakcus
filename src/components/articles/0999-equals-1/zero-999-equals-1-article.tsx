@@ -246,6 +246,14 @@ export function Zero999Equals1Article() {
           as understanding it. Most people who object to 0.999…&nbsp;=&nbsp;1 know what decimals
           are. They have not yet understood what infinity does to them.
         </p>
+        <p>
+          If these questions about numbers and limits leave you wanting more,{" "}
+          <ArticleProseLink href="/book-lists/books-about-pi" className="article-euclid-link">
+            six books about π
+          </ArticleProseLink>{" "}
+          approach the same territory from different directions — none of them
+          textbooks, all of them worth your time.
+        </p>
       </div>
 
       {/* ── COMIC ── */}

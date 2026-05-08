@@ -215,6 +215,14 @@ export function Sqrt2IrrationalArticle() {
               than any bill could. If such a ratio existed, there would have to be
               a first natural number witnessing it. There isn&apos;t.
             </p>
+            <p className="mt-5 text-base leading-relaxed text-[var(--ink)] sm:text-lg">
+              If the irrationality of √2 made you curious about π — another
+              number that refuses to behave —{" "}
+              <ArticleProseLink href="/book-lists/books-about-pi">
+                six books approach it from equally oblique angles
+              </ArticleProseLink>
+              : history, category theory, and at least one very well-timed pun.
+            </p>
           </div>
 
         </article>

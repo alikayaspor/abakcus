@@ -364,6 +364,17 @@ export default function IntroductionToMathematicalPhilosophyPage() {
           </div>
         </article>
 
+        <div className="mx-auto max-w-[720px] px-[var(--page-pad)] pb-4">
+          <p className="text-sm leading-relaxed text-[var(--ink-muted)]">
+            If Russell&apos;s obsession with what numbers actually are has you
+            curious about π specifically,{" "}
+            <ArticleProseLink href="/book-lists/books-about-pi" className="underline underline-offset-2 hover:text-[var(--ink)]">
+              six books approach it from equally unruly angles
+            </ArticleProseLink>
+            {" — "}history, transcendence, category theory, and one very
+            ill-advised Indiana bill.
+          </p>
+        </div>
         <ArticleReadMore currentSlug="introduction-to-mathematical-philosophy" />
       </div>
     </>
