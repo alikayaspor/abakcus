@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url("/17-best-math-youtube-channels-to-study-mathematics", 0.8, "monthly"),
     url("/24-beautiful-physics-poster-designs-that-inspire-you", 0.8, "monthly"),
     url("/25-beautiful-math-documentaries-to-love-math", 0.8, "monthly"),
-    url("/book-lists/pi", 0.8, "monthly"),
+    url("/book-lists/books-about-pi", 0.8, "monthly"),
 
     // Articles
     url("/articles/0999-equals-1", 0.7, "monthly"),
@@ -57,6 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url("/articles/zurich-notebook", 0.7, "monthly"),
 
     // Books
+    url("/books/how-smart-machines-think", 0.7, "monthly"),
     url("/books/islamic-geometric-patterns-eric-broug", 0.7, "monthly"),
     url("/books/fractal-geometry-of-nature", 0.7, "monthly"),
     url("/books/geometry-of-pasta", 0.7, "monthly"),

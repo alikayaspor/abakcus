@@ -105,6 +105,20 @@ const ALL_BOOKS: Book[] = [
     section: "mathematics",
     publishedAt: "2025-07-01",
   },
+  // ── Technology & AI ──────────────────────────────────────────────────────
+  {
+    slug: "how-smart-machines-think",
+    title: "How Smart Machines Think",
+    author: "Sean Gerrish",
+    year: "2018",
+    publisher: "MIT Press",
+    dek: "Written before ChatGPT existed. The foundations it explains — reinforcement learning, ensemble methods, recommendation systems — are still the floor every modern AI stands on.",
+    href: "/books/how-smart-machines-think",
+    image:
+      "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/How%20Smart%20Machines%20Think%20by%20Sean%20Gerrish.jpg",
+    section: "other" as const,
+    publishedAt: "2026-05-08",
+  },
   // ── Physics ──────────────────────────────────────────────────────────────
   {
     slug: "when-einstein-walked-with-godel",
@@ -133,19 +147,6 @@ const ALL_BOOKS: Book[] = [
     publishedAt: "2025-05-01",
   },
   // ── Education & Others ───────────────────────────────────────────────────
-  {
-    slug: "pi-books-list",
-    title: "Six Books That Taught π How to Misbehave",
-    author: "Abakcus — Book list",
-    year: "2026",
-    publisher: "Abakcus",
-    dek: "History, obsession, category theory, a novella — and a knight named Sir Cumference.",
-    href: "/book-lists/pi",
-    image:
-      "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Six%20books%20that%20taught%20%CF%80%20how%20to%20misbehave.png",
-    section: "other",
-    publishedAt: "2026-01-01",
-  },
   {
     slug: "lifelong-kindergarten",
     title: "Lifelong Kindergarten",
@@ -220,6 +221,7 @@ function BookCard({ book, index }: { book: Book; index: number }) {
           alt={`${book.title} — ${book.author}`}
           width={400}
           height={533}
+          unoptimized={book.image.endsWith(".png")}
           className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
           sizes="(max-width:640px) 48vw, (max-width:1024px) 32vw, 20vw"
         />

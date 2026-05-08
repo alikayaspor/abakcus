@@ -502,7 +502,7 @@ export function PinocchioArticle() {
                 Fibonacci shelf
               </ArticleProseLink>{" "}
               to the{" "}
-              <ArticleProseLink href="/book-lists/pi">
+              <ArticleProseLink href="/book-lists/books-about-pi">
                 six-book shelf on π
               </ArticleProseLink>
               . The intuition that Pinocchio&apos;s nose is probably fine after

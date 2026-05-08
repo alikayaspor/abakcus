@@ -4,7 +4,7 @@ import { ArticleReadMore } from "@/components/articles/article-read-more";
 import { PiBooksList } from "@/components/book-lists/pi-books-list";
 import { SiteHeader } from "@/components/home/site-header";
 
-const CANONICAL = "https://abakcus.com/book-lists/pi";
+const CANONICAL = "https://abakcus.com/book-lists/books-about-pi";
 const OG_IMAGE =
   "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Six%20books%20that%20taught%20%CF%80%20how%20to%20misbehave.png";
 

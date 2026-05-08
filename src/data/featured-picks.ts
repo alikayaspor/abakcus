@@ -20,7 +20,7 @@ export const featuredPicks: FeaturedPick[] = [
     title: "Six Books That Taught π How to Misbehave",
     dek: "History, obsession, category theory — and Sir Cumference.",
     tag: "Book list",
-    href: "/book-lists/pi",
+    href: "/book-lists/books-about-pi",
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Six%20books%20that%20taught%20%CF%80%20how%20to%20misbehave.png",
     pageColor: PASTEL.rose,

@@ -220,7 +220,7 @@ export default function WhenEinsteinPage() {
               },
               {
                 q: "Is there meaning hidden in the digits of pi — or only randomness?",
-                href: "/book-lists/pi",
+                href: "/book-lists/books-about-pi",
               },
             ].map((item) => (
               <div

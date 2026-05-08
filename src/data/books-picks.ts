@@ -75,7 +75,7 @@ export const booksShelf: BookShelfItem[] = [
     title: "Six Books That Taught π How to Misbehave",
     author: "Book list",
     dek: "History, obsession, category theory, a novella — and a knight named Sir Cumference.",
-    href: "/book-lists/pi",
+    href: "/book-lists/books-about-pi",
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Six%20books%20that%20taught%20%CF%80%20how%20to%20misbehave.png",
     pageColor: PASTEL.sky,
@@ -146,5 +146,16 @@ export const booksShelf: BookShelfItem[] = [
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Introduction%20to%20Mathematical%20Philosophy%20by%20Bertrand%20Russell.png",
     pageColor: PASTEL.rose,
     publishedAt: "2026-05-06",
+  },
+  {
+    slug: "how-smart-machines-think",
+    title: "How Smart Machines Think",
+    author: "Sean Gerrish",
+    dek: "Written in 2018, before ChatGPT. The foundations it explains are still the floor every modern AI stands on.",
+    href: "/books/how-smart-machines-think",
+    image:
+      "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/How%20Smart%20Machines%20Think%20by%20Sean%20Gerrish.jpg",
+    pageColor: PASTEL.sky,
+    publishedAt: "2026-05-08",
   },
 ];

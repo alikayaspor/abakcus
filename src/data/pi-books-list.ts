@@ -1,4 +1,4 @@
-/** Editorial copy for `/book-lists/pi` — six books about π (covers on R2). */
+/** Editorial copy for `/book-lists/books-about-pi` — six books about π (covers on R2). */
 
 export type PiBookAside = {
   title: string;

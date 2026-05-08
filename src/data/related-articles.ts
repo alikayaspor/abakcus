@@ -59,6 +59,7 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
   "fractal-geometry-of-nature",
   "lifelong-kindergarten",
   "surely-youre-joking-mr-feynman",
+  "how-smart-machines-think",
   "your-name-in-landsat",
   "bambu-lab-p2s",
 ]);
@@ -443,6 +444,14 @@ const RELATED_ORDER: Record<string, string[]> = {
     "0999-equals-1",
     "billingsley-euclid",
     "feynman-technique",
+  ],
+  "how-smart-machines-think": [
+    "feynman-technique",
+    "feynman-math-education",
+    "surely-youre-joking-mr-feynman",
+    "seeing-theory",
+    "lifelong-kindergarten",
+    "when-einstein-walked-with-godel",
   ],
 };
 
