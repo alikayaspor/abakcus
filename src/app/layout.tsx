@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { PatreonNudgeDialog } from "@/components/site/patreon-nudge-dialog";
 import { DM_Mono, DM_Sans, EB_Garamond, Fraunces } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const serif = Fraunces({
@@ -62,6 +63,18 @@ export default function RootLayout({
       className={`${sans.variable} ${serif.variable} ${ebGaramond.variable} ${dmMono.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full overflow-x-hidden bg-[var(--surface)] pb-[env(safe-area-inset-bottom,0px)] font-sans text-[var(--ink)] antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3N1ZM0WPPZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3N1ZM0WPPZ');
+          `}
+        </Script>
         {children}
         <PatreonNudgeDialog />
       </body>
