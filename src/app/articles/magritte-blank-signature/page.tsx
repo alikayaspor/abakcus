@@ -3,11 +3,16 @@ import Link from "next/link";
 import { ArticleReadMore } from "@/components/articles/article-read-more";
 import { SiteHeader } from "@/components/home/site-header";
 
+const CANONICAL = "https://abakcus.com/articles/magritte-blank-signature";
+const OG_IMAGE =
+  "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Rene%20Magritte%E2%80%99s%20The%20Blank%20Signature.webp";
+
 export const metadata: Metadata = {
   title:
-    "René Magritte's The Blank Signature: A Journey Through the Mind-Bending Layers of Reality",
+    "René Magritte's The Blank Signature: A Journey Through the Mind-Bending Layers of Reality — Abakcus",
   description:
     "In 1965, Magritte painted a woman on horseback through a forest. Everything in the painting is real. Nothing in the painting is possible. Here is why that matters.",
+  authors: [{ name: "Ali Kaya" }],
   keywords: [
     "Magritte The Blank Signature",
     "La Carte Blanche Magritte",
@@ -18,14 +23,24 @@ export const metadata: Metadata = {
     "occlusion painting",
     "National Gallery of Art",
   ],
+  alternates: { canonical: CANONICAL },
   openGraph: {
     title:
       "René Magritte's The Blank Signature: A Journey Through the Mind-Bending Layers of Reality",
     description:
       "In 1965, Magritte painted a woman on horseback through a forest. Everything in the painting is real. Nothing in the painting is possible.",
+    url: CANONICAL,
+    siteName: "Abakcus",
     type: "article",
+    publishedTime: "2026-05-03",
+    locale: "en_US",
     images: [
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Rene%20Magritte%E2%80%99s%20The%20Blank%20Signature.webp",
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 800,
+        alt: "René Magritte's The Blank Signature (La Carte Blanche), 1965",
+      },
     ],
   },
   twitter: {
@@ -33,23 +48,54 @@ export const metadata: Metadata = {
     title: "René Magritte's The Blank Signature",
     description:
       "In 1965, Magritte painted a woman on horseback through a forest. Everything in the painting is real. Nothing in the painting is possible.",
-    images: [
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Rene%20Magritte%E2%80%99s%20The%20Blank%20Signature.webp",
-    ],
+    images: [OG_IMAGE],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "René Magritte's The Blank Signature: A Journey Through the Mind-Bending Layers of Reality",
+  description:
+    "In 1965, Magritte painted a woman on horseback through a forest where nothing is possible but everything is real.",
+  datePublished: "2026-05-03",
+  dateModified: "2026-05-03",
+  author: {
+    "@type": "Person",
+    name: "Ali Kaya",
+    url: "https://abakcus.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Abakcus",
+    url: "https://abakcus.com",
+  },
+  image: OG_IMAGE,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": CANONICAL,
+  },
+  keywords:
+    "Magritte, The Blank Signature, La Carte Blanche, surrealism, impossible painting, perception",
+  articleSection: "Art · Surrealism",
 };
 
 export default function MagritteBlankSignaturePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
       <div className="uc-page-bg pb-4">
         <div className="mx-auto max-w-[var(--page-max)] px-[var(--page-pad)] pt-6">
           <Link
-            href="/"
+            href="/articles"
             className="inline-flex text-sm text-[var(--ink-muted)] underline-offset-4 hover:underline"
           >
-            ← Back to home
+            ← All articles
           </Link>
         </div>
 

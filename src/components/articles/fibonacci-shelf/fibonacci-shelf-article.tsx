@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArticleImageLightbox } from "@/components/articles/article-image-lightbox";
+import { ArticleProseLink } from "@/components/articles/article-prose-link";
 import { UnitCircleSectionReveal } from "@/components/articles/unit-circle/unit-circle-section-reveal";
 import { fibonacciShelfImages } from "@/data/fibonacci-shelf-images";
 import { PASTEL, type PastelId } from "@/data/pastel-palette";
@@ -349,7 +350,16 @@ export function FibonacciShelfArticle() {
               about something real: a sequence that shows up in sunflower seeds,
               nautilus shells, and now your living room. Whether you find that
               poetic or just interesting is up to you. Either way, it&apos;s a
-              decent trick for six rectangles of aluminum.
+              decent trick for six rectangles of aluminum. For a different
+              material entirely — something you design and print in an afternoon
+              —{" "}
+              <ArticleProseLink
+                href="/gadgets/bambu-lab-p2s"
+                className="article-euclid-link"
+              >
+                the Bambu Lab P2S
+              </ArticleProseLink>{" "}
+              will produce a Fibonacci spiral before dinner.
             </p>
           </section>
         </article>

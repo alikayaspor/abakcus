@@ -430,7 +430,13 @@ export function Rushmore1998Article() {
           <ArticleProseLink href="/videos/los-cronocrimenes" className="article-euclid-link">
             the best films quietly share
           </ArticleProseLink>
-          , regardless of genre or budget.
+          , regardless of genre or budget. The same year this film came out, the other
+          great education film of the decade was still a decade away:{" "}
+          <ArticleProseLink href="/videos/stand-and-deliver" className="article-euclid-link">
+            Stand and Deliver
+          </ArticleProseLink>{" "}
+          asks what it costs to teach math to people the system has already decided
+          can&apos;t do it.
         </p>
 
         {/* ── VERDICT ── */}

@@ -31,6 +31,7 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
   "killed-by-google",
   "marilyn-vos-savant",
   "alejandro-guijarro-momentum",
+  "penrose-journal",
   "specimens-fancy-turning",
   "sqrt2-irrational",
   "snelson-needle-tower",
@@ -43,11 +44,13 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
   "feynman-ode-to-a-flower",
   "okazaki-matchstick",
   "rushmore-1998",
+  "stand-and-deliver",
   "owl-silent-flight",
   "mushroom-color-atlas",
   "yuki-kawae",
   "trinity",
   "introduction-to-mathematical-philosophy",
+  "islamic-geometric-patterns-eric-broug",
   "oliver-byrne-euclid",
   "pasta-by-design",
   "geometry-of-pasta",
@@ -56,6 +59,8 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
   "fractal-geometry-of-nature",
   "lifelong-kindergarten",
   "surely-youre-joking-mr-feynman",
+  "your-name-in-landsat",
+  "bambu-lab-p2s",
 ]);
 
 /**
@@ -63,21 +68,29 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
  * Base order when reading X: all others, newest-first in the list below minus X.
  */
 const RELATED_ORDER: Record<string, string[]> = {
+  "your-name-in-landsat": [
+    "river-runner",
+    "seeing-theory",
+    "fry-universe",
+    "mushroom-color-atlas",
+    "barbara-iweins-katalog",
+    "killed-by-google",
+  ],
   "fry-universe": [
     "river-runner",
     "seeing-theory",
     "barbara-iweins-katalog",
     "killed-by-google",
     "mushroom-color-atlas",
-    "pringles",
+    "your-name-in-landsat",
   ],
   "seeing-theory": [
-    "sudoku-mathematics",
-    "unit-circle",
-    "feynman-technique",
-    "billingsley-euclid",
     "river-runner",
-    "mit-1869",
+    "fry-universe",
+    "barbara-iweins-katalog",
+    "killed-by-google",
+    "mushroom-color-atlas",
+    "your-name-in-landsat",
   ],
   "magritte-blank-signature": [
     "alejandro-guijarro-momentum",
@@ -240,28 +253,28 @@ const RELATED_ORDER: Record<string, string[]> = {
     "billingsley-euclid",
   ],
   "river-runner": [
-    "feynman-technique",
-    "unit-circle",
-    "inkala-sudoku",
-    "mit-1869",
-    "billingsley-euclid",
-    "cymatics-nigel-stanford",
+    "seeing-theory",
+    "fry-universe",
+    "barbara-iweins-katalog",
+    "killed-by-google",
+    "mushroom-color-atlas",
+    "your-name-in-landsat",
   ],
   "barbara-iweins-katalog": [
-    "taming-the-garden",
     "river-runner",
-    "feynman-technique",
-    "billingsley-euclid",
-    "pinocchio",
-    "zurich-notebook",
+    "seeing-theory",
+    "fry-universe",
+    "killed-by-google",
+    "mushroom-color-atlas",
+    "your-name-in-landsat",
   ],
   "killed-by-google": [
     "river-runner",
     "barbara-iweins-katalog",
-    "feynman-technique",
-    "inkala-sudoku",
-    "mit-1869",
-    "cymatics-nigel-stanford",
+    "seeing-theory",
+    "fry-universe",
+    "mushroom-color-atlas",
+    "your-name-in-landsat",
   ],
   "marilyn-vos-savant": [
     "sudoku-mathematics",
@@ -392,12 +405,12 @@ const RELATED_ORDER: Record<string, string[]> = {
     "feynman-ode-to-a-flower",
   ],
   "mushroom-color-atlas": [
-    "dinara-kasko-kinetic-tarts",
-    "specimens-fancy-turning",
     "barbara-iweins-katalog",
-    "alejandro-guijarro-momentum",
-    "taming-the-garden",
-    "feynman-technique",
+    "river-runner",
+    "seeing-theory",
+    "fry-universe",
+    "killed-by-google",
+    "your-name-in-landsat",
   ],
   "trinity": [
     "yuki-kawae",
@@ -423,6 +436,14 @@ const RELATED_ORDER: Record<string, string[]> = {
     "mit-1869",
     "sudoku-mathematics",
   ],
+  "pi-books-list": [
+    "indiana-pi-bill",
+    "unit-circle",
+    "sqrt2-irrational",
+    "0999-equals-1",
+    "billingsley-euclid",
+    "feynman-technique",
+  ],
 };
 
 export function getRelatedArticles(currentSlug: string): CuratedArticle[] {
@@ -432,12 +453,14 @@ export function getRelatedArticles(currentSlug: string): CuratedArticle[] {
   // Determine category from the current page's href prefix
   const isBook = currentHref.startsWith("/books/");
   const isVideo = currentHref.startsWith("/videos/");
+  const isTool = currentHref.startsWith("/tools/");
 
   const pool = curatedArticles.filter((a) => {
     if (a.slug === currentSlug) return false;
     if (!publishedArticleSlugs.has(a.slug)) return false;
     if (isBook) return a.href.startsWith("/books/");
     if (isVideo) return a.href.startsWith("/videos/");
+    if (isTool) return a.href.startsWith("/tools/");
     // Articles: exclude tools, books, videos
     return (
       !a.href.startsWith("/tools/") &&

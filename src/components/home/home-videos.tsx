@@ -37,7 +37,8 @@ function VideoCard({ title, dek, tag, href, image, pageColor }: VideoPick) {
   );
 }
 
-function FilmCard({ title, dek, tag, href, image, pageColor }: VideoPick) {
+function FilmCard(props: VideoPick) {
+  const { title, dek, tag, href, image, pageColor } = props;
   return (
     <Link
       href={href}
@@ -70,7 +71,7 @@ function FilmCard({ title, dek, tag, href, image, pageColor }: VideoPick) {
 }
 
 export function HomeVideos() {
-  const videos = videosPicks.filter((v) => !isFilmOrDoc(v.tag));
+  const videos = videosPicks.filter((v) => !isFilmOrDoc(v.tag)).slice(0, 6);
   const films = videosPicks.filter((v) => isFilmOrDoc(v.tag));
 
   return (
@@ -129,7 +130,7 @@ export function HomeVideos() {
 
         {/* ── ROW 2: Films & Documentaries (portrait) ── */}
         {films.length > 0 && (
-          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
+          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-5">
             {films.map((v) => (
               <FilmCard key={v.slug} {...v} />
             ))}

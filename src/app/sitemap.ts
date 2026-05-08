@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Index pages
     url("/articles", 0.9, "weekly"),
     url("/books", 0.9, "weekly"),
+    url("/videos", 0.9, "weekly"),
     url("/tools", 0.9, "weekly"),
     url("/questions", 0.9, "weekly"),
     url("/newsletter", 0.8, "monthly"),
@@ -53,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url("/articles/zurich-notebook", 0.7, "monthly"),
 
     // Books
+    url("/books/islamic-geometric-patterns-eric-broug", 0.7, "monthly"),
     url("/books/fractal-geometry-of-nature", 0.7, "monthly"),
     url("/books/geometry-of-pasta", 0.7, "monthly"),
     url("/books/lifelong-kindergarten", 0.7, "monthly"),
@@ -64,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url("/books/when-einstein-walked-with-godel", 0.7, "monthly"),
 
     // Tools
+    url("/tools/your-name-in-landsat", 0.7, "monthly"),
     url("/tools/barbara-iweins-katalog", 0.7, "monthly"),
     url("/tools/killed-by-google", 0.7, "monthly"),
     url("/tools/mushroom-color-atlas", 0.7, "monthly"),
@@ -72,6 +75,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url("/tools/seeing-theory", 0.7, "monthly"),
 
     // Gadgets
+    url("/gadgets/bambu-lab-p2s", 0.7, "monthly"),
+    url("/gadgets/chocolate-planets", 0.7, "monthly"),
     url("/gadgets/hagoromo-chalk", 0.7, "monthly"),
     url("/gadgets/xtool-f1-ultra", 0.7, "monthly"),
 
@@ -85,6 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url("/videos/okazaki-matchstick", 0.7, "monthly"),
     url("/videos/owl-silent-flight", 0.7, "monthly"),
     url("/videos/roberto-carlos-free-kick", 0.7, "monthly"),
+    url("/videos/stand-and-deliver", 0.7, "monthly"),
     url("/videos/rushmore-1998", 0.7, "monthly"),
     url("/videos/taming-the-garden", 0.7, "monthly"),
     url("/videos/the-physics-of-kung-fu", 0.7, "monthly"),

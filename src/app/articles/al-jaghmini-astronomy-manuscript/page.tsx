@@ -3,11 +3,17 @@ import Link from "next/link";
 import { ArticleReadMore } from "@/components/articles/article-read-more";
 import { SiteHeader } from "@/components/home/site-header";
 
+const CANONICAL =
+  "https://abakcus.com/articles/al-jaghmini-astronomy-manuscript";
+const OG_IMAGE =
+  "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini.jpg";
+
 export const metadata: Metadata = {
   title:
-    "Al-Jaghmini's Al-Mulakhkhas: The Astronomy Textbook That Outlived an Empire",
+    "Al-Jaghmini's Al-Mulakhkhas: The Astronomy Textbook That Outlived an Empire — Abakcus",
   description:
     "Written one year before its author died in the Mongol conquest of Khwarazm, al-Jaghmini's astronomical treatise became the most widely copied Arabic astronomy textbook ever made — and survived to be hand-copied in Ottoman Anatolia 162 years later.",
+  authors: [{ name: "Ali Kaya" }],
   keywords: [
     "al-Jaghmini",
     "al-Mulakhkhas fi al-Hayah",
@@ -18,14 +24,24 @@ export const metadata: Metadata = {
     "medieval Islamic science",
     "Ptolemaic astronomy",
   ],
+  alternates: { canonical: CANONICAL },
   openGraph: {
     title:
       "Al-Jaghmini's Al-Mulakhkhas: The Astronomy Textbook That Outlived an Empire",
     description:
       "Written in Khwarazm the year before the Mongols destroyed it, copied by hand 162 years later in Ottoman Anatolia — and studied in classrooms for six more centuries.",
+    url: CANONICAL,
+    siteName: "Abakcus",
     type: "article",
+    publishedTime: "2026-04-30",
+    locale: "en_US",
     images: [
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini.jpg",
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 800,
+        alt: "Illustrated pages from al-Jaghmini's Al-Mulakhkhas fi al-Hay'ah, Ayasoluk copy, 1383",
+      },
     ],
   },
   twitter: {
@@ -34,23 +50,54 @@ export const metadata: Metadata = {
       "Al-Jaghmini's Al-Mulakhkhas: The Astronomy Textbook That Outlived an Empire",
     description:
       "Written in Khwarazm the year before the Mongols destroyed it, copied by hand 162 years later in Ottoman Anatolia — and studied in classrooms for six more centuries.",
-    images: [
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini.jpg",
-    ],
+    images: [OG_IMAGE],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "Al-Jaghmini's Al-Mulakhkhas: The Astronomy Textbook That Outlived an Empire",
+  description:
+    "Al-Jaghmini's astronomical treatise, written c. 1220–1221, became the most widely copied Arabic astronomy textbook and survived to be hand-copied in Ottoman Anatolia 162 years later.",
+  datePublished: "2026-04-30",
+  dateModified: "2026-04-30",
+  author: {
+    "@type": "Person",
+    name: "Ali Kaya",
+    url: "https://abakcus.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Abakcus",
+    url: "https://abakcus.com",
+  },
+  image: OG_IMAGE,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": CANONICAL,
+  },
+  keywords:
+    "al-Jaghmini, al-Mulakhkhas, Islamic astronomy, Khwarazm, history of science",
+  articleSection: "History of Science · Islamic Astronomy",
 };
 
 export default function AlJaghminiPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
       <div className="uc-page-bg pb-4">
         <div className="mx-auto max-w-[var(--page-max)] px-[var(--page-pad)] pt-6">
           <Link
-            href="/"
+            href="/articles"
             className="inline-flex text-sm text-[var(--ink-muted)] underline-offset-4 hover:underline"
           >
-            ← Back to home
+            ← All articles
           </Link>
         </div>
 

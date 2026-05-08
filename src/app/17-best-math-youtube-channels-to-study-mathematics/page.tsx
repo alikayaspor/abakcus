@@ -5,7 +5,7 @@ import { MathYouTubeChannelsArticle } from "@/components/articles/math-youtube-c
 import { SiteHeader } from "@/components/home/site-header";
 
 export const metadata: Metadata = {
-  title: "Five Channels That Make You Love Mathematics — Abakcus",
+  title: "Five YouTube Channels That Make You Love Mathematics — Abakcus",
   description:
     "Numberphile, 3Blue1Brown, Eddie Woo, Socratica, Khan Academy — five YouTube channels built by people who loved mathematics first, and only then turned the camera on.",
   keywords: [
@@ -21,21 +21,21 @@ export const metadata: Metadata = {
     "study mathematics YouTube",
   ],
   openGraph: {
-    title: "Five Channels That Make You Love Mathematics",
+    title: "Five YouTube Channels That Make You Love Mathematics",
     description:
       "Numberphile, 3Blue1Brown, Eddie Woo, Socratica, Khan Academy — five YouTube channels built by people who loved mathematics first, and only then turned the camera on.",
     type: "article",
     images: [
-      "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev/Five%20Channels%20That%20Make%20You%20Love%20Mathematics.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Five%20YouTube%20Channels%20That%20Make%20You%20Love%20Mathematics.png",
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Five Channels That Make You Love Mathematics",
+    title: "Five YouTube Channels That Make You Love Mathematics",
     description:
       "Numberphile, 3Blue1Brown, Eddie Woo, Socratica, Khan Academy — five YouTube channels built by people who loved mathematics first, and only then turned the camera on.",
     images: [
-      "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev/Five%20Channels%20That%20Make%20You%20Love%20Mathematics.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Five%20YouTube%20Channels%20That%20Make%20You%20Love%20Mathematics.png",
     ],
   },
 };

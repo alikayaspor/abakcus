@@ -155,7 +155,13 @@ export function PringlesArticle() {
             <ArticleProseLink href="/articles/zurich-notebook">
               Einstein&apos;s Zurich Notebook
             </ArticleProseLink>
-            .
+            . And for another food object where geometry is the whole
+            point,{" "}
+            <ArticleProseLink href="/gadgets/chocolate-planets">
+              Martin&apos;s Chocolatier&apos;s solar system in Belgian chocolate
+            </ArticleProseLink>
+            — nine planets, Jupiter the largest truffle because it is the
+            largest planet.
           </p>
 
           <figure

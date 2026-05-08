@@ -468,7 +468,16 @@ export function NeedleTowerArticle() {
               standing 30 meters tall, has been in the sculpture garden of the
               Kröller-Müller Museum in Otterlo, the Netherlands since 1971. The
               two towers are not identical — the proportions differ — but the
-              structural logic is the same. Both are still standing.
+              structural logic is the same. Both are still standing. The same
+              question — how does a structure carry load with almost nothing? —
+              is what makes the bridge design challenge so useful on a{" "}
+              <ArticleProseLink
+                href="/gadgets/bambu-lab-p2s"
+                className="article-euclid-link"
+              >
+                Bambu Lab P2S
+              </ArticleProseLink>
+              : print it, add weight until it fails, revise.
             </p>
           </div>
 

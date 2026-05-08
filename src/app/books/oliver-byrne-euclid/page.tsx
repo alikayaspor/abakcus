@@ -5,35 +5,92 @@ import { SiteHeader } from "@/components/home/site-header";
 import { ArticleProseLink } from "@/components/articles/article-prose-link";
 import { ArticleReadMore } from "@/components/articles/article-read-more";
 
+const CANONICAL = "https://abakcus.com/books/oliver-byrne-euclid";
+const OG_IMAGE =
+  "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Oliver%20Byrne%20%E2%80%93%20The%20First%20Six%20Books%20of%20the%20Elements%20of%20Euclid.webp";
+
 export const metadata: Metadata = {
-  title: "Oliver Byrne's Euclid — The First Six Books of the Elements",
+  title: "The First Six Books of the Elements of Euclid | Abakcus",
   description:
     "Oliver Byrne translated two thousand years of geometry into colour. Red, yellow, blue, and black. The result looks like it was designed yesterday.",
+  authors: [{ name: "Ali Kaya" }],
+  alternates: { canonical: CANONICAL },
+  keywords: [
+    "Oliver Byrne",
+    "Elements of Euclid",
+    "First Six Books of Euclid",
+    "Byrne Euclid TASCHEN",
+    "coloured Euclid",
+    "visual mathematics",
+    "Euclid geometry book",
+    "mathematics history",
+    "Bauhaus mathematics",
+    "geometric proof colour",
+  ],
   openGraph: {
     title: "Oliver Byrne's Euclid — The First Six Books of the Elements",
     description:
-      "Oliver Byrne translated two thousand years of geometry into colour. The result remains astonishing today.",
+      "Oliver Byrne translated two thousand years of geometry into colour. Red, yellow, blue, and black. The result remains astonishing today.",
+    url: CANONICAL,
+    siteName: "Abakcus",
+    type: "article",
+    publishedTime: "2025-12-01",
+    locale: "en_US",
     images: [
       {
-        url: "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Oliver%20Byrne%20%E2%80%93%20The%20First%20Six%20Books%20of%20the%20Elements%20of%20Euclid.webp",
+        url: OG_IMAGE,
         width: 800,
         height: 1000,
-        alt: "Oliver Byrne — The First Six Books of the Elements of Euclid",
+        alt: "Oliver Byrne — The First Six Books of the Elements of Euclid, TASCHEN edition",
       },
     ],
-    type: "article",
   },
   twitter: {
     card: "summary_large_image",
     title: "Oliver Byrne's Euclid — The First Six Books of the Elements",
     description:
       "Red, yellow, blue, black. Before Mondrian, Byrne. A mathematics textbook from 1847 that looks like it was designed last year.",
-    images: [
-      "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Oliver%20Byrne%20%E2%80%93%20The%20First%20Six%20Books%20of%20the%20Elements%20of%20Euclid.webp",
-    ],
+    images: [OG_IMAGE],
   },
-  alternates: {
-    canonical: "/books/oliver-byrne-euclid",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Review",
+  name: "Oliver Byrne's Euclid — The First Six Books of the Elements",
+  description:
+    "Oliver Byrne translated two thousand years of geometry into colour. Red, yellow, blue, and black. The result looks like it was designed yesterday.",
+  reviewRating: {
+    "@type": "Rating",
+    ratingValue: "5",
+    bestRating: "5",
+  },
+  author: {
+    "@type": "Person",
+    name: "Ali Kaya",
+    url: "https://abakcus.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Abakcus",
+    url: "https://abakcus.com",
+  },
+  datePublished: "2025-12-01",
+  url: CANONICAL,
+  itemReviewed: {
+    "@type": "Book",
+    name: "The First Six Books of the Elements of Euclid",
+    author: {
+      "@type": "Person",
+      name: "Oliver Byrne",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "TASCHEN",
+    },
+    datePublished: "2010",
+    inLanguage: "en",
+    image: OG_IMAGE,
   },
 };
 
@@ -69,6 +126,10 @@ const READERS = [
 export default function OliverByrneEuclidPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
 
       {/* ── HERO ── */}
@@ -160,23 +221,16 @@ export default function OliverByrneEuclidPage() {
       <div className="uc-page-bg pb-16">
         <div className="mx-auto max-w-[var(--page-max)] px-[var(--page-pad)] pt-6">
           <Link
-            href="/"
+            href="/books"
             className="inline-flex text-sm text-[var(--ink-muted)] underline-offset-4 hover:underline"
           >
-            ← Back to home
+            ← All books
           </Link>
         </div>
 
         <article
           className="mx-auto max-w-[720px] px-[var(--page-pad)] pt-14 pb-20 text-[var(--ink)]"
-          itemScope
-          itemType="https://schema.org/Review"
         >
-          <meta
-            itemProp="itemReviewed"
-            content="The First Six Books of the Elements of Euclid by Oliver Byrne"
-          />
-          <meta itemProp="author" content="Abakcus" />
 
           {/* ── OPENING ── */}
           <p className="mb-12 border-b border-[var(--line)] pb-12 font-serif text-[1.5rem] italic leading-[1.55] text-[var(--ink)] sm:text-[1.65rem]">

@@ -101,7 +101,7 @@ export function MathYouTubeChannelsArticle() {
           Mathematics · YouTube
         </p>
         <h1 className="mb-8 font-serif text-[clamp(2rem,5vw,3rem)] font-normal leading-[1.2] text-[var(--ink)]">
-          Five Channels That Make You{" "}
+          Five YouTube Channels That Make You{" "}
           <em className="italic text-[var(--ink)]">Love</em> Mathematics
         </h1>
         <figure
@@ -109,14 +109,14 @@ export function MathYouTubeChannelsArticle() {
           style={{ backgroundColor: "#111009" }}
         >
           <ArticleImageLightbox
-            src={`${R2}/Five%20Channels%20That%20Make%20You%20Love%20Mathematics.png`}
-            alt="Five Channels That Make You Love Mathematics — vintage TV displaying mathematical equations"
+            src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Five%20YouTube%20Channels%20That%20Make%20You%20Love%20Mathematics.png"
+            alt="Five YouTube Channels That Make You Love Mathematics — vintage TV displaying mathematical equations"
           >
             <div className="w-full rounded-xl bg-black/20 p-1 sm:p-1.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`${R2}/Five%20Channels%20That%20Make%20You%20Love%20Mathematics.png`}
-                alt="Five Channels That Make You Love Mathematics — vintage TV displaying mathematical equations"
+                src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Five%20YouTube%20Channels%20That%20Make%20You%20Love%20Mathematics.png"
+                alt="Five YouTube Channels That Make You Love Mathematics — vintage TV displaying mathematical equations"
                 className="mx-auto block h-auto w-full rounded-lg object-contain transition-transform duration-500 group-hover:scale-[1.01]"
                 loading="eager"
                 decoding="async"

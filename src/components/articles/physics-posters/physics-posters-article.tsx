@@ -1,27 +1,24 @@
 import { ArticleProseLink } from "@/components/articles/article-prose-link";
-import { ArticleImageLightbox } from "@/components/articles/article-image-lightbox";
 import { PASTEL } from "@/data/pastel-palette";
 
 const R2 = "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev";
-const HERO_IMG = `${R2}/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.png`;
+const HERO_IMG = "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20Inspire%20You.png";
 
 /* ── HERO IMAGE ── */
 function HeroImage() {
   return (
     <figure className="mb-12 overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] sm:-mx-8 sm:p-4 lg:-mx-16" style={{ backgroundColor: "#0e0c09" }}>
-      <ArticleImageLightbox src={HERO_IMG} alt="24 Beautiful Physics Poster Designs — three glowing posters on a dark gallery wall">
-        <div className="w-full rounded-xl bg-black/20 p-1 sm:p-1.5">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={HERO_IMG}
-            alt="24 Beautiful Physics Poster Designs — three glowing posters on a dark gallery wall"
-            className="mx-auto block h-auto w-full rounded-lg object-contain transition-transform duration-500 group-hover:scale-[1.01]"
-            loading="eager"
-            decoding="async"
-            draggable={false}
-          />
-        </div>
-      </ArticleImageLightbox>
+      <div className="w-full rounded-xl bg-black/20 p-1 sm:p-1.5">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={HERO_IMG}
+          alt="24 Beautiful Physics Poster Designs — three glowing posters on a dark gallery wall"
+          className="mx-auto block h-auto w-full rounded-lg object-contain"
+          loading="eager"
+          decoding="async"
+          draggable={false}
+        />
+      </div>
     </figure>
   );
 }
@@ -43,19 +40,17 @@ function PosterImage({
       className="my-7 overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] sm:-mx-8 sm:p-4 lg:-mx-16"
       style={{ backgroundColor: PASTEL[pastel] }}
     >
-      <ArticleImageLightbox src={src} alt={alt}>
-        <div className="w-full rounded-xl bg-white/30 p-1 sm:p-1.5">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={src}
-            alt={alt}
-            className="mx-auto block h-auto w-full rounded-lg object-contain transition-transform duration-500 group-hover:scale-[1.01]"
-            loading={priority ? "eager" : "lazy"}
-            decoding="async"
-            draggable={false}
-          />
-        </div>
-      </ArticleImageLightbox>
+      <div className="w-full rounded-xl bg-white/30 p-1 sm:p-1.5">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={alt}
+          className="mx-auto block h-auto w-full rounded-lg object-contain"
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
+          draggable={false}
+        />
+      </div>
     </figure>
   );
 }
@@ -406,7 +401,11 @@ export function PhysicsPostersArticle() {
             Special relativity&rsquo;s sequel, ten years later. This time Einstein explained
             gravity: large masses bend space-time, and even light follows that curvature. Black
             holes, gravitational waves — all were predictions of general relativity before they were
-            observations.
+            observations. You can watch the theory being assembled in real time in Einstein&rsquo;s{" "}
+            <ArticleProseLink href="/articles/zurich-notebook">
+              Zurich Notebook
+            </ArticleProseLink>
+            , where the field equations emerge across dozens of pages of trial and error.
           </p>
         </PosterEntry>
 
@@ -437,7 +436,12 @@ export function PhysicsPostersArticle() {
           <p>
             The law of inertia: an object in motion stays in motion, a stationary object stays still
             — unless a force intervenes. An object launched into space, with nothing ahead of it,
-            continues forever.
+            continues forever. Feynman argued in his{" "}
+            <ArticleProseLink href="/articles/feynman-math-education">
+              lectures on physics education
+            </ArticleProseLink>{" "}
+            that this law is far stranger than it sounds — it took Newton to notice that rest and
+            constant motion are the same state.
           </p>
         </PosterEntry>
 

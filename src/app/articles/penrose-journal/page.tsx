@@ -1,25 +1,100 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleReadMore } from "@/components/articles/article-read-more";
+import { ArticleProseLink } from "@/components/articles/article-prose-link";
 import { SiteHeader } from "@/components/home/site-header";
 
+const CANONICAL = "https://abakcus.com/articles/penrose-journal";
+const OG_IMAGE =
+  "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Roger-Penroses-Beautiful-Journal-1024x678.jpg.webp";
+
 export const metadata: Metadata = {
-  title: "Inside Roger Penrose's Notebook",
+  title: "Inside Roger Penrose's Notebook | Abakcus",
   description:
     "Roger Penrose's personal notebooks contain handwritten pages of spinor algebra, twistor diagrams, Penrose tiling prototypes, and Cayley algebra — alongside programs for a 1978 calculator.",
+  authors: [{ name: "Ali Kaya" }],
+  alternates: { canonical: CANONICAL },
+  keywords: [
+    "Roger Penrose",
+    "Penrose notebook",
+    "Penrose tiling",
+    "spinor algebra",
+    "twistor theory",
+    "Cayley algebra",
+    "Penrose graphical notation",
+    "mathematical physics notebook",
+    "aperiodic tiling",
+  ],
+  openGraph: {
+    title: "Inside Roger Penrose's Notebook",
+    description:
+      "Handwritten pages of spinor algebra, twistor diagrams, Penrose tiling prototypes, and Cayley algebra — alongside programs for a 1978 pocket calculator.",
+    url: CANONICAL,
+    siteName: "Abakcus",
+    type: "article",
+    publishedTime: "2026-04-15",
+    locale: "en_US",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1024,
+        height: 678,
+        alt: "Roger Penrose's notebook — hyperbolic circle diagrams and Commodore P50 calculator code",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Inside Roger Penrose's Notebook",
+    description:
+      "Spinor algebra, Penrose tilings, Cayley algebra, and a Commodore P50 calculator — four spreads from Roger Penrose's working notebooks.",
+    images: [OG_IMAGE],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Inside Roger Penrose's Notebook",
+  description:
+    "Roger Penrose's personal notebooks contain handwritten pages of spinor algebra, twistor diagrams, Penrose tiling prototypes, and Cayley algebra — alongside programs for a 1978 calculator.",
+  datePublished: "2026-04-15",
+  dateModified: "2026-04-15",
+  author: {
+    "@type": "Person",
+    name: "Ali Kaya",
+    url: "https://abakcus.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Abakcus",
+    url: "https://abakcus.com",
+  },
+  image: OG_IMAGE,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": CANONICAL,
+  },
+  keywords:
+    "Roger Penrose, Penrose notebook, Penrose tiling, spinor algebra, twistor theory, Cayley algebra",
+  articleSection: "Mathematics · Physics",
 };
 
 export default function PenroseJournalPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
       <div className="uc-page-bg pb-4">
         <div className="mx-auto max-w-[var(--page-max)] px-[var(--page-pad)] pt-6">
           <Link
-            href="/"
+            href="/articles"
             className="inline-flex text-sm text-[var(--ink-muted)] underline-offset-4 hover:underline"
           >
-            ← Back to home
+            ← All articles
           </Link>
         </div>
 
@@ -172,9 +247,9 @@ export default function PenroseJournalPage() {
               <p className="font-sans text-xs text-[var(--ink-muted)] leading-relaxed">
                 Penrose's work on aperiodic tilings is a cornerstone of mathematical physics. See
                 also:{" "}
-                <Link href="/articles/unit-circle" className="text-[var(--ink)] underline">
+                <ArticleProseLink href="/articles/unit-circle">
                   Unit Circle
-                </Link>{" "}
+                </ArticleProseLink>{" "}
                 for more on geometric visualization.
               </p>
             </div>

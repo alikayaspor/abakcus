@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { PatreonNudgeDialog } from "@/components/site/patreon-nudge-dialog";
 import { DM_Mono, DM_Sans, EB_Garamond, Fraunces } from "next/font/google";
 import "./globals.css";
 
@@ -62,6 +63,7 @@ export default function RootLayout({
     >
       <body className="min-h-full overflow-x-hidden bg-[var(--surface)] pb-[env(safe-area-inset-bottom,0px)] font-sans text-[var(--ink)] antialiased">
         {children}
+        <PatreonNudgeDialog />
       </body>
     </html>
   );

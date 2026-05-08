@@ -17,7 +17,7 @@ export type FeaturedPick = {
 export const featuredPicks: FeaturedPick[] = [
   {
     slug: "pi-books-list",
-    title: "Six books that taught π how to misbehave",
+    title: "Six Books That Taught π How to Misbehave",
     dek: "History, obsession, category theory — and Sir Cumference.",
     tag: "Book list",
     href: "/book-lists/pi",
@@ -46,6 +46,16 @@ export const featuredPicks: FeaturedPick[] = [
     pageColor: PASTEL.peach,
   },
   {
+    slug: "24-beautiful-physics-poster-designs-that-inspire-you",
+    title: "24 Beautiful Physics Poster Designs That Inspire You",
+    dek: "String theory, quantum mechanics, entropy — 24 poster designs that turn physics concepts into beautiful objects worth hanging on a wall.",
+    tag: "Physics · Design",
+    href: "/24-beautiful-physics-poster-designs-that-inspire-you",
+    image:
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.png",
+    pageColor: PASTEL.lavender,
+  },
+  {
     slug: "taming-the-garden",
     title: "A tree on a barge, crossing the Black Sea",
     dek: "Salomé Jashi's documentary on a billionaire who collected ancient trees — uprooted, shipped, replanted.",
@@ -63,7 +73,7 @@ export const featuredPicks: FeaturedPick[] = [
     href: "/articles/alejandro-guijarro-momentum",
     image:
       "https://pub-98e13baa8ca84d53b2e3ee903a8fce62.r2.dev/Alejandro%20Guijarro%20Physics%20Blackboards%201.jpg",
-    pageColor: PASTEL.lime,
+    pageColor: PASTEL.sky,
   },
   {
     slug: "erich-dieckmann-metal-tube-chair",
@@ -73,7 +83,7 @@ export const featuredPicks: FeaturedPick[] = [
     href: "/articles/erich-dieckmann-metal-tube-chair",
     image:
       "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Metal%20Tube%20Chair%20by%20Erich%20Dieckmann.png",
-    pageColor: PASTEL.lime,
+    pageColor: PASTEL.rose,
   },
   {
     slug: "oliver-byrne-euclid",

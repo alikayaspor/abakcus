@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { booksFeatured, booksShelf } from "@/data/books-picks";
 
-const allBooks = [booksFeatured, ...booksShelf];
+const allBooks = [booksFeatured, ...booksShelf]
+  .sort((a, b) => {
+    const aIsList = a.href.startsWith("/book-lists/");
+    const bIsList = b.href.startsWith("/book-lists/");
+    if (aIsList !== bIsList) return aIsList ? -1 : 1;
+    return Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
+  })
+  .slice(0, 8);
 
 function ShelfCard({
   title,

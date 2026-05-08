@@ -3,23 +3,98 @@ import Link from "next/link";
 import { ArticleReadMore } from "@/components/articles/article-read-more";
 import { SiteHeader } from "@/components/home/site-header";
 
+const CANONICAL = "https://abakcus.com/articles/feynman-technique";
+const OG_IMAGE =
+  "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Richard%20Feynman.webp";
+
 export const metadata: Metadata = {
-  title: "The Feynman Technique: A Complete Guide",
+  title: "The Feynman Technique: A Complete Guide — Abakcus",
   description:
     "A complete guide to the Feynman Technique — the four-step learning method developed by Nobel Prize-winning physicist Richard Feynman. Learn how it works, why it works, and how to apply it to anything.",
+  authors: [{ name: "Ali Kaya" }],
+  keywords: [
+    "Feynman Technique",
+    "Feynman learning method",
+    "how to learn anything",
+    "active recall",
+    "Richard Feynman",
+    "study techniques",
+    "four step learning",
+    "teach to learn",
+    "gap identification learning",
+    "comprehension over memorization",
+  ],
+  alternates: { canonical: CANONICAL },
+  openGraph: {
+    title: "The Feynman Technique: A Complete Guide",
+    description:
+      "A complete guide to the four-step learning method developed by Richard Feynman — how it works, why it works, and how to apply it to anything.",
+    url: CANONICAL,
+    siteName: "Abakcus",
+    type: "article",
+    publishedTime: "2026-04-18",
+    locale: "en_US",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 800,
+        alt: "Richard Feynman — the physicist behind the Feynman Technique",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Feynman Technique: A Complete Guide",
+    description:
+      "A complete guide to the four-step learning method developed by Richard Feynman — how it works, why it works, and how to apply it to anything.",
+    images: [OG_IMAGE],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "The Feynman Technique: A Complete Guide",
+  description:
+    "A complete guide to the Feynman Technique — the four-step learning method that uses teaching as the deepest form of understanding.",
+  datePublished: "2026-04-18",
+  dateModified: "2026-04-18",
+  author: {
+    "@type": "Person",
+    name: "Ali Kaya",
+    url: "https://abakcus.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Abakcus",
+    url: "https://abakcus.com",
+  },
+  image: OG_IMAGE,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": CANONICAL,
+  },
+  keywords:
+    "Feynman Technique, learning method, active recall, Richard Feynman, study techniques",
+  articleSection: "Learning · Cognition",
 };
 
 export default function FeynmanTechniquePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
       <div className="uc-page-bg pb-4">
         <div className="mx-auto max-w-[var(--page-max)] px-[var(--page-pad)] pt-6">
           <Link
-            href="/"
+            href="/articles"
             className="inline-flex text-sm text-[var(--ink-muted)] underline-offset-4 hover:underline"
           >
-            ← Back to home
+            ← All articles
           </Link>
         </div>
 

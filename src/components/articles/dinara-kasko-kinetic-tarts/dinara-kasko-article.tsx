@@ -202,6 +202,10 @@ export function DinaraKaskoArticle() {
             <ArticleProseLink href="/books/pasta-by-design">
               George Legendre&apos;s parametric equations for 92 pasta shapes
             </ArticleProseLink>
+            , to{" "}
+            <ArticleProseLink href="/gadgets/chocolate-planets">
+              Martin&apos;s Chocolatier&apos;s nine-planet solar system in Belgian chocolate
+            </ArticleProseLink>
             . Here the geometry is more immediate: you can see it, then you eat
             it, then it is gone.
           </p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { LogoImage } from "@/components/logo-image";
+import { SearchModal } from "@/components/home/search-modal";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -71,6 +72,7 @@ function IconClose({ className }: { className?: string }) {
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   useEffect(() => {
     if (menuOpen) {
@@ -98,8 +100,9 @@ export function SiteHeader() {
         <div className="relative mx-auto flex h-[3.75rem] max-w-[var(--page-max)] items-center pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] md:h-[4.5rem] md:px-8">
           <button
             type="button"
+            onClick={() => setSearchOpen(true)}
             className="flex h-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full text-[var(--ink)] transition-colors hover:bg-[var(--tonal)] active:bg-[var(--tonal)]"
-            aria-label="Search (coming soon)"
+            aria-label="Search"
           >
             <IconSearch />
           </button>
@@ -123,6 +126,8 @@ export function SiteHeader() {
           </button>
         </div>
       </header>
+
+      {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
 
       {menuOpen ? (
         <>

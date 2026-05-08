@@ -2,8 +2,6 @@ import type { ReactNode } from "react";
 import { ArticleImageLightbox } from "@/components/articles/article-image-lightbox";
 import { ArticleProseLink } from "@/components/articles/article-prose-link";
 import { UnitCircleSectionReveal } from "@/components/articles/unit-circle/unit-circle-section-reveal";
-import { PASTEL } from "@/data/pastel-palette";
-
 const R2 = "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev";
 const IMG_EXAM    = `${R2}/MIT%27s%201869%20algebra%20entrance%20exam.png`;
 const IMG_ANS_1   = `${R2}/MIT%E2%80%99s%20algebra%20entrance%20exam%20answers.jpg`;
@@ -55,7 +53,7 @@ function ExamFigure({
   return (
     <figure
       className="my-10 overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] sm:p-4"
-      style={{ backgroundColor: PASTEL.peach }}
+      style={{ backgroundColor: "#f5c53a" }}
     >
       <ArticleImageLightbox src={src} alt={alt} caption={caption}>
         <div className="w-full rounded-xl bg-white/60 p-1 sm:p-1.5">
@@ -105,8 +103,8 @@ function ThenNowInfographic() {
     },
   ];
   return (
-    <figure className="my-8 overflow-hidden rounded-sm border border-[#d8d4cc] bg-[#f5f0e8] shadow-[var(--shadow-soft)]">
-      <div className="grid grid-cols-2 divide-x divide-y divide-[#d8d4cc] md:grid-cols-4 md:divide-y-0">
+    <figure className="my-8 overflow-hidden rounded-sm border border-[#b8c96a] bg-[#c9d87c] shadow-[var(--shadow-soft)]">
+      <div className="grid grid-cols-2 divide-x divide-y divide-[#b8c96a] md:grid-cols-4 md:divide-y-0">
         {cols.map((c) => (
           <div key={c.label} className="flex flex-col gap-2 px-4 py-5 text-left">
             <p className="font-mono text-[0.5rem] font-normal uppercase leading-snug tracking-[0.14em] text-[var(--ink-muted)]">
@@ -138,8 +136,8 @@ export function Mit1869Article() {
             Mathematics · History · June 7, 1869
           </p>
           <h1 className="font-serif text-[clamp(2rem,6vw,3.1rem)] font-normal leading-[1.1] tracking-[-0.02em] text-[var(--ink)]">
-            MIT&apos;s 1869 algebra entrance exam — seven questions that
-            haven&apos;t changed
+            MIT&apos;s 1869 Algebra Entrance Exam — Seven Questions That
+            Haven&apos;t Changed
           </h1>
           <p className="mx-auto mt-6 max-w-[34rem] border-l-2 border-[var(--ink)] pl-5 text-left text-lg italic leading-relaxed text-[var(--ink-muted)] sm:text-xl">
             Seven questions, June 7, 1869. Find the value when e = 8, simplify
@@ -162,21 +160,21 @@ export function Mit1869Article() {
 
           <ExamFigure
             src={IMG_EXAM}
-            alt="MIT's 1869 algebra entrance exam — seven questions dated June 7, 1869"
+            alt="MIT's 1869 Algebra Entrance Exam — seven questions dated June 7, 1869"
             caption="MIT's 1869 algebra entrance exam. Institute Archives & Special Collections."
             priority
           />
 
           <section data-uc-section className="mt-14">
             <SectionHead title="The exam is real" />
-            <p className="text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               You can find it in the MIT Institute Archives &amp; Special
               Collections. Seven questions, one page, dated June 7, 1869. It
               covers the MIT entrance exam for the academic year 1869–1870 —
               the first year the institute required a formal qualifying test at
               all. Before that, admission to MIT was essentially open.
             </p>
-            <p className="mt-4 text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="mt-4 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               The school opened in 1865, just after the Civil War, with 15
               students. Tuition was $100 for the year. The &ldquo;conditions
               for admission&rdquo; in the 1865 catalogue required only that
@@ -190,7 +188,7 @@ export function Mit1869Article() {
 
           <section data-uc-section className="mt-14">
             <SectionHead title="Why no exam until 1869" />
-            <p className="text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               MIT was four years old and desperate for tuition revenue. The
               object of the test wasn&apos;t to whittle down a massive applicant
               pool — it was simply to ensure incoming students could handle the
@@ -199,14 +197,13 @@ export function Mit1869Article() {
               withdraw them from the school.&rdquo; The exam was a floor, not a
               filter.
             </p>
-            <p className="mt-4 text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="mt-4 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               By 1869, the French requirement and the handwriting requirement had
               both been dropped. Algebra had been added. The MIT Corporation
               decided that incoming students should sit formal qualifying exams
               in English, Geometry, Arithmetic, and Algebra. The algebra section
-              is what went viral on Reddit in 2024, accumulating over 37,000
-              upvotes and 1,800 comments — mostly people marvelling at how
-              straightforward it looks.
+              is the section that caught people's attention in 2024 — mostly
+              marvelling at how straightforward it looks.
             </p>
 
             <AsideNote title="The school in 1869">
@@ -220,7 +217,7 @@ export function Mit1869Article() {
 
           <section data-uc-section className="mt-14">
             <SectionHead title="The seven questions" />
-            <p className="text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               All seven questions are what any contemporary high school student
               would recognise as standard algebra. Question 1 substitutes a
               value and evaluates an expression with roots — the kind of
@@ -233,7 +230,7 @@ export function Mit1869Article() {
               multiplication and division. Question 4 reduces a fraction with
               variable terms. Questions 6 and 7 are equations to solve.
             </p>
-            <p className="mt-4 text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="mt-4 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               Question 7 — &ldquo;Solve 7x − 5y = 24, 4x − 3y = 11&rdquo; — is
               a two-variable system of linear equations. It appears in
               essentially the same form in every algebra textbook currently in
@@ -251,7 +248,7 @@ export function Mit1869Article() {
 
           <section data-uc-section className="mt-14">
             <SectionHead title="The answers, in 19th-century handwriting" />
-            <p className="text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               The MIT Archives note that the answer sheet was completed by a
               20th-century person and &ldquo;won&apos;t always match those that
               might have been given by 19th century applicants.&rdquo; This is a
@@ -259,7 +256,7 @@ export function Mit1869Article() {
               1869 applicants. We have the questions, but not the answers that
               passed or failed. The archive is reconstructed.
             </p>
-            <p className="mt-4 text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="mt-4 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               The handwriting on the answer sheet is elegant and deliberate in
               a way that fills the page differently from modern working — tighter
               spacing, the algebraic notation slightly different in style. But
@@ -282,7 +279,7 @@ export function Mit1869Article() {
           <section data-uc-section className="mt-14">
             <SectionHead title="Then vs. now — what actually changed" />
             <ThenNowInfographic />
-            <p className="text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               The exam wasn&apos;t designed to find the best students in the
               country. It was designed to find students who wouldn&apos;t fail
               out. The bar was: can you handle this? Not: are you one of the top
@@ -295,15 +292,15 @@ export function Mit1869Article() {
           </section>
 
           <section data-uc-section className="mt-14">
-            <SectionHead title="The Reddit reaction, and what it missed" />
-            <p className="text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
-              When the exam surfaced on Reddit in late 2024, the most common
-              response was &ldquo;I could have gotten into MIT in 1870.&rdquo; A
-              few commenters pushed back: this was only the algebra section; the
-              full exam included English, Geometry, and Arithmetic too; and there
-              were no calculators, so everything was done by hand.
+            <SectionHead title="The reaction, and what it missed" />
+            <p className="font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
+              When the exam resurfaced in 2024, the most common
+              response was &ldquo;I could have gotten into MIT in 1870.&rdquo;
+              But this was only the algebra section; the full exam included
+              English, Geometry, and Arithmetic too; and there were no
+              calculators, so everything was done by hand.
             </p>
-            <p className="mt-4 text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="mt-4 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               One observation that landed: the questions were designed to require
               almost no calculation — they test algebraic manipulation, not
               arithmetic fluency. That&apos;s a deliberate choice that still
@@ -318,7 +315,7 @@ export function Mit1869Article() {
               entrance requirement. And 157 years later, it still is.
             </PullQuote>
 
-            <p className="text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               A student sitting the 1869 MIT entrance exam today would need no
               explanation of what any question is asking. The notation is
               slightly archaic, the square root symbol is written differently,
@@ -331,7 +328,7 @@ export function Mit1869Article() {
               , a book that still teaches the same geometry Euclid wrote. The
               medium ages. The mathematics doesn&apos;t.
             </p>
-            <p className="mt-4 text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="mt-4 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               In 1897, Indiana&apos;s legislature tried to make the mathematics
               comply with legislation instead. The{" "}
               <ArticleProseLink href="/articles/indiana-pi-bill">
@@ -342,7 +339,7 @@ export function Mit1869Article() {
               and everything else — admissions, tuition, selectivity — arranged
               around it.
             </p>
-            <p className="mt-4 text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
+            <p className="mt-4 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
               What changed is who gets to take the test, how many people apply,
               and what the test is used to decide. The questions are the same.
               The exam is completely different.

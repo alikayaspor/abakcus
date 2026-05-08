@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleReadMore } from "@/components/articles/article-read-more";
+import { ArticleProseLink } from "@/components/articles/article-prose-link";
 import { SiteHeader } from "@/components/home/site-header";
 
+const CANONICAL =
+  "https://abakcus.com/articles/erich-dieckmann-metal-tube-chair";
+const OG_IMAGE =
+  "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Metal%20Tube%20Chair%20by%20Erich%20Dieckmann.png";
+
 export const metadata: Metadata = {
-  title: "Drawing a Chair 64 Times: Erich Dieckmann and the Geometry of Sitting",
+  title: "Drawing a Chair 64 Times: Erich Dieckmann and the Bauhaus | Abakcus",
   description:
     "Erich Dieckmann drew the same chair 64 times. Not out of obsession — out of method. Each iteration stripped away one more assumption about what a chair has to be.",
+  authors: [{ name: "Ali Kaya" }],
+  alternates: { canonical: CANONICAL },
   keywords: [
     "Erich Dieckmann",
     "Möbelbau 1931",
@@ -20,34 +28,74 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Drawing a Chair 64 Times: Erich Dieckmann and the Geometry of Sitting",
     description:
-      "Erich Dieckmann drew the same chair 64 times. Not out of obsession — out of method.",
+      "Erich Dieckmann drew the same chair 64 times. Not out of obsession — out of method. Each iteration stripped away one more assumption about what a chair has to be.",
+    url: CANONICAL,
+    siteName: "Abakcus",
     type: "article",
+    publishedTime: "2026-05-02",
+    locale: "en_US",
     images: [
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Metal%20Tube%20Chair%20by%20Erich%20Dieckmann.png",
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 800,
+        alt: "Erich Dieckmann — 64 tubular steel chair profile variations from Möbelbau, 1931",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Drawing a Chair 64 Times: Erich Dieckmann and the Geometry of Sitting",
     description:
-      "Erich Dieckmann drew the same chair 64 times. Not out of obsession — out of method.",
-    images: [
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Metal%20Tube%20Chair%20by%20Erich%20Dieckmann.png",
-    ],
+      "Erich Dieckmann drew the same chair 64 times. Not out of obsession — out of method. Each iteration stripped away one more assumption about what a chair has to be.",
+    images: [OG_IMAGE],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "Drawing a Chair 64 Times: Erich Dieckmann and the Geometry of Sitting",
+  description:
+    "Erich Dieckmann drew the same chair 64 times. Not out of obsession — out of method. Each iteration stripped away one more assumption about what a chair has to be.",
+  datePublished: "2026-05-02",
+  dateModified: "2026-05-02",
+  author: {
+    "@type": "Person",
+    name: "Ali Kaya",
+    url: "https://abakcus.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Abakcus",
+    url: "https://abakcus.com",
+  },
+  image: OG_IMAGE,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": CANONICAL,
+  },
+  keywords:
+    "Erich Dieckmann, Möbelbau 1931, Bauhaus furniture design, tubular steel chair, morphological matrix, design research",
+  articleSection: "Design · Bauhaus",
 };
 
 export default function ErichDieckmannPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
       <div className="uc-page-bg pb-4">
         <div className="mx-auto max-w-[var(--page-max)] px-[var(--page-pad)] pt-6">
           <Link
-            href="/"
+            href="/articles"
             className="inline-flex text-sm text-[var(--ink-muted)] underline-offset-4 hover:underline"
           >
-            ← Back to home
+            ← All articles
           </Link>
         </div>
 
@@ -224,14 +272,9 @@ export default function ErichDieckmannPage() {
 
             <p className="mb-6 text-base leading-relaxed text-[var(--ink)] sm:text-lg">
               Dieckmann&apos;s chart is, at its core, an exploration of what happens when you take that possibility seriously from the very beginning of the design process. The top rows ask: what if we built in metal the way we build in wood? The bottom rows ask: what if we didn&apos;t? The same instinct drives{" "}
-              <Link
-                href="/articles/pringles"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="article-euclid-link"
-              >
+              <ArticleProseLink href="/articles/pringles">
                 hyperbolic paraboloid geometry in industrial design
-              </Link>
+              </ArticleProseLink>
               {" "}— the form arises not from aesthetics but from the structural logic of the material itself.
             </p>
 
@@ -261,14 +304,9 @@ export default function ErichDieckmannPage() {
 
             <p className="mb-6 text-base leading-relaxed text-[var(--ink)] sm:text-lg">
               Most designers, encountering a brief for a tubular steel chair, would produce several sketches and refine the most promising. Dieckmann produced 64. Not because he was indecisive — because he understood that the only way to know where you are in a design space is to have mapped it first. It is the same logic behind{" "}
-              <Link
-                href="/articles/specimens-fancy-turning"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="article-euclid-link"
-              >
+              <ArticleProseLink href="/articles/specimens-fancy-turning">
                 Victorian ornamental turning
-              </Link>
+              </ArticleProseLink>
               : an exhaustive systematic traversal of form, driven not by taste but by method.
             </p>
           </section>
@@ -285,14 +323,9 @@ export default function ErichDieckmannPage() {
 
             <p className="mb-6 text-base leading-relaxed text-[var(--ink)] sm:text-lg">
               It is also a quiet rebuke to the dominant Bauhaus image of furniture as pure geometry: the front view, the orthogonal projection, the plan. Dieckmann is saying that a chair&apos;s personality — its hospitality or hostility, its invitation to rest or its demand for alertness — is encoded in the view most design drawings omit. The side. The profile. The thing you see when a chair has been turned to face away from you. The same principle governs{" "}
-              <Link
-                href="/articles/fibonacci-shelf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="article-euclid-link"
-              >
+              <ArticleProseLink href="/articles/fibonacci-shelf">
                 furniture built on mathematical sequences
-              </Link>
+              </ArticleProseLink>
               : the proportions that matter most are rarely the ones you notice first.
             </p>
 

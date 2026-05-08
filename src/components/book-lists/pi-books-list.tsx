@@ -119,9 +119,14 @@ function BookEntry({ book, priority }: { book: PiBookEntry; priority: boolean })
               href={book.amazonUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="article-euclid-link mt-3 text-center text-sm font-medium sm:text-left"
+              className="mt-3 flex items-center justify-center gap-1.5 rounded-lg border border-[#b8c96a] bg-[#c9d87c] px-3 py-2 font-sans text-[0.72rem] font-semibold tracking-[0.04em] text-[#3a4a12] shadow-[0_1px_3px_rgba(140,160,40,0.15)] transition-all duration-200 hover:bg-[#bdd070] hover:border-[#aabe58] hover:shadow-[0_3px_10px_rgba(140,160,40,0.25)] hover:-translate-y-px active:translate-y-0 active:shadow-none"
             >
-              Amazon
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="opacity-60">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Get it on Amazon
             </a>
           </div>
 

@@ -13,6 +13,26 @@ export type GadgetPick = {
 
 /** Placeholder “continue reading” style rows — gadgets & gear */
 export const gadgetsPicks: GadgetPick[] = [
+  {
+    slug: "bambu-lab-p2s",
+    title: "Bambu Lab P2S",
+    dek: "Platonic solids, Fibonacci spirals, bridge load tests. The printer that makes abstract math something a child can hold.",
+    readPercent: 100,
+    href: "/gadgets/bambu-lab-p2s",
+    image:
+      "https://pub-f821ec2a41964e44873680b9d87ddf19.r2.dev/Bambu%20Lab%20P2S.jpg",
+    pageColor: PASTEL.peach,
+  },
+  {
+    slug: "chocolate-planets",
+    title: "Martin's Chocolatier Chocolate Planets",
+    dek: "Nine handmade Belgian truffles. Eight planets plus the Sun. Zero Pluto.",
+    readPercent: 100,
+    href: "/gadgets/chocolate-planets",
+    image:
+      "https://pub-f821ec2a41964e44873680b9d87ddf19.r2.dev/Martins%20Chocolatier%20Luxury%20Chocolate%20Planets.webp",
+    pageColor: PASTEL.lavender,
+  },
   {    slug: "xtool-f1-ultra",
     title: "xTool F1 Ultra",
     dek: "Two lasers, one desk. Fiber for metal, diode for wood — both at research-grade precision.",
@@ -31,54 +51,5 @@ export const gadgetsPicks: GadgetPick[] = [
     image:
       "https://pub-f821ec2a41964e44873680b9d87ddf19.r2.dev/Hagoromo%20Chalk.jpg",
     pageColor: PASTEL.lime,
-  },
-  {    slug: "headphones",
-    title: "Sound that stays put",
-    dek: "Wireless cans for deep work and long flights",
-    readPercent: 37,
-    href: "/gadgets",
-    image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=80",
-    pageColor: PASTEL.lime,
-  },
-  {
-    slug: "keyboard",
-    title: "Quiet desk",
-    dek: "Mechanical keys that still feel like a typewriter",
-    readPercent: 82,
-    href: "/gadgets",
-    image:
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=900&q=80",
-    pageColor: PASTEL.sky,
-  },
-  {
-    slug: "e-reader",
-    title: "One pocket library",
-    dek: "E-ink that reads like paper in any light",
-    readPercent: 9,
-    href: "/gadgets",
-    image:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=900&q=80",
-    pageColor: PASTEL.peach,
-  },
-  {
-    slug: "camera",
-    title: "Pocket frame",
-    dek: "A compact camera that still loves low light",
-    readPercent: 88,
-    href: "/gadgets",
-    image:
-      "https://images.unsplash.com/photo-1526170375885-4d8ecf77bf99?w=900&q=80",
-    pageColor: PASTEL.rose,
-  },
-  {
-    slug: "watch",
-    title: "Time without noise",
-    dek: "A watch that nudges, never shouts",
-    readPercent: 45,
-    href: "/gadgets",
-    image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80",
-    pageColor: PASTEL.lavender,
   },
 ];

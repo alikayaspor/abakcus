@@ -28,7 +28,7 @@ const R2 = "https://pub-5aa87426ad334d0495bf29d914b5ce1b.r2.dev";
 
 export const piBooksListHero = {
   kicker: "Book list — six entries on one number",
-  title: "Six books that taught π how to misbehave",
+  title: "Six Books That Taught π How to Misbehave",
   sub:
     "Pi is irrational. It is transcendental. Its digits never repeat and no formula closes it down. These six books approach it the same way — from oblique angles, with different tools, refusing to settle for the tidy version. None of them are textbooks. All of them are worth your time.",
 };

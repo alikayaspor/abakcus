@@ -1,5 +1,4 @@
 import { ArticleProseLink } from "@/components/articles/article-prose-link";
-import { ArticleImageLightbox } from "@/components/articles/article-image-lightbox";
 import { PASTEL } from "@/data/pastel-palette";
 
 const R2 = "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev";
@@ -25,22 +24,17 @@ function HeroImage() {
       className="mb-12 overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] sm:-mx-8 sm:p-4 lg:-mx-16"
       style={{ backgroundColor: "#f5f0e5" }}
     >
-      <ArticleImageLightbox
-        src={HERO_IMG}
-        alt="Rafael Araujo's geometrical drawings — golden ratio spirals and helix constructions"
-      >
-        <div className="w-full rounded-xl bg-white/30 p-1 sm:p-1.5">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={HERO_IMG}
-            alt="Rafael Araujo's geometrical drawings — golden ratio spirals and helix constructions"
-            className="mx-auto block h-auto w-full rounded-lg object-contain transition-transform duration-500 group-hover:scale-[1.01]"
-            loading="eager"
-            decoding="async"
-            draggable={false}
-          />
-        </div>
-      </ArticleImageLightbox>
+      <div className="w-full rounded-xl bg-white/30 p-1 sm:p-1.5">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={HERO_IMG}
+          alt="Rafael Araujo's geometrical drawings — golden ratio spirals and helix constructions"
+          className="mx-auto block h-auto w-full rounded-lg object-contain"
+          loading="eager"
+          decoding="async"
+          draggable={false}
+        />
+      </div>
     </figure>
   );
 }
@@ -62,19 +56,17 @@ function DrawingImage({
       className="my-7 overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] sm:-mx-8 sm:p-4 lg:-mx-16"
       style={{ backgroundColor: PASTEL[pastel] }}
     >
-      <ArticleImageLightbox src={src} alt={alt}>
-        <div className="w-full rounded-xl bg-white/30 p-1 sm:p-1.5">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={src}
-            alt={alt}
-            className="mx-auto block h-auto w-full rounded-lg object-contain transition-transform duration-500 group-hover:scale-[1.01]"
-            loading={priority ? "eager" : "lazy"}
-            decoding="async"
-            draggable={false}
-          />
-        </div>
-      </ArticleImageLightbox>
+      <div className="w-full rounded-xl bg-white/30 p-1 sm:p-1.5">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={alt}
+          className="mx-auto block h-auto w-full rounded-lg object-contain"
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
+          draggable={false}
+        />
+      </div>
     </figure>
   );
 }
@@ -139,7 +131,8 @@ function FactsRow() {
       {facts.map((f) => (
         <div
           key={f.number}
-          className="rounded-lg border border-[var(--line)] bg-[var(--tonal)] px-4 py-5 text-center"
+          className="rounded-lg border border-[#e8d03a] px-4 py-5 text-center"
+          style={{ backgroundColor: "#ffe566" }}
         >
           <div className="font-serif text-[1.8rem] font-bold leading-none text-[var(--ink)]">
             {f.number}
@@ -189,7 +182,7 @@ function VideoEmbed() {
   return (
     <div className="my-10">
       <p className="mb-3 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.1em] text-[var(--ink-muted)]">
-        Watch — Rafael Araujo at Work
+        TED Talk — Rafael Araujo
       </p>
       <div
         className="overflow-hidden rounded-lg border border-[var(--line)]"
@@ -197,7 +190,7 @@ function VideoEmbed() {
       >
         <iframe
           src="https://www.youtube.com/embed/sxwCBTD-8f8"
-          title="Rafael Araujo: From Chaos to Order"
+          title="Rafael Araujo TED Talk"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           style={{
@@ -211,8 +204,8 @@ function VideoEmbed() {
         />
       </div>
       <p className="mt-3 font-serif text-[0.78rem] italic leading-relaxed text-[var(--ink-muted)]">
-        Watch Araujo build one of his intricate compositions from the very first dot — a meditative
-        process that makes the mathematics visible in real time.
+        Araujo&rsquo;s TED Talk on how he uses the Golden Ratio and pure geometry to recreate the
+        hidden mathematical order of nature — entirely by hand.
       </p>
     </div>
   );
@@ -232,6 +225,18 @@ export function RafaelAraujoArticle() {
           Rafael Araujo&rsquo;s 20+ Mesmerizing{" "}
           <em className="italic">Geometrical Masterpieces</em>
         </h1>
+        <div className="mt-5 inline-flex items-center gap-3 rounded-full border border-[var(--line)] bg-[var(--tonal)] px-4 py-2">
+          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--ink)] font-sans text-[0.6rem] font-bold text-[var(--bg)]">
+            AK
+          </div>
+          <span className="font-sans text-[0.72rem] text-[var(--ink-muted)]">
+            Ali Kaya
+          </span>
+          <span className="h-3 w-px bg-[var(--line)]" />
+          <time dateTime="2026-05-05" className="font-sans text-[0.72rem] text-[var(--ink-muted)]">
+            May 5, 2026
+          </time>
+        </div>
       </header>
 
       {/* ── HERO IMAGE ── */}
@@ -253,7 +258,7 @@ export function RafaelAraujoArticle() {
             href="https://www.rafael-araujo.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--ink)] underline underline-offset-[3px] hover:opacity-70"
+            className="article-euclid-link"
           >
             Rafael Araujo
           </a>{" "}
@@ -294,7 +299,7 @@ export function RafaelAraujoArticle() {
 
       {/* ── PROSE II: NO ROOM FOR ERROR ── */}
       <section className="mb-10 space-y-5 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
-        <h2 className="font-sans text-[1.2rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">
+        <h2 className="font-serif text-[1.2rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">
           No Room for Error
         </h2>
         <p>
@@ -321,7 +326,7 @@ export function RafaelAraujoArticle() {
 
       {/* ── PROSE III: GEOMETRY OF GROWTH ── */}
       <section className="mb-10 space-y-5 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
-        <h2 className="font-sans text-[1.2rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">
+        <h2 className="font-serif text-[1.2rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">
           The Geometry of Growth
         </h2>
         <p>
@@ -358,57 +363,7 @@ export function RafaelAraujoArticle() {
       {/* ── DRAWINGS ── */}
       <div className="space-y-0">
 
-        <DrawingEntry num="01" title="Blue Morpho Double Helix" medium="ink + acrylic on canvas, 2015" imgKey="1" pastelIdx={0} priority>
-          <p>
-            The defining image of Araujo&rsquo;s practice: a Blue Morpho butterfly suspended at the
-            convergence of a double helix. The insect&rsquo;s symmetry is not assumed — it is
-            proved, step by step, by the geometric armature surrounding it.
-          </p>
-        </DrawingEntry>
-
-        <DrawingEntry num="02" title="4 Fibonacci Spirals" medium="common origin, different radius · ink on paper, 2015" imgKey="2" pastelIdx={1}>
-          <p>
-            Four logarithmic spirals sharing a single origin point, each drawn at a different
-            radius. The result looks organic — like a flower or a sea creature. The result is
-            entirely mathematical.
-          </p>
-        </DrawingEntry>
-
-        <DrawingEntry num="03" title="Golden Shell" medium="ink on paper" imgKey="3" pastelIdx={2} />
-
-        <DrawingEntry num="04" title="Slim Cone Double Helix" medium="ink on paper" imgKey="4" pastelIdx={3} />
-
-        <DrawingEntry num="05" title="8 Fibonacci Spirals, Mirror Symmetry" medium="same centre, different radius · ink on paper, 2015" imgKey="5" pastelIdx={4}>
-          <p>
-            Eight spirals radiating from a common centre, mirrored on both axes. Araujo imposes a
-            symmetry that nature itself favors — seen in the seed heads of sunflowers and the
-            arrangement of pine cone scales.
-          </p>
-        </DrawingEntry>
-
-        <DrawingEntry num="06" title="Phyllotaxis Pattern" medium="Fibonacci growth sequence · ink on paper" imgKey="6" pastelIdx={0}>
-          <p>
-            Phyllotaxis is the phenomenon by which plants arrange their leaves, seeds, or florets in
-            Fibonacci patterns. Araujo&rsquo;s hand-plotted version makes the underlying grid
-            explicit — the dots are not decoration, they are data points in a spiral sequence.
-          </p>
-        </DrawingEntry>
-
-        <DrawingEntry num="07" title="Morpho Butterfly Construction" medium="golden spiral skeleton · ink on canvas" imgKey="7" pastelIdx={1} />
-
-        <DrawingEntry num="08" title="Yellow Spikes Shell" medium="ink on paper" imgKey="8" pastelIdx={2} />
-
-        <DrawingEntry num="09" title="The Fibonacci Sequence" medium="acrylic + ink on canvas" imgKey="9" pastelIdx={3}>
-          <p>
-            A torus-like form built from the Fibonacci sequence — the numbers 1, 1, 2, 3, 5, 8, 13
-            mapped onto a three-dimensional geometric object. Araujo&rsquo;s construction lines are
-            left fully visible, turning the arithmetic into architecture.
-          </p>
-        </DrawingEntry>
-
-        <DrawingEntry num="10" title="Geometric Solid Study" medium="pencil and ink on paper" imgKey="11" pastelIdx={4} />
-
-        <DrawingEntry num="11" title="Nautilus Cross Section" medium="ink on paper" imgKey="12" pastelIdx={0}>
+        <DrawingEntry num="01" title="Nautilus Cross Section" medium="ink on paper" imgKey="12" pastelIdx={0} priority>
           <p>
             The chambers of a nautilus shell follow a perfect logarithmic spiral — each one a fixed
             proportion of the last, governed by Phi. Araujo draws the cross-section from the spiral
@@ -416,44 +371,53 @@ export function RafaelAraujoArticle() {
           </p>
         </DrawingEntry>
 
-        <DrawingEntry num="12" title="Golden Dragonfly" medium="golden ratio proportions · ink on canvas" imgKey="123" pastelIdx={1} />
+        <DrawingEntry num="02" title="45 Degrees Cone Shell 2" medium="golden ratio proportions · ink on canvas" imgKey="123" pastelIdx={1} />
 
-        <DrawingEntry num="13" title="Rose Phyllotaxis" medium="Fibonacci petals · ink on paper" imgKey="13" pastelIdx={2} />
+        <DrawingEntry num="03" title="Murex" medium="spiral construction · ink on paper" imgKey="16" pastelIdx={2} />
 
-        <DrawingEntry num="14" title="Butterfly on Helix Cone" medium="ink + acrylic on canvas" imgKey="14" pastelIdx={3} />
+        <DrawingEntry num="04" title="Blue Stripes Shell" medium="ink on paper, 2015" imgKey="5" pastelIdx={3} />
 
-        <DrawingEntry num="15" title="Sunflower Seed Head" medium="Fibonacci dot arrangement · ink on paper" imgKey="15" pastelIdx={4}>
+        <DrawingEntry num="05" title="Semi-Flat Shell" medium="ink + acrylic on canvas" imgKey="17" pastelIdx={4} />
+
+        <DrawingEntry num="06" title="45 Degrees' Shell" medium="growth sequence · ink on paper" imgKey="21" pastelIdx={0} />
+
+        <DrawingEntry num="07" title="Blue Spikes' Shell" medium="ink on paper" imgKey="22" pastelIdx={1} />
+
+        <DrawingEntry num="08" title="Flat Shell" medium="ink on paper" imgKey="8" pastelIdx={2} />
+
+        <DrawingEntry num="09" title="Golden Shell" medium="pencil and ink on paper" imgKey="11" pastelIdx={3} />
+
+        <DrawingEntry num="10" title="Phoebis Triple Helix" medium="ink + acrylic on canvas, 2015" imgKey="1" pastelIdx={4}>
           <p>
-            A sunflower&rsquo;s seed head contains two interlocking families of spirals — typically
-            34 clockwise and 55 counterclockwise — consecutive Fibonacci numbers. Araujo plots each
-            seed position by hand, making visible the arithmetic that a living plant performs
-            unconsciously.
+            The defining image of Araujo&rsquo;s practice: a Phoebis butterfly suspended at the
+            convergence of a triple helix. The insect&rsquo;s symmetry is not assumed — it is
+            proved, step by step, by the geometric armature surrounding it.
           </p>
         </DrawingEntry>
 
-        <DrawingEntry num="16" title="Helix Cone Study" medium="spiral construction · ink on paper" imgKey="16" pastelIdx={0} />
+        <DrawingEntry num="11" title="Slim Cone Double Helix" medium="ink on paper, 2015" imgKey="2" pastelIdx={0}>
+          <p>
+            Monarch butterflies arranged along two interlocking helices inside a cone. The
+            geometry dictates where each insect sits — the spiral is not decorative, it is
+            the structure.
+          </p>
+        </DrawingEntry>
 
-        <DrawingEntry num="17" title="Double Helix Study" medium="ink + acrylic on canvas" imgKey="17" pastelIdx={1} />
+        <DrawingEntry num="12" title="Morpho Sequence 1" medium="ink on paper" imgKey="3" pastelIdx={1} />
 
-        <DrawingEntry num="18" title="Morpho on Elliptic Grid" medium="ink on paper" imgKey="18" pastelIdx={2} />
-
-        <DrawingEntry num="19" title="Conchospiral Construction" medium="ink on canvas" imgKey="19" pastelIdx={3} />
-
-        <DrawingEntry num="20" title="Hummingbird and Fibonacci Arc" medium="ink + acrylic on canvas" imgKey="20" pastelIdx={4} />
-
-        <DrawingEntry num="21" title="Calla Lily Phyllotaxis" medium="growth sequence · ink on paper" imgKey="21" pastelIdx={0} />
-
-        <DrawingEntry num="22" title="Fibonacci Flower Series" medium="ink on paper" imgKey="22" pastelIdx={1} />
-
-        <DrawingEntry num="23" title="Golden Ratio Shell, Plan View" medium="ink on paper" imgKey="24" pastelIdx={2} />
-
-        <DrawingEntry num="24" title="Blue Morpho, Full Wings" medium="golden spiral skeleton · ink on canvas" imgKey="25" pastelIdx={3} />
+        <DrawingEntry num="13" title="Monarch Water Mirror" medium="Fibonacci growth sequence · ink on paper" imgKey="6" pastelIdx={2}>
+          <p>
+            Phyllotaxis is the phenomenon by which plants arrange their leaves, seeds, or florets in
+            Fibonacci patterns. Araujo&rsquo;s hand-plotted version makes the underlying grid
+            explicit — the dots are not decoration, they are data points in a spiral sequence.
+          </p>
+        </DrawingEntry>
 
       </div>
 
       {/* ── PROSE: COLORING BOOK ── */}
       <section className="mt-14 space-y-5 border-t border-[var(--line)] pt-12 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
-        <h2 className="font-sans text-[1.2rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">
+        <h2 className="font-serif text-[1.2rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">
           The Coloring Book That Invites You In
         </h2>
         <p>
@@ -462,7 +426,7 @@ export function RafaelAraujoArticle() {
             href="https://amzn.to/4u8DrdR"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--ink)] underline underline-offset-[3px] hover:opacity-70"
+            className="article-euclid-link"
           >
             <em>Golden Ratio Coloring Book</em>
           </a>{" "}
@@ -485,7 +449,7 @@ export function RafaelAraujoArticle() {
 
       {/* ── CLOSING PROSE ── */}
       <section className="space-y-5 font-serif text-[0.95rem] leading-[1.9] text-[var(--ink)]">
-        <h2 className="font-sans text-[1.2rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">
+        <h2 className="font-serif text-[1.2rem] font-semibold tracking-[-0.01em] text-[var(--ink)]">
           A Spiritual Connection to Nature&rsquo;s Code
         </h2>
         <p>
@@ -507,7 +471,7 @@ export function RafaelAraujoArticle() {
             href="https://www.rafael-araujo.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--ink)] underline underline-offset-[3px] hover:opacity-70"
+            className="article-euclid-link"
           >
             official website
           </a>
@@ -516,7 +480,7 @@ export function RafaelAraujoArticle() {
             href="https://amzn.to/4u8DrdR"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--ink)] underline underline-offset-[3px] hover:opacity-70"
+            className="article-euclid-link"
           >
             Golden Ratio Coloring Book
           </a>

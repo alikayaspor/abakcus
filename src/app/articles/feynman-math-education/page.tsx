@@ -3,10 +3,15 @@ import Link from "next/link";
 import { ArticleReadMore } from "@/components/articles/article-read-more";
 import { SiteHeader } from "@/components/home/site-header";
 
+const CANONICAL = "https://abakcus.com/articles/feynman-math-education";
+const OG_IMAGE =
+  "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/How%20Should%20Math%20Be%20Taught%20to%20Children%3F.webp";
+
 export const metadata: Metadata = {
-  title: "Feynman on How Math Should Be Taught to Children",
+  title: "Feynman on How Math Should Be Taught to Children — Abakcus",
   description:
     "In 1965, Richard Feynman read 500 pounds of math textbooks and wrote the sharpest critique in the history of mathematics education. Sixty years later, the problem remains unsolved.",
+  authors: [{ name: "Ali Kaya" }],
   keywords: [
     "Feynman mathematics education",
     "new math reform 1960s",
@@ -17,13 +22,23 @@ export const metadata: Metadata = {
     "California curriculum committee",
     "Feynman Engineering and Science",
   ],
+  alternates: { canonical: CANONICAL },
   openGraph: {
     title: "Feynman on How Math Should Be Taught to Children",
     description:
       "In 1965, Feynman read 500 pounds of math textbooks and wrote the sharpest critique in the history of mathematics education.",
+    url: CANONICAL,
+    siteName: "Abakcus",
     type: "article",
+    publishedTime: "2026-05-01",
+    locale: "en_US",
     images: [
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/How%20Should%20Math%20Be%20Taught%20to%20Children%3F.webp",
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 800,
+        alt: "How Should Math Be Taught to Children? — Richard Feynman",
+      },
     ],
   },
   twitter: {
@@ -31,23 +46,53 @@ export const metadata: Metadata = {
     title: "Feynman on How Math Should Be Taught to Children",
     description:
       "In 1965, Feynman read 500 pounds of math textbooks and wrote the sharpest critique in the history of mathematics education.",
-    images: [
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/How%20Should%20Math%20Be%20Taught%20to%20Children%3F.webp",
-    ],
+    images: [OG_IMAGE],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Feynman on How Math Should Be Taught to Children",
+  description:
+    "In 1965, Richard Feynman read 500 pounds of math textbooks and wrote the sharpest critique in the history of mathematics education.",
+  datePublished: "2026-05-01",
+  dateModified: "2026-05-01",
+  author: {
+    "@type": "Person",
+    name: "Ali Kaya",
+    url: "https://abakcus.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Abakcus",
+    url: "https://abakcus.com",
+  },
+  image: OG_IMAGE,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": CANONICAL,
+  },
+  keywords:
+    "Feynman mathematics education, how to teach math, new math reform, mathematics curriculum",
+  articleSection: "Mathematics Education",
 };
 
 export default function FeynmanMathEducationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
       <div className="uc-page-bg pb-4">
         <div className="mx-auto max-w-[var(--page-max)] px-[var(--page-pad)] pt-6">
           <Link
-            href="/"
+            href="/articles"
             className="inline-flex text-sm text-[var(--ink-muted)] underline-offset-4 hover:underline"
           >
-            ← Back to home
+            ← All articles
           </Link>
         </div>
 

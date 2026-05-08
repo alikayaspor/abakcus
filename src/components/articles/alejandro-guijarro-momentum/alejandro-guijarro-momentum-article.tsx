@@ -5,26 +5,26 @@ import { PASTEL } from "@/data/pastel-palette";
 const R2 = "https://pub-98e13baa8ca84d53b2e3ee903a8fce62.r2.dev";
 
 const IMAGES = [
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%201.jpg`,  caption: "Momentum — Cambridge, 2011" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%202.jpg`,  caption: "Momentum — Oxford, 2011" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%203.jpg`,  caption: "Momentum — Stanford, 2010" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards.jpg`,      caption: "Momentum — UC Berkeley, 2011" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%205.jpg`,  caption: "Momentum — CERN, Geneva, 2012" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%204.jpg`,  caption: "Momentum — SLAC, Stanford, 2010" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%207.jpg`,  caption: "Momentum — MIT, 2011" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%206.jpg`,  caption: "Momentum — Instituto de Física Corpuscular, Valencia, 2012" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%208.jpg`,  caption: "Momentum — Cambridge II, 2011" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%209.jpg`,  caption: "Momentum — Oxford II, 2011" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2010.jpg`, caption: "Momentum — Berkeley II, 2011" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2011.jpg`, caption: "Momentum — CERN II, 2012" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2012.jpg`, caption: "Momentum — Stanford II, 2010" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2013.jpg`, caption: "Momentum — Cambridge III, 2011" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2014.jpg`, caption: "Momentum — Oxford III, 2011" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2016.jpg`, caption: "Momentum — UC Berkeley III, 2012" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2017.jpg`, caption: "Momentum — CERN III, 2012" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2015.jpg`, caption: "Momentum — MIT II, 2012" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2018.jpg`, caption: "Momentum — Stanford III, 2012" },
-  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2019.jpg`, caption: "Momentum — Series overview, 2012" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%201.jpg`,  caption: "Momentum — Cambridge, 2011",                                        alt: "Alejandro Guijarro Momentum — quantum mechanics blackboard at Cambridge, 2011" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%202.jpg`,  caption: "Momentum — Oxford, 2011",                                           alt: "Alejandro Guijarro Momentum — quantum mechanics blackboard at Oxford, 2011" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%203.jpg`,  caption: "Momentum — Stanford, 2010",                                         alt: "Alejandro Guijarro Momentum — physics blackboard at Stanford, 2010" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards.jpg`,      caption: "Momentum — UC Berkeley, 2011",                                      alt: "Alejandro Guijarro Momentum — quantum mechanics blackboard at UC Berkeley, 2011" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%205.jpg`,  caption: "Momentum — CERN, Geneva, 2012",                                     alt: "Alejandro Guijarro Momentum — physics blackboard at CERN, Geneva, 2012" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%204.jpg`,  caption: "Momentum — SLAC, Stanford, 2010",                                   alt: "Alejandro Guijarro Momentum — blackboard at SLAC National Accelerator Laboratory, Stanford, 2010" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%207.jpg`,  caption: "Momentum — MIT, 2011",                                              alt: "Alejandro Guijarro Momentum — quantum mechanics blackboard at MIT, 2011" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%206.jpg`,  caption: "Momentum — Instituto de Física Corpuscular, Valencia, 2012",        alt: "Alejandro Guijarro Momentum — physics blackboard at Instituto de Física Corpuscular, Valencia, 2012" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%208.jpg`,  caption: "Momentum — Cambridge II, 2011",                                     alt: "Alejandro Guijarro Momentum — quantum mechanics blackboard at Cambridge II, 2011" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%209.jpg`,  caption: "Momentum — Oxford II, 2011",                                        alt: "Alejandro Guijarro Momentum — physics blackboard at Oxford II, 2011" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2010.jpg`, caption: "Momentum — Berkeley II, 2011",                                      alt: "Alejandro Guijarro Momentum — quantum mechanics blackboard at UC Berkeley II, 2011" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2011.jpg`, caption: "Momentum — CERN II, 2012",                                          alt: "Alejandro Guijarro Momentum — physics blackboard at CERN II, Geneva, 2012" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2012.jpg`, caption: "Momentum — Stanford II, 2010",                                      alt: "Alejandro Guijarro Momentum — physics blackboard at Stanford II, 2010" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2013.jpg`, caption: "Momentum — Cambridge III, 2011",                                    alt: "Alejandro Guijarro Momentum — quantum mechanics blackboard at Cambridge III, 2011" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2014.jpg`, caption: "Momentum — Oxford III, 2011",                                       alt: "Alejandro Guijarro Momentum — physics blackboard at Oxford III, 2011" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2016.jpg`, caption: "Momentum — UC Berkeley III, 2012",                                  alt: "Alejandro Guijarro Momentum — quantum mechanics blackboard at UC Berkeley III, 2012" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2017.jpg`, caption: "Momentum — CERN III, 2012",                                         alt: "Alejandro Guijarro Momentum — physics blackboard at CERN III, Geneva, 2012" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2015.jpg`, caption: "Momentum — MIT II, 2012",                                           alt: "Alejandro Guijarro Momentum — quantum mechanics blackboard at MIT II, 2012" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2018.jpg`, caption: "Momentum — Stanford III, 2012",                                     alt: "Alejandro Guijarro Momentum — physics blackboard at Stanford III, 2012" },
+  { src: `${R2}/Alejandro%20Guijarro%20Physics%20Blackboards%2019.jpg`, caption: "Momentum — Series overview, 2012",                                  alt: "Alejandro Guijarro Momentum photography series overview — quantum mechanics blackboards, 2012" },
 ];
 
 function SectionHead({ title }: { title: string }) {
@@ -133,6 +133,18 @@ export function AlejandroGuijarroMomentumArticle() {
             Momentum — a series that asks whether science and abstraction were
             ever really different things.
           </p>
+          <div className="mt-6 flex justify-center">
+            <div className="inline-flex items-center gap-3 rounded-full border border-[var(--line)] bg-[var(--tonal)] px-4 py-2">
+              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--ink)] font-sans text-[0.6rem] font-bold text-[var(--bg)]">
+                AK
+              </div>
+              <span className="font-sans text-[0.72rem] text-[var(--ink-muted)]">Ali Kaya</span>
+              <span className="h-3 w-px bg-[var(--line)]" />
+              <time dateTime="2026-05-05" className="font-sans text-[0.72rem] text-[var(--ink-muted)]">
+                May 5, 2026
+              </time>
+            </div>
+          </div>
           <div className="mx-auto mt-7 h-px w-14 bg-[var(--line)] sm:mt-8" aria-hidden />
         </div>
 
@@ -142,14 +154,14 @@ export function AlejandroGuijarroMomentumArticle() {
           <div className="my-10 flex flex-col gap-4 sm:-mx-8 lg:-mx-16">
             <GalleryImage
               src={IMAGES[0]!.src}
-              alt={IMAGES[0]!.caption}
+              alt={IMAGES[0]!.alt}
               caption={IMAGES[0]!.caption}
               priority
               pastel="sky"
             />
             <GalleryImage
               src={IMAGES[1]!.src}
-              alt={IMAGES[1]!.caption}
+              alt={IMAGES[1]!.alt}
               caption={IMAGES[1]!.caption}
               pastel="peach"
             />
@@ -180,8 +192,11 @@ export function AlejandroGuijarroMomentumArticle() {
             <ArticleProseLink href="/articles/billingsley-euclid">
               geometric diagrams in Euclid&apos;s Elements
             </ArticleProseLink>{" "}
-            are drawings before they are proofs. The notebook pages of
-            Roger Penrose are indistinguishable, at a glance, from abstract
+            are drawings before they are proofs.             The{" "}
+            <ArticleProseLink href="/articles/penrose-journal">
+              notebook pages of Roger Penrose
+            </ArticleProseLink>{" "}
+            are indistinguishable, at a glance, from abstract
             expressionism. Guijarro&apos;s photographs make this latent connection explicit
             by doing almost nothing — he photographs what was already there and hangs it on
             a gallery wall.
@@ -206,8 +221,8 @@ export function AlejandroGuijarroMomentumArticle() {
 
           {/* ── IMAGES 3–4 ── */}
           <div className="my-10 flex flex-col gap-4 sm:-mx-8 lg:-mx-16">
-            <GalleryImage src={IMAGES[2]!.src} alt={IMAGES[2]!.caption} caption={IMAGES[2]!.caption} pastel="lavender" />
-            <GalleryImage src={IMAGES[3]!.src} alt={IMAGES[3]!.caption} caption={IMAGES[3]!.caption} pastel="lime" />
+            <GalleryImage src={IMAGES[2]!.src} alt={IMAGES[2]!.alt} caption={IMAGES[2]!.caption} pastel="lavender" />
+            <GalleryImage src={IMAGES[3]!.src} alt={IMAGES[3]!.alt} caption={IMAGES[3]!.caption} pastel="lime" />
           </div>
 
           <PullQuote
@@ -247,8 +262,8 @@ export function AlejandroGuijarroMomentumArticle() {
 
           {/* ── IMAGES 5–6 ── */}
           <div className="my-10 flex flex-col gap-4 sm:-mx-8 lg:-mx-16">
-            <GalleryImage src={IMAGES[4]!.src} alt={IMAGES[4]!.caption} caption={IMAGES[4]!.caption} pastel="rose" />
-            <GalleryImage src={IMAGES[5]!.src} alt={IMAGES[5]!.caption} caption={IMAGES[5]!.caption} pastel="sky" />
+            <GalleryImage src={IMAGES[4]!.src} alt={IMAGES[4]!.alt} caption={IMAGES[4]!.caption} pastel="rose" />
+            <GalleryImage src={IMAGES[5]!.src} alt={IMAGES[5]!.alt} caption={IMAGES[5]!.caption} pastel="sky" />
           </div>
 
           {/* ── THE SCALE DECISION ── */}
@@ -282,8 +297,8 @@ export function AlejandroGuijarroMomentumArticle() {
 
           {/* ── IMAGES 7–8 ── */}
           <div className="my-10 flex flex-col gap-4 sm:-mx-8 lg:-mx-16">
-            <GalleryImage src={IMAGES[6]!.src} alt={IMAGES[6]!.caption} caption={IMAGES[6]!.caption} pastel="peach" />
-            <GalleryImage src={IMAGES[7]!.src} alt={IMAGES[7]!.caption} caption={IMAGES[7]!.caption} pastel="lavender" />
+            <GalleryImage src={IMAGES[6]!.src} alt={IMAGES[6]!.alt} caption={IMAGES[6]!.caption} pastel="peach" />
+            <GalleryImage src={IMAGES[7]!.src} alt={IMAGES[7]!.alt} caption={IMAGES[7]!.caption} pastel="lavender" />
           </div>
 
           <Divider />
@@ -318,8 +333,8 @@ export function AlejandroGuijarroMomentumArticle() {
 
           {/* ── IMAGES 9–10 ── */}
           <div className="my-10 flex flex-col gap-4 sm:-mx-8 lg:-mx-16">
-            <GalleryImage src={IMAGES[8]!.src} alt={IMAGES[8]!.caption} caption={IMAGES[8]!.caption} pastel="lime" />
-            <GalleryImage src={IMAGES[9]!.src} alt={IMAGES[9]!.caption} caption={IMAGES[9]!.caption} pastel="rose" />
+            <GalleryImage src={IMAGES[8]!.src} alt={IMAGES[8]!.alt} caption={IMAGES[8]!.caption} pastel="lime" />
+            <GalleryImage src={IMAGES[9]!.src} alt={IMAGES[9]!.alt} caption={IMAGES[9]!.caption} pastel="rose" />
           </div>
 
           {/* ── EQUATIONS AS ABSTRACT MARKS ── */}
@@ -341,7 +356,11 @@ export function AlejandroGuijarroMomentumArticle() {
 
             <p className="mt-5 text-base leading-relaxed text-[var(--ink)] sm:text-lg">
               For everyone else, they are nothing but marks. The density, color, pressure,
-              and layering of chalk on a dark surface. The way the eraser&apos;s arc creates
+              and layering of{" "}
+              <ArticleProseLink href="/gadgets/hagoromo-chalk">
+                chalk
+              </ArticleProseLink>{" "}
+              on a dark surface. The way the eraser&apos;s arc creates
               a landscape-like sweep across the lower third. The way multicolored chalk turns
               a board that could be a map into something that could be a painting by Basquiat
               — a comparison the gallery notes for <em>Momentum</em> make explicitly,
@@ -352,10 +371,10 @@ export function AlejandroGuijarroMomentumArticle() {
 
           {/* ── IMAGES 11–14 ── */}
           <div className="my-10 flex flex-col gap-4 sm:-mx-8 lg:-mx-16">
-            <GalleryImage src={IMAGES[10]!.src} alt={IMAGES[10]!.caption} caption={IMAGES[10]!.caption} pastel="sky" />
-            <GalleryImage src={IMAGES[11]!.src} alt={IMAGES[11]!.caption} caption={IMAGES[11]!.caption} pastel="peach" />
-            <GalleryImage src={IMAGES[12]!.src} alt={IMAGES[12]!.caption} caption={IMAGES[12]!.caption} pastel="lavender" />
-            <GalleryImage src={IMAGES[13]!.src} alt={IMAGES[13]!.caption} caption={IMAGES[13]!.caption} pastel="rose" />
+            <GalleryImage src={IMAGES[10]!.src} alt={IMAGES[10]!.alt} caption={IMAGES[10]!.caption} pastel="sky" />
+            <GalleryImage src={IMAGES[11]!.src} alt={IMAGES[11]!.alt} caption={IMAGES[11]!.caption} pastel="peach" />
+            <GalleryImage src={IMAGES[12]!.src} alt={IMAGES[12]!.alt} caption={IMAGES[12]!.caption} pastel="lavender" />
+            <GalleryImage src={IMAGES[13]!.src} alt={IMAGES[13]!.alt} caption={IMAGES[13]!.caption} pastel="rose" />
           </div>
 
           <PullQuote
@@ -388,10 +407,10 @@ export function AlejandroGuijarroMomentumArticle() {
 
           {/* ── IMAGES 15–18 ── */}
           <div className="my-10 flex flex-col gap-4 sm:-mx-8 lg:-mx-16">
-            <GalleryImage src={IMAGES[14]!.src} alt={IMAGES[14]!.caption} caption={IMAGES[14]!.caption} pastel="lime" />
-            <GalleryImage src={IMAGES[15]!.src} alt={IMAGES[15]!.caption} caption={IMAGES[15]!.caption} pastel="sky" />
-            <GalleryImage src={IMAGES[16]!.src} alt={IMAGES[16]!.caption} caption={IMAGES[16]!.caption} pastel="peach" />
-            <GalleryImage src={IMAGES[17]!.src} alt={IMAGES[17]!.caption} caption={IMAGES[17]!.caption} pastel="lavender" />
+            <GalleryImage src={IMAGES[14]!.src} alt={IMAGES[14]!.alt} caption={IMAGES[14]!.caption} pastel="lime" />
+            <GalleryImage src={IMAGES[15]!.src} alt={IMAGES[15]!.alt} caption={IMAGES[15]!.caption} pastel="sky" />
+            <GalleryImage src={IMAGES[16]!.src} alt={IMAGES[16]!.alt} caption={IMAGES[16]!.caption} pastel="peach" />
+            <GalleryImage src={IMAGES[17]!.src} alt={IMAGES[17]!.alt} caption={IMAGES[17]!.caption} pastel="lavender" />
           </div>
 
           <Divider />
@@ -419,8 +438,8 @@ export function AlejandroGuijarroMomentumArticle() {
 
           {/* ── FINAL TWO IMAGES ── */}
           <div className="my-10 flex flex-col gap-4 sm:-mx-8 lg:-mx-16">
-            <GalleryImage src={IMAGES[18]!.src} alt={IMAGES[18]!.caption} caption={IMAGES[18]!.caption} pastel="rose" />
-            <GalleryImage src={IMAGES[19]!.src} alt={IMAGES[19]!.caption} caption={IMAGES[19]!.caption} pastel="lime" />
+            <GalleryImage src={IMAGES[18]!.src} alt={IMAGES[18]!.alt} caption={IMAGES[18]!.caption} pastel="rose" />
+            <GalleryImage src={IMAGES[19]!.src} alt={IMAGES[19]!.alt} caption={IMAGES[19]!.caption} pastel="lime" />
           </div>
 
           {/* ── ARTIST BIO ── */}

@@ -8,7 +8,14 @@ export type CuratedArticleSource = {
   /** Author retained for metadata; not shown on the home grid */
   author: string;
   dek: string;
+  /** Primary image — used on home grid cards */
   image: string;
+  /**
+   * Optional alternate image for the articles-archive listing.
+   * Use a landscape crop when the primary `image` is portrait-oriented.
+   * Falls back to `image` when omitted.
+   */
+  imageArchive?: string;
   href: string;
   pageColor: string;
   /** Newer dates surface first on the home grid. Use ISO `YYYY-MM-DD`. */
@@ -36,6 +43,17 @@ const HOME_GRID_SPANS: ("wide" | "narrow")[] = [
 /** Source list — add new pieces here with today’s (or release) `publishedAt`. */
 export const curatedArticles: CuratedArticleSource[] = [
 
+  {
+    slug: "your-name-in-landsat",
+    title: "Your Name, Written by Earth",
+    author: "Ali Kaya",
+    dek: "NASA spells out your name using real Landsat satellite images. Every letter is a real place, 700 km below, with coordinates you can look up.",
+    image:
+      "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Your%20Name%20in%20Landsat.png",
+    href: "/tools/your-name-in-landsat",
+    pageColor: PASTEL.sky,
+    publishedAt: "2026-05-05",
+  },
   {
     slug: "introduction-to-mathematical-philosophy",
     title: "Written in Prison. In Print for a Century.",
@@ -162,7 +180,9 @@ export const curatedArticles: CuratedArticleSource[] = [
     author: "Ali Kaya",
     dek: "String theory, quantum mechanics, entropy, general relativity — 24 poster designs by 2046 Print Shop that turn physics concepts into beautiful objects worth hanging on a wall.",
     image:
-      "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.png",
+    imageArchive:
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20Inspire%20You.png",
     href: "/24-beautiful-physics-poster-designs-that-inspire-you",
     pageColor: PASTEL.lavender,
     publishedAt: "2026-04-26",
@@ -173,18 +193,18 @@ export const curatedArticles: CuratedArticleSource[] = [
     author: "Ali Kaya",
     dek: "A Trip to Infinity, The Proof, N Is a Number — 25 documentaries that show the other face of mathematics: obsession, beauty, and the particular madness of chasing a question.",
     image:
-      "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematic.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematics.png",
     href: "/25-beautiful-math-documentaries-to-love-math",
     pageColor: PASTEL.peach,
     publishedAt: "2026-04-25",
   },
   {
     slug: "17-best-math-youtube-channels-to-study-mathematics",
-    title: "Five Channels That Make You Love Mathematics",
+    title: "Five YouTube Channels That Make You Love Mathematics",
     author: "Ali Kaya",
     dek: "Numberphile, 3Blue1Brown, Eddie Woo, Socratica, Khan Academy — five YouTube channels built by people who loved mathematics first, and only then turned the camera on.",
     image:
-      "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev/Five%20Channels%20That%20Make%20You%20Love%20Mathematics.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Five%20YouTube%20Channels%20That%20Make%20You%20Love%20Mathematics.png",
     href: "/17-best-math-youtube-channels-to-study-mathematics",
     pageColor: PASTEL.sky,
     publishedAt: "2026-04-24",
@@ -239,6 +259,17 @@ export const curatedArticles: CuratedArticleSource[] = [
     publishedAt: "2026-04-19",
   },
   {
+    slug: "mushroom-color-atlas",
+    title: "The Color the Forest Already Had",
+    author: "Ali Kaya",
+    dek: "825 colors, 40+ dye mushrooms. Julie Beeler's atlas of natural color that exists only because a specific fungus grew in a specific place.",
+    image:
+      "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Mushroom%20Color%20Atlas.webp",
+    href: "/tools/mushroom-color-atlas",
+    pageColor: PASTEL.peach,
+    publishedAt: "2026-04-19",
+  },
+  {
     slug: "killed-by-google",
     title: "299 Products. One Graveyard.",
     author: "Ali Kaya",
@@ -268,6 +299,17 @@ export const curatedArticles: CuratedArticleSource[] = [
     href: "/tools/river-runner",
     pageColor: PASTEL.sky,
     publishedAt: "2026-04-19",
+  },
+  {
+    slug: "stand-and-deliver",
+    title: "The Testing Board Assumed They Cheated",
+    author: "Ali Kaya",
+    dek: "Stand and Deliver tells the story of Jaime Escalante. But the real story is harder, darker, and far more interesting than the film lets on.",
+    image:
+      "https://pub-676f738e0a3948d19dc9defd954e36d5.r2.dev/Stand%20And%20Deliver.jpg",
+    href: "/videos/stand-and-deliver",
+    pageColor: PASTEL.peach,
+    publishedAt: "2026-05-07",
   },
   {    slug: "cymatics-nigel-stanford",
     title: "Cymatics: Sound Has a Shape",
@@ -493,6 +535,17 @@ export const curatedArticles: CuratedArticleSource[] = [
     publishedAt: "2025-06-01",
   },
   // ── Books (filtered out of home grid & /articles listing) ──────────────────
+  {
+    slug: "islamic-geometric-patterns-eric-broug",
+    title: "Islamic Geometric Patterns",
+    author: "Eric Broug · Thames & Hudson",
+    dek: "A compass, a ruler, and 1,400 years of quiet geometry. 23 patterns from real buildings — from the Great Mosque of Córdoba to Samarkand.",
+    image:
+      "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Islamic%20Geometric%20Patterns%20by%20Eric%20Broug.jpg",
+    href: "/books/islamic-geometric-patterns-eric-broug",
+    pageColor: PASTEL.sky,
+    publishedAt: "2026-05-07",
+  },
   {
     slug: "oliver-byrne-euclid",
     title: "The First Six Books of the Elements of Euclid",

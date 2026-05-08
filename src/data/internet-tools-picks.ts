@@ -67,4 +67,14 @@ export const internetToolsPicks: InternetToolPick[] = [
     image:
       "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Mushroom%20Color%20Atlas.webp",
   },
+
+  {
+    slug: "your-name-in-landsat",
+    layout: "wide",
+    title: "Your Name, Written by Earth",
+    dek: "NASA spells out your name using real Landsat satellite images of Earth's surface. Every letter is a real place with coordinates.",
+    href: "/tools/your-name-in-landsat",
+    image:
+      "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Your%20Name%20in%20Landsat.png",
+  },
 ];

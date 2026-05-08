@@ -8,6 +8,7 @@ export type BookFeatured = {
   href: string;
   image: string;
   pageColor: string;
+  publishedAt: string;
 };
 
 export type BookShelfItem = {
@@ -18,6 +19,7 @@ export type BookShelfItem = {
   href: string;
   image: string;
   pageColor: string;
+  publishedAt: string;
 };
 
 /** Hero pick — large cover, long line */
@@ -30,10 +32,22 @@ export const booksFeatured: BookFeatured = {
   image:
     "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Oliver%20Byrne%20%E2%80%93%20The%20First%20Six%20Books%20of%20the%20Elements%20of%20Euclid.webp",
   pageColor: PASTEL.peach,
+  publishedAt: "2025-12-01",
 };
 
 /** Four-up shelf — math, science, wonder */
 export const booksShelf: BookShelfItem[] = [
+  {
+    slug: "islamic-geometric-patterns-eric-broug",
+    title: "Islamic Geometric Patterns",
+    author: "Eric Broug",
+    dek: "A compass, a ruler, and 1,400 years of quiet geometry. 23 patterns from real buildings.",
+    href: "/books/islamic-geometric-patterns-eric-broug",
+    image:
+      "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Islamic%20Geometric%20Patterns%20by%20Eric%20Broug.jpg",
+    pageColor: PASTEL.lime,
+    publishedAt: "2026-05-07",
+  },
   {
     slug: "pasta-by-design",
     title: "Pasta by Design",
@@ -42,7 +56,8 @@ export const booksShelf: BookShelfItem[] = [
     href: "/books/pasta-by-design",
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Pasta%20by%20Design.jpg",
-    pageColor: PASTEL.peach,
+    pageColor: PASTEL.lavender,
+    publishedAt: "2025-11-01",
   },
   {
     slug: "geometry-of-pasta",
@@ -53,16 +68,18 @@ export const booksShelf: BookShelfItem[] = [
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/The%20Geometry%20of%20Pasta.jpg",
     pageColor: PASTEL.rose,
+    publishedAt: "2025-10-01",
   },
   {
     slug: "pi-books-list",
-    title: "Six books that taught π how to misbehave",
+    title: "Six Books That Taught π How to Misbehave",
     author: "Book list",
     dek: "History, obsession, category theory, a novella — and a knight named Sir Cumference.",
     href: "/book-lists/pi",
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Six%20books%20that%20taught%20%CF%80%20how%20to%20misbehave.png",
     pageColor: PASTEL.sky,
+    publishedAt: "2026-01-01",
   },
   {
     slug: "the-art-and-science-of-ernst-haeckel",
@@ -73,6 +90,7 @@ export const booksShelf: BookShelfItem[] = [
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/The%20Art%20and%20Science%20of%20Ernst%20Haeckel%20by%20TASCHEN.png",
     pageColor: PASTEL.lime,
+    publishedAt: "2025-09-01",
   },
   {
     slug: "when-einstein-walked-with-godel",
@@ -83,6 +101,7 @@ export const booksShelf: BookShelfItem[] = [
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/When%20Einstein%20Walked%20with%20Go%CC%88del-%20Excursions%20to%20the%20Edge%20of%20Thought.jpg",
     pageColor: PASTEL.lavender,
+    publishedAt: "2025-08-01",
   },
   {
     slug: "fractal-geometry-of-nature",
@@ -93,6 +112,7 @@ export const booksShelf: BookShelfItem[] = [
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/The%20Fractal%20Geometry%20of%20Nature%20%E2%80%94%20Benoi%CC%82t%20B.%20Mandelbrot.jpg",
     pageColor: PASTEL.sky,
+    publishedAt: "2025-07-01",
   },
   {
     slug: "lifelong-kindergarten",
@@ -103,6 +123,7 @@ export const booksShelf: BookShelfItem[] = [
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Lifelong%20Kindergarten-%20Cultivating%20Creativity%20Through%20Projects%2C%20Passion%2C%20Peers%2C%20and%20Play.jpg",
     pageColor: PASTEL.lavender,
+    publishedAt: "2025-06-01",
   },
   {
     slug: "surely-youre-joking-mr-feynman",
@@ -113,6 +134,7 @@ export const booksShelf: BookShelfItem[] = [
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Surely%20You%E2%80%99re%20Joking%2C%20Mr.%20Feynman!%20by%20Richard%20Feynman.jpg",
     pageColor: PASTEL.peach,
+    publishedAt: "2025-05-01",
   },
   {
     slug: "introduction-to-mathematical-philosophy",
@@ -122,6 +144,7 @@ export const booksShelf: BookShelfItem[] = [
     href: "/books/introduction-to-mathematical-philosophy",
     image:
       "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Introduction%20to%20Mathematical%20Philosophy%20by%20Bertrand%20Russell.png",
-    pageColor: PASTEL.sky,
+    pageColor: PASTEL.rose,
+    publishedAt: "2026-05-06",
   },
 ];

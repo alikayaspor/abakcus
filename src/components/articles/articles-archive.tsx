@@ -18,9 +18,10 @@ function ArticleArchiveCard({
   article: CuratedArticleSource;
   priority?: boolean;
 }) {
-  const { slug, title, dek, href, image, pageColor, publishedAt } = article;
+  const { slug, title, dek, href, image, imageArchive, pageColor, publishedAt } = article;
+  const cardImage = imageArchive ?? image;
   const isSvgThumb =
-    image.endsWith(".svg") || image.includes("unit-circle-minimal-sweet");
+    cardImage.endsWith(".svg") || cardImage.includes("unit-circle-minimal-sweet");
   const isUnitCircle = slug === "unit-circle";
   const dateLabel = formatListDate(publishedAt);
 
@@ -54,7 +55,7 @@ function ArticleArchiveCard({
             ) : isSvgThumb ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={image}
+                src={cardImage}
                 alt=""
                 className="absolute inset-0 h-full w-full object-contain p-4 transition-transform duration-500 ease-out group-hover:scale-[1.03] sm:p-5"
                 loading={priority ? "eager" : "lazy"}
@@ -62,7 +63,7 @@ function ArticleArchiveCard({
               />
             ) : (
               <Image
-                src={image}
+                src={cardImage}
                 alt=""
                 fill
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"

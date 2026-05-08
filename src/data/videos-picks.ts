@@ -12,6 +12,16 @@ export type VideoPick = {
 
 export const videosPicks: VideoPick[] = [
   {
+    slug: "stand-and-deliver",
+    title: "Stand and Deliver",
+    dek: "The testing board assumed they cheated. The students re-sat the exam. They passed again. This time no one said anything.",
+    tag: "Film · Mathematics",
+    href: "/videos/stand-and-deliver",
+    image:
+      "https://pub-676f738e0a3948d19dc9defd954e36d5.r2.dev/Stand%20And%20Deliver.jpg",
+    pageColor: PASTEL.peach,
+  },
+  {
     slug: "kung-fu-motion-visualization",
     title: "Kung Fu Motion Visualization",
     dek: "Tobias Gremmler turned motion-capture data from Kung Fu masters into five moving sculptures. Veri heykel oldu; zaman kumaş, hız madde.",
@@ -38,7 +48,7 @@ export const videosPicks: VideoPick[] = [
     href: "/videos/taming-the-garden",
     image:
       "https://pub-5aa87426ad334d0495bf29d914b5ce1b.r2.dev/taming%20the%20garden.jpeg",
-    pageColor: PASTEL.peach,
+    pageColor: PASTEL.lavender,
   },
   {
     slug: "roberto-carlos-free-kick",
