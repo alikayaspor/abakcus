@@ -72,7 +72,9 @@ function FilmCard(props: VideoPick) {
 
 export function HomeVideos() {
   const videos = videosPicks.filter((v) => !isFilmOrDoc(v.tag)).slice(0, 6);
-  const films = videosPicks.filter((v) => isFilmOrDoc(v.tag));
+  const allFilms = videosPicks.filter((v) => isFilmOrDoc(v.tag));
+  // Shuffle and take 4 so the row never overflows and feels fresh
+  const films = [...allFilms].sort(() => Math.random() - 0.5).slice(0, 4);
 
   return (
     <section
