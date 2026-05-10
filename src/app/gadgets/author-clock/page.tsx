@@ -254,19 +254,14 @@ export default function AuthorClockPage() {
               </span>
             </div>
             <div className="divide-y divide-[var(--line)]">
-              {[
-                ["Vol. 1", "Desk or nightstand. Compact. Suits a work surface near books."],
-                ["Vol. 2", "Larger. Wall-mountable. Readable from across a room. The product page reads: "Large enough to jostle for space with a copy of Anna Karenina.""],
-              ].map(([label, desc]) => (
-                <div key={label} className="flex flex-wrap gap-x-6 px-5 py-3">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-[#c9a84c] w-16 shrink-0 pt-0.5">
-                    {label}
-                  </span>
-                  <span className="font-sans text-sm text-[var(--ink)] leading-relaxed flex-1">
-                    {desc}
-                  </span>
-                </div>
-              ))}
+              <div className="flex flex-wrap gap-x-6 px-5 py-3">
+                <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-[#c9a84c] w-16 shrink-0 pt-0.5">Vol. 1</span>
+                <span className="font-sans text-sm text-[var(--ink)] leading-relaxed flex-1">Desk or nightstand. Compact. Suits a work surface near books.</span>
+              </div>
+              <div className="flex flex-wrap gap-x-6 px-5 py-3">
+                <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-[#c9a84c] w-16 shrink-0 pt-0.5">Vol. 2</span>
+                <span className="font-sans text-sm text-[var(--ink)] leading-relaxed flex-1">Larger. Wall-mountable. Readable from across a room. The product page reads: &ldquo;Large enough to jostle for space with a copy of Anna Karenina.&rdquo;</span>
+              </div>
             </div>
           </div>
 
