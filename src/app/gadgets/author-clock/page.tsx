@@ -21,6 +21,8 @@ const jsonLd = {
   offers: {
     "@type": "Offer",
     url: AMAZON_URL,
+    price: "199.00",
+    priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     seller: { "@type": "Organization", name: "Amazon" },
   },
@@ -109,54 +111,48 @@ export default function AuthorClockPage() {
       <SiteHeader />
 
       {/* ── HERO ── */}
-      <header className="grid grid-cols-1 overflow-hidden bg-[#16110a] md:grid-cols-[1fr_44%]">
+      <header className="grid grid-cols-1 overflow-hidden bg-[#f2ede6] md:grid-cols-[1fr_44%]">
         {/* LEFT — text panel */}
-        <div className="flex items-center bg-[#16110a] px-[clamp(1.5rem,6vw,4rem)] py-16 md:py-24">
+        <div className="flex items-center px-[clamp(1.5rem,6vw,4rem)] py-16 md:py-24">
           <div className="w-full max-w-lg">
-            <p className="font-mono text-[0.6rem] uppercase tracking-[0.22em] text-white/30">
+            <p className="font-mono text-[0.6rem] uppercase tracking-[0.22em] text-[#16110a]/30">
               Gadgets &amp; Gear &nbsp;·&nbsp; Literature
             </p>
-            <h1 className="mt-4 font-serif text-[clamp(2.2rem,5.5vw,4.2rem)] font-bold leading-[1.0] tracking-tight text-[#f0ede8]">
+            <h1 className="mt-4 font-serif text-[clamp(2.2rem,5.5vw,4.2rem)] font-bold leading-[1.0] tracking-tight text-[#16110a]">
               Author Clock
             </h1>
-            <p className="mt-5 max-w-sm font-serif text-[1.05rem] italic leading-relaxed text-white/45">
+            <p className="mt-5 max-w-sm font-serif text-[1.05rem] italic leading-relaxed text-[#16110a]/45">
               Most clocks tell you where you are in the day. This one tells you
               who else was there.
             </p>
             <div className="mt-6 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[0.58rem] uppercase tracking-[0.14em]">
-              <span className="text-[#c9a84c]">E-Paper Display</span>
-              <span className="text-white/20">+</span>
-              <span className="text-[#a08060]">White Oak &amp; Brass</span>
-              <span className="text-white/20">/</span>
-              <span className="text-white/40">13,000+ Quotes</span>
-              <span className="text-white/20">/</span>
-              <span className="text-white/40">MoMA Design Store</span>
+              <span className="text-[#9a7a30]">E-Paper Display</span>
+              <span className="text-[#16110a]/20">+</span>
+              <span className="text-[#7a5c3a]">White Oak &amp; Brass</span>
+              <span className="text-[#16110a]/20">/</span>
+              <span className="text-[#16110a]/40">13,000+ Quotes</span>
+              <span className="text-[#16110a]/20">/</span>
+              <span className="text-[#16110a]/40">MoMA Design Store</span>
             </div>
             <a
               href={AMAZON_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#c9a84c] px-5 py-2.5 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#16110a] transition-opacity hover:opacity-85"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#16110a] px-5 py-2.5 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#f2ede6] transition-opacity hover:opacity-85"
             >
               See on Amazon ↗
             </a>
           </div>
         </div>
 
-        {/* RIGHT — product image */}
-        <div className="flex items-center justify-center bg-[#16110a] px-4 py-12 md:py-0">
+        {/* RIGHT — mix-blend-multiply on light bg: white disappears, clock floats */}
+        <div className="flex items-center justify-center px-8 py-12 md:py-0">
           <Image
             src={HERO_IMAGE}
             alt="Author Clock — literary desk clock with e-paper display, white oak housing and brass base"
             width={960}
             height={960}
-            className="h-auto w-full max-w-md object-contain"
-            style={{
-              maskImage:
-                "radial-gradient(ellipse 72% 80% at 55% 50%, black 42%, transparent 78%)",
-              WebkitMaskImage:
-                "radial-gradient(ellipse 72% 80% at 55% 50%, black 42%, transparent 78%)",
-            }}
+            className="h-auto w-full max-w-md object-contain mix-blend-multiply"
             priority
             sizes="(max-width:768px) 100vw, 44vw"
           />
