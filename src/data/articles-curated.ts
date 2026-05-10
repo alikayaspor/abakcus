@@ -44,6 +44,17 @@ const HOME_GRID_SPANS: ("wide" | "narrow")[] = [
 export const curatedArticles: CuratedArticleSource[] = [
 
   {
+    slug: "literature-clock",
+    title: "Every Minute Has a Book",
+    author: "Ali Kaya",
+    dek: "There are 1,440 minutes in a day. Literature Clock matches each one to a passage from world literature. Open the site: find out it's 2:47 because Tolstoy already wrote that minute.",
+    image:
+      "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Literature%20Clock.png",
+    href: "/tools/literature-clock",
+    pageColor: PASTEL.peach,
+    publishedAt: "2026-05-10",
+  },
+  {
     slug: "good-will-hunting",
     title: "How Do You Like Them Apples?",
     author: "Ali Kaya",

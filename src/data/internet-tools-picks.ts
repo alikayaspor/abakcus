@@ -77,6 +77,15 @@ export const internetToolsPicks: InternetToolPick[] = [
     image:
       "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Your%20Name%20in%20Landsat.png",
   },  {
+    slug: "literature-clock",
+    layout: "wide",
+    title: "Every Minute Has a Book",
+    dek: "1,440 minutes in a day. Each one matched to a passage from world literature. Check the time, read a sentence.",
+    href: "/tools/literature-clock",
+    image:
+      "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Literature%20Clock.png",
+  },
+  {
     slug: "calculus-made-easy",
     layout: "narrow",
     title: "What One Fool Can Do, Another Can",
