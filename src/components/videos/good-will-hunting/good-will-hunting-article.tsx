@@ -183,11 +183,7 @@ export function GoodWillHuntingArticle() {
       {/* ── ARTICLE BODY ── */}
       <article
         className="mx-auto max-w-[720px] px-[var(--page-pad)] pt-16 pb-24"
-        itemScope
-        itemType="https://schema.org/Review"
       >
-        <meta itemProp="itemReviewed" content="Good Will Hunting directed by Gus Van Sant" />
-        <meta itemProp="author" content="Abakcus" />
 
         {/* Eyebrow tags */}
         <div className="mb-8 flex flex-wrap items-center gap-2">
