@@ -76,5 +76,12 @@ export const internetToolsPicks: InternetToolPick[] = [
     href: "/tools/your-name-in-landsat",
     image:
       "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Your%20Name%20in%20Landsat.png",
-  },
-];
+  },  {
+    slug: "calculus-made-easy",
+    layout: "narrow",
+    title: "What One Fool Can Do, Another Can",
+    dek: "Silvanus P. Thompson wrote a calculus book in 1910. Someone converted it to HTML by hand. It's free and it still works.",
+    href: "/tools/calculus-made-easy",
+    image:
+      "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Calculus%20Made%20Easy.png",
+  },];

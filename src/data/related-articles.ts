@@ -62,6 +62,7 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
   "how-smart-machines-think",
   "your-name-in-landsat",
   "bambu-lab-p2s",
+  "calculus-made-easy",
 ]);
 
 /**
@@ -69,6 +70,14 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
  * Base order when reading X: all others, newest-first in the list below minus X.
  */
 const RELATED_ORDER: Record<string, string[]> = {
+  "calculus-made-easy": [
+    "feynman-math-education",
+    "billingsley-euclid",
+    "seeing-theory",
+    "feynman-technique",
+    "unit-circle",
+    "introduction-to-mathematical-philosophy",
+  ],
   "your-name-in-landsat": [
     "river-runner",
     "seeing-theory",
