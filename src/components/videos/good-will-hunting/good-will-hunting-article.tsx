@@ -63,9 +63,8 @@ export function GoodWillHuntingArticle() {
             {/* Poster */}
             <div className="w-44 shrink-0 sm:w-56 md:w-64">
               <div
-                className="relative overflow-hidden rounded-sm"
+                className="overflow-hidden rounded-sm"
                 style={{
-                  aspectRatio: "3/4",
                   boxShadow:
                     "0 40px 100px -20px rgba(0,0,0,0.85), 0 0 0 1px rgba(42,74,53,0.3)",
                 }}
@@ -73,10 +72,10 @@ export function GoodWillHuntingArticle() {
                 <Image
                   src={POSTER}
                   alt="Good Will Hunting — Gus Van Sant, 1997"
-                  fill
-                  className="object-cover"
+                  width={400}
+                  height={600}
+                  className="w-full h-auto"
                   priority
-                  sizes="(max-width:768px) 176px, 256px"
                 />
               </div>
             </div>
