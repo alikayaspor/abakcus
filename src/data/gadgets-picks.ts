@@ -31,7 +31,7 @@ export const gadgetsPicks: GadgetPick[] = [
     href: "/gadgets/bambu-lab-p2s",
     image:
       "https://pub-f821ec2a41964e44873680b9d87ddf19.r2.dev/Bambu%20Lab%20P2S.jpg",
-    pageColor: PASTEL.peach,
+    pageColor: PASTEL.sky,
   },
   {
     slug: "chocolate-planets",

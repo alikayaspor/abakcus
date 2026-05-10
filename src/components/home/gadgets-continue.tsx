@@ -93,7 +93,14 @@ export function GadgetsContinue() {
           ))}
         </div>
 
-        <div className="mt-8 flex justify-center gap-3">
+        <div className="mt-8 flex flex-col items-center gap-4">
+          <Link
+            href="/gadgets"
+            className="font-sans text-sm font-medium text-[var(--ink-muted)] underline underline-offset-4 hover:text-[var(--ink)] transition-colors"
+          >
+            View all gadgets →
+          </Link>
+          <div className="flex gap-3">
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--surface)] text-[var(--ink)] shadow-[var(--shadow-soft)] transition-[transform,background-color] hover:bg-[var(--tonal)] active:scale-[0.98]"
@@ -110,6 +117,7 @@ export function GadgetsContinue() {
           >
             <IconChevron dir="right" />
           </button>
+          </div>
         </div>
       </div>
     </section>
