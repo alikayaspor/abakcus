@@ -90,9 +90,7 @@ export function GoodWillHuntingArticle() {
               </p>
 
               <h1 className="mt-4 font-serif text-[clamp(2rem,6vw,4rem)] font-medium italic leading-[1.05] tracking-tight text-[#edf8f0]">
-                How Do You Like
-                <br />
-                Them Apples?
+                Good Will Hunting
               </h1>
 
               <p
