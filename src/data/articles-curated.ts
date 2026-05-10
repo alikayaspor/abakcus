@@ -88,6 +88,17 @@ export const curatedArticles: CuratedArticleSource[] = [
     publishedAt: "2026-05-05",
   },
   {
+    slug: "calculus-made-easy",
+    title: "What One Fool Can Do, Another Can",
+    author: "Ali Kaya",
+    dek: "Silvanus P. Thompson wrote a calculus book in 1910. Someone converted it to HTML by hand. It's free and it still works.",
+    image:
+      "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/Calculus%20Made%20Easy.png",
+    href: "/tools/calculus-made-easy",
+    pageColor: PASTEL.sky,
+    publishedAt: "2026-05-10",
+  },
+  {
     slug: "fry-universe",
     title: "Your Favorite Fry Is a Geometry Problem",
     author: "Ali Kaya",
