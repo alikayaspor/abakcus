@@ -14,6 +14,16 @@ export type GadgetPick = {
 /** Placeholder “continue reading” style rows — gadgets & gear */
 export const gadgetsPicks: GadgetPick[] = [
   {
+    slug: "author-clock",
+    title: "Author Clock",
+    dek: "A desk clock that tells time through literary quotes. E-paper display, white oak housing, brass base. It raised nearly a million dollars on Kickstarter and is sold at MoMA.",
+    readPercent: 100,
+    href: "/gadgets/author-clock",
+    image:
+      "https://pub-f821ec2a41964e44873680b9d87ddf19.r2.dev/Author%20Clock.jpg",
+    pageColor: PASTEL.peach,
+  },
+  {
     slug: "bambu-lab-p2s",
     title: "Bambu Lab P2S",
     dek: "Platonic solids, Fibonacci spirals, bridge load tests. The printer that makes abstract math something a child can hold.",

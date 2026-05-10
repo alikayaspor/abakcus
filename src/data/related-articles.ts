@@ -65,6 +65,7 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
   "calculus-made-easy",
   "good-will-hunting",
   "literature-clock",
+  "author-clock",
 ]);
 
 /**
@@ -72,13 +73,21 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
  * Base order when reading X: all others, newest-first in the list below minus X.
  */
 const RELATED_ORDER: Record<string, string[]> = {
+  "author-clock": [
+    "literature-clock",
+    "bambu-lab-p2s",
+    "hagoromo-chalk",
+    "billingsley-euclid",
+    "barbara-iweins-katalog",
+    "killed-by-google",
+  ],
   "literature-clock": [
+    "author-clock",
     "calculus-made-easy",
     "seeing-theory",
     "billingsley-euclid",
     "river-runner",
     "barbara-iweins-katalog",
-    "killed-by-google",
   ],
   "good-will-hunting": [
     "stand-and-deliver",
