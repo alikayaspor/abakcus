@@ -44,6 +44,17 @@ const HOME_GRID_SPANS: ("wide" | "narrow")[] = [
 export const curatedArticles: CuratedArticleSource[] = [
 
   {
+    slug: "good-will-hunting",
+    title: "How Do You Like Them Apples?",
+    author: "Ali Kaya",
+    dek: "A janitor at MIT solves a research-level math problem on a hallway chalkboard. The film is not about the mathematics. Gus Van Sant, 1997.",
+    image:
+      "https://pub-676f738e0a3948d19dc9defd954e36d5.r2.dev/Good%20Will%20Hunting.webp",
+    href: "/videos/good-will-hunting",
+    pageColor: PASTEL.lime,
+    publishedAt: "2026-05-10",
+  },
+  {
     slug: "your-name-in-landsat",
     title: "Your Name, Written by Earth",
     author: "Ali Kaya",

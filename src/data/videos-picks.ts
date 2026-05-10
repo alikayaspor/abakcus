@@ -12,6 +12,16 @@ export type VideoPick = {
 
 export const videosPicks: VideoPick[] = [
   {
+    slug: "good-will-hunting",
+    title: "Good Will Hunting",
+    dek: "A janitor at MIT solves a research-level math problem in chalk on a hallway wall. The film is entirely uninterested in the mathematics.",
+    tag: "Film · Mathematics",
+    href: "/videos/good-will-hunting",
+    image:
+      "https://pub-676f738e0a3948d19dc9defd954e36d5.r2.dev/Good%20Will%20Hunting.webp",
+    pageColor: PASTEL.lime,
+  },
+  {
     slug: "stand-and-deliver",
     title: "Stand and Deliver",
     dek: "The testing board assumed they cheated. The students re-sat the exam. They passed again. This time no one said anything.",
