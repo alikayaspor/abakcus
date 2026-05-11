@@ -234,7 +234,7 @@ export function OwlSilentFlightArticle() {
           that reduce noise by measurable decibels while actually increasing aerodynamic
           efficiency — the owl, it turns out, did not trade silence for lift. It found
           a way to have both, which is the kind of solution that{" "}
-          <ArticleProseLink href="/articles/pringles" className="article-euclid-link">
+          <ArticleProseLink href="/articles/geometry-behind-pringles" className="article-euclid-link">
             embarrasses engineers because it suggests they were looking at the wrong tradeoff
           </ArticleProseLink>
           .

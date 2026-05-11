@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url("/articles/mit-1869", 0.7, "monthly"),
     url("/articles/penrose-journal", 0.7, "monthly"),
     url("/articles/pinocchio", 0.7, "monthly"),
-    url("/articles/pringles", 0.7, "monthly"),
+    url("/articles/geometry-behind-pringles", 0.7, "monthly"),
     url("/articles/rambo-fox", 0.7, "monthly"),
     url("/articles/snelson-needle-tower", 0.7, "monthly"),
     url("/articles/specimens-fancy-turning", 0.7, "monthly"),

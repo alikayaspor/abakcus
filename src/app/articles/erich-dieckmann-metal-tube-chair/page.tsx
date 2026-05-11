@@ -272,7 +272,7 @@ export default function ErichDieckmannPage() {
 
             <p className="mb-6 text-base leading-relaxed text-[var(--ink)] sm:text-lg">
               Dieckmann&apos;s chart is, at its core, an exploration of what happens when you take that possibility seriously from the very beginning of the design process. The top rows ask: what if we built in metal the way we build in wood? The bottom rows ask: what if we didn&apos;t? The same instinct drives{" "}
-              <ArticleProseLink href="/articles/pringles">
+              <ArticleProseLink href="/articles/geometry-behind-pringles">
                 hyperbolic paraboloid geometry in industrial design
               </ArticleProseLink>
               {" "}— the form arises not from aesthetics but from the structural logic of the material itself.

@@ -146,7 +146,7 @@ export function PinocchioArticle() {
           <p className="mt-6 text-sm leading-relaxed text-[var(--ink-muted)]">
             On Abakcus, this sits next to other stories that put serious tools on
             unlikely questions — from{" "}
-            <ArticleProseLink href="/articles/pringles">
+            <ArticleProseLink href="/articles/geometry-behind-pringles">
               the geometry of a Pringle
             </ArticleProseLink>{" "}
             to{" "}

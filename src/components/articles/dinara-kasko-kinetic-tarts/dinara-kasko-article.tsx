@@ -195,7 +195,7 @@ export function DinaraKaskoArticle() {
           <p className="mt-6 text-sm leading-relaxed text-[var(--ink-muted)]">
             The project fits naturally alongside other Abakcus pieces that find
             rigorous mathematics in unexpected objects — from{" "}
-            <ArticleProseLink href="/articles/pringles">
+            <ArticleProseLink href="/articles/geometry-behind-pringles">
               the hyperbolic paraboloid hiding inside a Pringle
             </ArticleProseLink>{" "}
             to{" "}

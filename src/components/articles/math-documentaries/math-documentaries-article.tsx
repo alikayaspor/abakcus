@@ -195,7 +195,7 @@ export function MathDocumentariesArticle() {
             strange discovery into mountains, clouds, circulatory systems, and the animation
             industry. For anyone who wants to see how mathematics hides in the places no one thinks
             to look — similar to how{" "}
-            <ArticleProseLink href="/articles/pringles" className="article-euclid-link">
+            <ArticleProseLink href="/articles/geometry-behind-pringles" className="article-euclid-link">
               hyperbolic geometry hides in a crisp
             </ArticleProseLink>
             .

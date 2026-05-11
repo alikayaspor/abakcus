@@ -298,7 +298,7 @@ export default function BambuLabP2SPage() {
             </ArticleProseLink>{" "}
             is different from seeing one. Understanding why{" "}
             <ArticleProseLink
-              href="/articles/pringles"
+              href="/articles/geometry-behind-pringles"
               className="article-euclid-link"
             >
               Voronoi patterns appear on a giraffe&apos;s coat, in atomic

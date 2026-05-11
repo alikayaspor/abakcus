@@ -499,7 +499,7 @@ export default function PastaByDesignPage() {
             it to design building facades. Legendre applied the same system to
             his dinner. The geometry escapes the kitchen in other ways too —
             a{" "}
-            <Link href="/articles/pringles" target="_blank" rel="noopener noreferrer" className="article-euclid-link">
+            <Link href="/articles/geometry-behind-pringles" target="_blank" rel="noopener noreferrer" className="article-euclid-link">
               Pringle chip is a hyperbolic paraboloid
             </Link>
             , shaped that way for the same structural reasons that keep

@@ -117,7 +117,7 @@ export function PringlesArticle() {
             Geometry · Engineering · Snacks
           </p>
           <h1 className="font-serif text-[clamp(2rem,6vw,3rem)] font-normal leading-[1.1] tracking-[-0.02em] text-[var(--ink)]">
-            The chip that required a geometry lesson
+            The geometry behind Pringles
           </h1>
           <p className="mx-auto mt-6 max-w-[34rem] border-l-2 border-[var(--ink)] pl-5 text-left text-lg italic leading-relaxed text-[var(--ink-muted)] sm:text-xl">
             A Pringle is a hyperbolic paraboloid. This is not a coincidence or a
@@ -230,10 +230,31 @@ export function PringlesArticle() {
               was, as his obituary put it, &ldquo;buried in a Pringles can&rdquo; at
               his own request. His family honored this.
             </AsideNote>
-          </section>
 
-          <section data-uc-section className="mt-14">
-            <SectionHead num="02" title="What a hyperbolic paraboloid actually is" />
+            <figure
+              className="my-10 overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] sm:p-4"
+              style={{ backgroundColor: PASTEL.sky }}
+            >
+              <ArticleImageLightbox
+                src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Pringles%20Patent.png"
+                alt="Pringles US Patent 3,498,798 — Fredric Baur's original patent application drawings"
+                caption="US Patent 3,498,798 (Baur, 1975) — the original Pringles patent application, showing the saddle mold geometry and canister system."
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-white/55">
+                  <Image
+                    src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Pringles%20Patent.png"
+                    alt=""
+                    fill
+                    className="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                    sizes="(max-width:768px) 100vw, min(680px, 90vw)"
+                  />
+                </div>
+              </ArticleImageLightbox>
+              <figcaption className="mt-4 px-1 text-center font-serif text-sm italic leading-snug text-[var(--ink)]">
+                US Patent 3,498,798 (Baur, 1975) — the original Pringles patent application.
+              </figcaption>
+            </figure>
+          </section>
             <p className="text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
               The term sounds formidable. The geometry is, once seen, immediately
               intuitive. Take a flat square sheet of paper. Hold two opposite

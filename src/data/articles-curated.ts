@@ -448,13 +448,13 @@ export const curatedArticles: CuratedArticleSource[] = [
     publishedAt: "2026-04-11",
   },
   {
-    slug: "pringles",
+    slug: "geometry-behind-pringles",
     title: "The chip that required a geometry lesson",
     author: "Ali Kaya",
     dek: "A Pringle is a hyperbolic paraboloid — stack, snap, can, and factory physics.",
     image:
       "https://pub-5aa87426ad334d0495bf29d914b5ce1b.r2.dev/Geometry%20Behind%20Pringles.webp",
-    href: "/articles/pringles",
+    href: "/articles/geometry-behind-pringles",
     pageColor: PASTEL.peach,
     publishedAt: "2026-04-10",
   },

@@ -298,7 +298,7 @@ export default function ChocolatePlanetsPage() {
               to exist in the world. The solar system has always been stranger
               than a diagram lets on — which is exactly{" "}
               <ArticleProseLink
-                href="/articles/pringles"
+                href="/articles/geometry-behind-pringles"
                 className="article-euclid-link"
               >
                 why it keeps showing up in unexpected places

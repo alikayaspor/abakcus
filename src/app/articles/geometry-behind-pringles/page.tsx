@@ -4,12 +4,12 @@ import { ArticleReadMore } from "@/components/articles/article-read-more";
 import { PringlesArticle } from "@/components/articles/pringles/pringles-article";
 import { SiteHeader } from "@/components/home/site-header";
 
-const CANONICAL = "https://abakcus.com/articles/pringles";
+const CANONICAL = "https://abakcus.com/articles/geometry-behind-pringles";
 const OG_IMAGE =
   "https://pub-5aa87426ad334d0495bf29d914b5ce1b.r2.dev/Geometry%20Behind%20Pringles.webp";
 
 export const metadata: Metadata = {
-  title: "The Chip That Required a Geometry Lesson — The Mathematics of Pringles | Abakcus",
+  title: "The Geometry Behind Pringles — Hyperbolic Paraboloids, Saddle Surfaces, and Why the Stack Holds | Abakcus",
   description:
     "A Pringle is a hyperbolic paraboloid — the same doubly-curved saddle surface used in architecture and engineering. Here is why that shape stacks, snaps, and ships the way it does.",
   authors: [{ name: "Ali Kaya" }],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "The Chip That Required a Geometry Lesson — The Mathematics of Pringles",
+    title: "The Geometry Behind Pringles — Hyperbolic Paraboloids, Saddle Surfaces, and Why the Stack Holds",
     description:
       "A Pringle is a hyperbolic paraboloid — structure, stack, snap, and the factory line all follow from the geometry.",
     url: CANONICAL,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Chip That Required a Geometry Lesson — The Mathematics of Pringles",
+    title: "The Geometry Behind Pringles — Hyperbolic Paraboloids, Saddle Surfaces, and Why the Stack Holds",
     description:
       "A Pringle is a hyperbolic paraboloid — structure, stack, snap, and the factory line all follow from the geometry.",
     images: [OG_IMAGE],
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "The Chip That Required a Geometry Lesson — The Mathematics of Pringles",
+  headline: "The Geometry Behind Pringles — Hyperbolic Paraboloids, Saddle Surfaces, and Why the Stack Holds",
   description:
     "A Pringle is a hyperbolic paraboloid — doubly curved, stackable, and structurally sound. Here is the geometry behind the chip.",
   datePublished: "2026-04-10",
@@ -98,7 +98,7 @@ export default function PringlesArticlePage() {
           </Link>
         </div>
         <PringlesArticle />
-        <ArticleReadMore currentSlug="pringles" />
+        <ArticleReadMore currentSlug="geometry-behind-pringles" />
       </div>
     </>
   );
