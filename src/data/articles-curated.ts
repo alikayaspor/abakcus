@@ -44,17 +44,6 @@ const HOME_GRID_SPANS: ("wide" | "narrow")[] = [
 export const curatedArticles: CuratedArticleSource[] = [
 
   {
-    slug: "author-clock",
-    title: "The Clock That Reads You Back",
-    author: "Ali Kaya",
-    dek: "A desk clock that tells time through literary quotes. E-paper, white oak, brass. $996K on Kickstarter. Sold at MoMA. It has parental controls. All of these things are true.",
-    image:
-      "https://pub-f821ec2a41964e44873680b9d87ddf19.r2.dev/Author%20Clock.jpg",
-    href: "/gadgets/author-clock",
-    pageColor: PASTEL.peach,
-    publishedAt: "2026-05-10",
-  },
-  {
     slug: "literature-clock",
     title: "Every Minute Has a Book",
     author: "Ali Kaya",
