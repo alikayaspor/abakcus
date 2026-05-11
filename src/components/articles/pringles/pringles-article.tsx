@@ -231,7 +231,7 @@ export function PringlesArticle() {
               his own request. His family honored this.
             </AsideNote>
 
-            <figure className="my-10 overflow-hidden rounded-[var(--radius-card)] shadow-[var(--shadow-card)]">
+            <figure className="my-10 overflow-hidden rounded-[var(--radius-card)] border border-[var(--line)] shadow-[var(--shadow-card)]">
               <ArticleImageLightbox
                 src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Pringles%20Patent.png"
                 alt="Pringles US Patent 3,498,798 — Fredric Baur's original patent application drawings"
