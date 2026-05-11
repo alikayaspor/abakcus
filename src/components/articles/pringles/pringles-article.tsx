@@ -231,26 +231,22 @@ export function PringlesArticle() {
               his own request. His family honored this.
             </AsideNote>
 
-            <figure
-              className="my-10 overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] sm:p-4"
-              style={{ backgroundColor: PASTEL.sky }}
-            >
+            <figure className="my-10 overflow-hidden rounded-[var(--radius-card)] shadow-[var(--shadow-card)]">
               <ArticleImageLightbox
                 src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Pringles%20Patent.png"
                 alt="Pringles US Patent 3,498,798 — Fredric Baur's original patent application drawings"
                 caption="US Patent 3,498,798 (Baur, 1975) — the original Pringles patent application, showing the saddle mold geometry and canister system."
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-white/55">
-                  <Image
-                    src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Pringles%20Patent.png"
-                    alt=""
-                    fill
-                    className="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
-                    sizes="(max-width:768px) 100vw, min(680px, 90vw)"
-                  />
-                </div>
+                <Image
+                  src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Pringles%20Patent.png"
+                  alt=""
+                  width={900}
+                  height={1200}
+                  className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(max-width:768px) 100vw, min(680px, 90vw)"
+                />
               </ArticleImageLightbox>
-              <figcaption className="mt-4 px-1 text-center font-serif text-sm italic leading-snug text-[var(--ink)]">
+              <figcaption className="mt-3 px-1 text-center font-serif text-sm italic leading-snug text-[var(--ink-muted)]">
                 US Patent 3,498,798 (Baur, 1975) — the original Pringles patent application.
               </figcaption>
             </figure>
