@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
-import { ArticleImageLightbox } from "@/components/articles/article-image-lightbox";
 import { ArticleProseLink } from "@/components/articles/article-prose-link";
 import { UnitCircleSectionReveal } from "@/components/articles/unit-circle/unit-circle-section-reveal";
 import { pringlesImages } from "@/data/pringles-images";
@@ -168,22 +167,16 @@ export function PringlesArticle() {
             className="my-10 overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] sm:p-4"
             style={{ backgroundColor: PASTEL.peach }}
           >
-            <ArticleImageLightbox
-              src={pringlesImages.hero}
-              alt="Geometry behind Pringles — hyperbolic paraboloid chip"
-              caption="Geometry Behind Pringles — the hyperbolic paraboloid in the wild."
-            >
               <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-white/55 sm:aspect-[5/3]">
                 <Image
                   src={pringlesImages.hero}
-                  alt=""
+                  alt="Geometry behind Pringles — hyperbolic paraboloid chip"
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="object-cover"
                   sizes="(max-width:768px) 100vw, min(680px, 90vw)"
                   priority
                 />
               </div>
-            </ArticleImageLightbox>
             <figcaption className="mt-4 px-1 text-center font-serif text-sm italic leading-snug text-[var(--ink)]">
               Geometry Behind Pringles — the hyperbolic paraboloid in the wild.
             </figcaption>
@@ -232,20 +225,14 @@ export function PringlesArticle() {
             </AsideNote>
 
             <figure className="my-10 overflow-hidden rounded-[var(--radius-card)] border border-[var(--line)] shadow-[var(--shadow-card)]">
-              <ArticleImageLightbox
-                src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Pringles%20Patent.png"
-                alt="Pringles US Patent 3,498,798 — Fredric Baur's original patent application drawings"
-                caption="US Patent 3,498,798 (Baur, 1975) — the original Pringles patent application, showing the saddle mold geometry and canister system."
-              >
                 <Image
                   src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/Pringles%20Patent.png"
-                  alt=""
+                  alt="Pringles US Patent 3,498,798 — Fredric Baur's original patent application drawings"
                   width={900}
                   height={1200}
-                  className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="h-auto w-full"
                   sizes="(max-width:768px) 100vw, min(680px, 90vw)"
                 />
-              </ArticleImageLightbox>
               <figcaption className="mt-3 px-1 text-center font-serif text-sm italic leading-snug text-[var(--ink-muted)]">
                 US Patent 3,498,798 (Baur, 1975) — the original Pringles patent application.
               </figcaption>
