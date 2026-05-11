@@ -46,6 +46,16 @@ export const featuredPicks: FeaturedPick[] = [
     pageColor: PASTEL.peach,
   },
   {
+    slug: "geometry-behind-pringles",
+    title: "The Geometry Behind Pringles",
+    dek: "A Pringle is a hyperbolic paraboloid — stack, snap, can, and factory physics.",
+    tag: "Mathematics",
+    href: "/articles/geometry-behind-pringles",
+    image:
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/The%20Geometry%20Behind%20Pringles.png",
+    pageColor: PASTEL.peach,
+  },
+  {
     slug: "24-beautiful-physics-poster-designs-that-inspire-you",
     title: "24 Beautiful Physics Poster Designs That Inspire You",
     dek: "String theory, quantum mechanics, entropy — 24 poster designs that turn physics concepts into beautiful objects worth hanging on a wall.",
