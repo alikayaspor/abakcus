@@ -255,6 +255,9 @@ export function PringlesArticle() {
               </figcaption>
             </figure>
           </section>
+
+          <section data-uc-section className="mt-14">
+            <SectionHead num="02" title="What a hyperbolic paraboloid actually is" />
             <p className="text-base leading-[1.85] text-[var(--ink)] sm:text-[1.05rem]">
               The term sounds formidable. The geometry is, once seen, immediately
               intuitive. Take a flat square sheet of paper. Hold two opposite
