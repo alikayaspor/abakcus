@@ -53,7 +53,7 @@ export const featuredPicks: FeaturedPick[] = [
     href: "/articles/geometry-behind-pringles",
     image:
       "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/The%20Geometry%20Behind%20Pringles.png",
-    pageColor: PASTEL.peach,
+    pageColor: PASTEL.sky,
   },
   {
     slug: "24-beautiful-physics-poster-designs-that-inspire-you",
