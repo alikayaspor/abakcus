@@ -116,7 +116,7 @@ export function PringlesArticle() {
             Geometry · Engineering · Snacks
           </p>
           <h1 className="font-serif text-[clamp(2rem,6vw,3rem)] font-normal leading-[1.1] tracking-[-0.02em] text-[var(--ink)]">
-            The geometry behind Pringles
+            The Geometry Behind Pringles
           </h1>
           <p className="mx-auto mt-6 max-w-[34rem] border-l-2 border-[var(--ink)] pl-5 text-left text-lg italic leading-relaxed text-[var(--ink-muted)] sm:text-xl">
             A Pringle is a hyperbolic paraboloid. This is not a coincidence or a
