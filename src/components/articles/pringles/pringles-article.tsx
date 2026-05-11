@@ -167,12 +167,13 @@ export function PringlesArticle() {
             className="my-10 overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] sm:p-4"
             style={{ backgroundColor: PASTEL.peach }}
           >
-              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-white/55 sm:aspect-[5/3]">
+              <div className="w-full overflow-hidden rounded-xl">
                 <Image
                   src={pringlesImages.hero}
                   alt="Geometry behind Pringles — hyperbolic paraboloid chip"
-                  fill
-                  className="object-cover"
+                  width={1200}
+                  height={800}
+                  className="h-auto w-full"
                   sizes="(max-width:768px) 100vw, min(680px, 90vw)"
                   priority
                 />
