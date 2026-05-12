@@ -70,6 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url("/books/when-einstein-walked-with-godel", 0.7, "monthly"),
 
     // Tools
+    url("/tools/mymind", 0.7, "monthly"),
     url("/tools/your-name-in-landsat", 0.7, "monthly"),
     url("/tools/barbara-iweins-katalog", 0.7, "monthly"),
     url("/tools/killed-by-google", 0.7, "monthly"),

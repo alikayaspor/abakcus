@@ -43,8 +43,17 @@ const HOME_GRID_SPANS: ("wide" | "narrow")[] = [
 /** Source list — add new pieces here with today’s (or release) `publishedAt`. */
 export const curatedArticles: CuratedArticleSource[] = [
 
-  {
-    slug: "literature-clock",
+  {    slug: "mymind",
+    title: "Save Everything. Organize Nothing.",
+    author: "Ali Kaya",
+    dek: "mymind auto-tags every link, image, and note you save — then finds them when you search. No folders, no tags, no system. You throw things at it; it organizes and makes them searchable. A rare app that actually keeps its promise.",
+    image:
+      "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/MyMind%203.webp",
+    href: "/tools/mymind",
+    pageColor: PASTEL.sky,
+    publishedAt: "2026-05-11",
+  },
+  {    slug: "literature-clock",
     title: "Every Minute Has a Book",
     author: "Ali Kaya",
     dek: "There are 1,440 minutes in a day. Literature Clock matches each one to a passage from world literature. Open the site: find out it's 2:47 because Tolstoy already wrote that minute.",

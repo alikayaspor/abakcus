@@ -5,7 +5,8 @@ import { curatedArticles, toCuratedArticleWithSpan } from "./articles-curated";
 export const RELATED_READ_MORE_COUNT = 6;
 
 /** Routes that exist today — avoid 404s in “Read more” */
-export const publishedArticleSlugs = new Set<string>([  "fry-universe",
+export const publishedArticleSlugs = new Set<string>([  "mymind",
+  "fry-universe",
   "seeing-theory",
   "magritte-blank-signature",
   "al-jaghmini-astronomy-manuscript",
@@ -73,6 +74,14 @@ export const publishedArticleSlugs = new Set<string>([  "fry-universe",
  * Base order when reading X: all others, newest-first in the list below minus X.
  */
 const RELATED_ORDER: Record<string, string[]> = {
+  "mymind": [
+    "literature-clock",
+    "river-runner",
+    "barbara-iweins-katalog",
+    "killed-by-google",
+    "mushroom-color-atlas",
+    "seeing-theory",
+  ],
   "author-clock": [
     "literature-clock",
     "bambu-lab-p2s",

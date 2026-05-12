@@ -16,6 +16,15 @@ export type InternetToolPick = {
 /** Four-up masonry-style row: wide | narrow, then narrow | wide */
 export const internetToolsPicks: InternetToolPick[] = [
   {
+    slug: "mymind",
+    layout: "narrow",
+    title: "Save Everything. Organize Nothing.",
+    dek: "mymind auto-tags every link, image, and note you save — then finds them when you search. No folders. No system. Just save.",
+    href: "/tools/mymind",
+    image:
+      "https://pub-3775c49696ac49478c024f66a3dbe50d.r2.dev/MyMind%203.webp",
+  },
+  {
     slug: "river-runner",
     layout: "wide",
     title: "Every Raindrop Has a Destination",
