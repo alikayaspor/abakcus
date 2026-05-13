@@ -126,9 +126,9 @@ export default function InfinitePowersPage() {
                 Harcourt
               </p>
               <h1 className="mt-5 font-serif text-[clamp(2rem,6vw,4.2rem)] font-bold leading-[1.0] tracking-tight text-[#f5f0e8]">
-                Newton Didn&apos;t
+                Infinite
                 <br />
-                <em className="text-[#8b7fdb]">Invent Calculus</em>
+                <em className="text-[#8b7fdb]">Powers</em>
               </h1>
               <p className="mt-6 font-serif text-lg italic leading-relaxed text-[#9a93b8]">
                 How the infinite became a language reality is written in.
