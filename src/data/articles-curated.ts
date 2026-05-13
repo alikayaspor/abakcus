@@ -165,7 +165,7 @@ export const curatedArticles: CuratedArticleSource[] = [
     author: "Ali Kaya",
     dek: "Written one year before its author died in the Mongol conquest of Khwarazm, al-Jaghmini's Mulakhkhas became the most widely copied Arabic astronomy textbook ever made.",
     image:
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini.jpg",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini.webp",
     href: "/articles/al-jaghmini-astronomy-manuscript",
     pageColor: PASTEL.peach,
     publishedAt: "2026-04-30",
@@ -222,9 +222,9 @@ export const curatedArticles: CuratedArticleSource[] = [
     author: "Ali Kaya",
     dek: "String theory, quantum mechanics, entropy, general relativity — 24 poster designs by 2046 Print Shop that turn physics concepts into beautiful objects worth hanging on a wall.",
     image:
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.webp",
     imageArchive:
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20Inspire%20You.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20Inspire%20You.webp",
     href: "/24-beautiful-physics-poster-designs-that-inspire-you",
     pageColor: PASTEL.lavender,
     publishedAt: "2026-04-26",
@@ -235,7 +235,7 @@ export const curatedArticles: CuratedArticleSource[] = [
     author: "Ali Kaya",
     dek: "A Trip to Infinity, The Proof, N Is a Number — 25 documentaries that show the other face of mathematics: obsession, beauty, and the particular madness of chasing a question.",
     image:
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematics.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematics.webp",
     href: "/25-beautiful-math-documentaries-to-love-math",
     pageColor: PASTEL.peach,
     publishedAt: "2026-04-25",

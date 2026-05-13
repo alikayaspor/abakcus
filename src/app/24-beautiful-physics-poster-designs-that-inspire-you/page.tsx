@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/home/site-header";
 const CANONICAL =
   "https://abakcus.com/24-beautiful-physics-poster-designs-that-inspire-you";
 const OG_IMAGE =
-  "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.png";
+  "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.webp";
 
 export const metadata: Metadata = {
   title: "24 Beautiful Physics Poster Designs That Inspire You | Abakcus",

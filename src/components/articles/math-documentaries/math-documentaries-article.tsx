@@ -2,7 +2,7 @@ import { ArticleProseLink } from "@/components/articles/article-prose-link";
 import { ArticleImageLightbox } from "@/components/articles/article-image-lightbox";
 
 const R2 = "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev";
-const HERO_IMG = "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematics.png";
+const HERO_IMG = "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematics.webp";
 
 /* ── HERO IMAGE ── */
 function HeroImage() {

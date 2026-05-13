@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       "A Trip to Infinity, The Proof, N Is a Number — 25 documentaries that show the other face of mathematics: obsession, beauty, and the particular madness of chasing a question.",
     type: "article",
     images: [
-      "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematic.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematics.webp",
     ],
   },
   twitter: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description:
       "A Trip to Infinity, The Proof, N Is a Number — 25 documentaries that show the other face of mathematics: obsession, beauty, and the particular madness of chasing a question.",
     images: [
-      "https://pub-57855d8f88704d1cafba485f1b715e8d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematic.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/25%20Beautiful%20Math%20Documentaries%20to%20Make%20Students%20Love%20Mathematics.webp",
     ],
   },
 };

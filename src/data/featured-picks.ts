@@ -62,7 +62,7 @@ export const featuredPicks: FeaturedPick[] = [
     tag: "Physics · Design",
     href: "/24-beautiful-physics-poster-designs-that-inspire-you",
     image:
-      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.png",
+      "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/24%20Beautiful%20Physics%20Poster%20Designs%20That%20Inspire%20You.webp",
     pageColor: PASTEL.lavender,
   },
   {

@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/home/site-header";
 const CANONICAL =
   "https://abakcus.com/articles/al-jaghmini-astronomy-manuscript";
 const OG_IMAGE =
-  "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini.jpg";
+  "https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini.webp";
 
 export const metadata: Metadata = {
   title:
@@ -127,7 +127,7 @@ export default function AlJaghminiPage() {
           {/* Featured Image */}
           <figure className="mb-12 -mx-[var(--page-pad)] md:-mx-[calc((100vw-680px)/4)]">
             <img
-              src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini.jpg"
+              src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini.webp"
               alt="Illustrated pages from al-Jaghmini's Al-Mulakhkhas fi al-Hay'ah, Ayasoluk copy, 1383"
               className="w-full h-auto"
             />
@@ -294,7 +294,7 @@ export default function AlJaghminiPage() {
             {/* First additional image */}
             <figure className="mb-8 -mx-[var(--page-pad)] md:-mx-[calc((100vw-680px)/4)]">
               <img
-                src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini%203.jpg"
+                src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini%203.webp"
                 alt="Solar eclipse diagram and lunar phase diagram from the Ayasoluk copy of al-Mulakhkhas, 1383"
                 className="w-full h-auto"
               />
@@ -347,7 +347,7 @@ export default function AlJaghminiPage() {
             {/* Second additional image */}
             <figure className="mb-8 -mx-[var(--page-pad)] md:-mx-[calc((100vw-680px)/4)]">
               <img
-                src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini%202.jpg"
+                src="https://pub-df7a29ac929f4b26b7322c861440d59d.r2.dev/An%20Illustrated%20Astronomical%20Treatise%20by%20Mahmud%20ibn%20Muhammad%20al-Jaghmini%202.webp"
                 alt="Orbital geometry diagrams from the Ayasoluk manuscript showing concentric celestial spheres"
                 className="w-full h-auto"
               />
