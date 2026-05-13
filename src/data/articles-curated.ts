@@ -666,6 +666,17 @@ export const curatedArticles: CuratedArticleSource[] = [
     publishedAt: "2025-06-01",
   },
   {
+    slug: "infinite-powers",
+    title: "Infinite Powers",
+    author: "Steven Strogatz",
+    dek: "Newton didn't invent calculus. Archimedes was doing it in the third century BC. Strogatz proves this — chapter by chapter.",
+    image:
+      "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Infinite%20Powers%20by%20Steven%20Strogatz.webp",
+    href: "/books/infinite-powers",
+    pageColor: PASTEL.lavender,
+    publishedAt: "2026-05-13",
+  },
+  {
     slug: "surely-youre-joking-mr-feynman",
     title: "Surely You're Joking, Mr. Feynman!",
     author: "Richard P. Feynman",

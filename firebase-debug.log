@@ -1,0 +1,36 @@
+[debug] [2026-05-13T04:46:10.857Z] ----------------------------------------------------------------------
+[debug] [2026-05-13T04:46:10.859Z] Command:       /opt/homebrew/Cellar/node@24/24.13.1_1/bin/node /opt/homebrew/bin/firebase hosting:sites:create abakcus --project ali-kaya-blog
+[debug] [2026-05-13T04:46:10.859Z] CLI Version:   15.16.0
+[debug] [2026-05-13T04:46:10.859Z] Platform:      darwin
+[debug] [2026-05-13T04:46:10.859Z] Node Version:  v24.13.1
+[debug] [2026-05-13T04:46:10.859Z] Time:          Tue May 12 2026 23:46:10 GMT-0500 (Central Daylight Time)
+[debug] [2026-05-13T04:46:10.860Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-13T04:46:10.870Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-13T04:46:10.870Z] > authorizing via signed-in user (alikayaspor@gmail.com)
+[debug] [2026-05-13T04:46:10.870Z] [iam] checking project ali-kaya-blog for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-13T04:46:10.870Z] Checked if tokens are valid: true, expires at: 1778650383793
+[debug] [2026-05-13T04:46:10.870Z] Checked if tokens are valid: true, expires at: 1778650383793
+[debug] [2026-05-13T04:46:10.871Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ali-kaya-blog:testIamPermissions [none]
+[debug] [2026-05-13T04:46:10.871Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ali-kaya-blog:testIamPermissions  x-goog-user-project=ali-kaya-blog
+[debug] [2026-05-13T04:46:10.871Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ali-kaya-blog:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-13T04:46:11.114Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ali-kaya-blog:testIamPermissions 200
+[debug] [2026-05-13T04:46:11.114Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ali-kaya-blog:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-13T04:46:11.115Z] Checked if tokens are valid: true, expires at: 1778650383793
+[debug] [2026-05-13T04:46:11.115Z] Checked if tokens are valid: true, expires at: 1778650383793
+[debug] [2026-05-13T04:46:11.115Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ali-kaya-blog/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2026-05-13T04:46:11.115Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ali-kaya-blog/services/cloudresourcemanager.googleapis.com  x-goog-user-project=ali-kaya-blog
+[debug] [2026-05-13T04:46:11.472Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ali-kaya-blog/services/cloudresourcemanager.googleapis.com 200
+[debug] [2026-05-13T04:46:11.472Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ali-kaya-blog/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2026-05-13T04:46:11.480Z] Checked if tokens are valid: true, expires at: 1778650383793
+[debug] [2026-05-13T04:46:11.480Z] Checked if tokens are valid: true, expires at: 1778650383793
+[debug] [2026-05-13T04:46:11.480Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/ali-kaya-blog [none]
+[debug] [2026-05-13T04:46:11.567Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/ali-kaya-blog 200
+[debug] [2026-05-13T04:46:11.567Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/ali-kaya-blog {"projectNumber":"76111287972","projectId":"ali-kaya-blog","lifecycleState":"ACTIVE","name":"Ali Kaya Blog","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-03-20T05:08:17.030757Z"}
+[debug] [2026-05-13T04:46:11.567Z] Checked if tokens are valid: true, expires at: 1778650383793
+[debug] [2026-05-13T04:46:11.567Z] Checked if tokens are valid: true, expires at: 1778650383793
+[debug] [2026-05-13T04:46:11.568Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/76111287972/sites siteId=abakcus&validateOnly=true
+[debug] [2026-05-13T04:46:11.568Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/76111287972/sites {"appId":""}
+[debug] [2026-05-13T04:46:12.080Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/76111287972/sites 400
+[debug] [2026-05-13T04:46:12.081Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/76111287972/sites {"error":{"code":400,"message":"Invalid name: `abakcus` is reserved by another project; try something like `abakcus-68a0b` instead","status":"FAILED_PRECONDITION"}}
+[warn] ⚠  Invalid name: `abakcus` is reserved by another project; try something like `abakcus-68a0b` instead 

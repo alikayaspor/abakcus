@@ -28,6 +28,19 @@ type Book = {
 
 const ALL_BOOKS: Book[] = [
   {
+    slug: "infinite-powers",
+    title: "Infinite Powers",
+    author: "Steven Strogatz",
+    year: "2019",
+    publisher: "Houghton Mifflin Harcourt",
+    dek: "Newton didn't invent calculus. Archimedes was doing it in the third century BC. Strogatz proves this — and then shows how the infinity principle shaped everything from Neptune's discovery to gravitational waves.",
+    href: "/books/infinite-powers",
+    image:
+      "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/Infinite%20Powers%20by%20Steven%20Strogatz.webp",
+    section: "mathematics",
+    publishedAt: "2026-05-13",
+  },
+  {
     slug: "introduction-to-mathematical-philosophy",
     title: "Introduction to Mathematical Philosophy",
     author: "Bertrand Russell",

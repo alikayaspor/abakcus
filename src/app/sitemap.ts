@@ -64,6 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url("/books/lifelong-kindergarten", 0.7, "monthly"),
     url("/books/oliver-byrne-euclid", 0.7, "monthly"),
     url("/books/pasta-by-design", 0.7, "monthly"),
+    url("/books/infinite-powers", 0.7, "monthly"),
     url("/books/surely-youre-joking-mr-feynman", 0.7, "monthly"),
     url("/books/introduction-to-mathematical-philosophy", 0.7, "monthly"),
     url("/books/the-art-and-science-of-ernst-haeckel", 0.7, "monthly"),

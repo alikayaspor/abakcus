@@ -61,6 +61,7 @@ export const publishedArticleSlugs = new Set<string>([  "mymind",
   "lifelong-kindergarten",
   "surely-youre-joking-mr-feynman",
   "how-smart-machines-think",
+  "infinite-powers",
   "your-name-in-landsat",
   "bambu-lab-p2s",
   "calculus-made-easy",
@@ -107,12 +108,12 @@ const RELATED_ORDER: Record<string, string[]> = {
     "marilyn-vos-savant",
   ],
   "calculus-made-easy": [
+    "infinite-powers",
     "feynman-math-education",
     "billingsley-euclid",
     "seeing-theory",
     "feynman-technique",
     "unit-circle",
-    "introduction-to-mathematical-philosophy",
   ],
   "your-name-in-landsat": [
     "river-runner",
@@ -497,6 +498,14 @@ const RELATED_ORDER: Record<string, string[]> = {
     "seeing-theory",
     "lifelong-kindergarten",
     "when-einstein-walked-with-godel",
+  ],
+  "infinite-powers": [
+    "calculus-made-easy",
+    "feynman-technique",
+    "feynman-math-education",
+    "surely-youre-joking-mr-feynman",
+    "when-einstein-walked-with-godel",
+    "unit-circle",
   ],
 };
 
