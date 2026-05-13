@@ -121,19 +121,19 @@ export default function InfinitePowersPage() {
 
             {/* Text */}
             <div className="max-w-xl">
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.22em] text-[#8b7fdb]">
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.22em] text-[#4ec9c0]">
                 On the Book &nbsp;·&nbsp; 2019 &nbsp;·&nbsp; Houghton Mifflin
                 Harcourt
               </p>
               <h1 className="mt-5 font-serif text-[clamp(2rem,6vw,4.2rem)] font-bold leading-[1.0] tracking-tight text-[#f5f0e8]">
                 Infinite
                 <br />
-                <em className="text-[#8b7fdb]">Powers</em>
+                <em className="text-[#4ec9c0]">Powers</em>
               </h1>
-              <p className="mt-6 font-serif text-lg italic leading-relaxed text-[#9a93b8]">
+              <p className="mt-6 font-serif text-lg italic leading-relaxed text-[#7ac9c4]">
                 How the infinite became a language reality is written in.
               </p>
-              <p className="mt-5 font-mono text-[0.68rem] uppercase tracking-[0.15em] text-[#3d3660]">
+              <p className="mt-5 font-mono text-[0.68rem] uppercase tracking-[0.15em] text-[#1a4a48]">
                 Steven Strogatz&nbsp;/&nbsp;384 pages&nbsp;/&nbsp;∞
                 principle&nbsp;/&nbsp;2,300 years
               </p>
@@ -141,7 +141,7 @@ export default function InfinitePowersPage() {
                 href="https://amzn.to/4dkHD3z"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#8b7fdb] px-5 py-2.5 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#090b1a] transition-opacity duration-200 hover:opacity-85"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#4ec9c0] px-5 py-2.5 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#090b1a] transition-opacity duration-200 hover:opacity-85"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +227,7 @@ export default function InfinitePowersPage() {
           </p>
 
           {/* ── PULL QUOTE 1 ── */}
-          <blockquote className="my-10 border-l-[3px] border-[#8b7fdb] py-1 pl-6">
+          <blockquote className="my-10 border-l-[3px] border-[#4ec9c0] py-1 pl-6">
             <p className="font-serif text-[1.2rem] italic leading-[1.65] text-[var(--ink)] sm:text-[1.3rem]">
               Archimedes didn&apos;t invent calculus. But he wrote its DNA two
               thousand years early. Strogatz shows this in the first three
@@ -291,7 +291,7 @@ export default function InfinitePowersPage() {
               ones, arrange them side by side — the shape that emerges starts to
               look like a rectangle. Push the number of slices toward infinity and
               the rectangle becomes exact.{" "}
-              <span className="text-[#8b7fdb]">
+              <span className="text-[#4ec9c0]">
                 The area formula falls out on its own.
               </span>{" "}
               Reading this, it&apos;s difficult not to think: why didn&apos;t
@@ -332,7 +332,7 @@ export default function InfinitePowersPage() {
           </p>
 
           {/* ── PULL QUOTE 2 ── */}
-          <blockquote className="my-10 border-l-[3px] border-[#8b7fdb] py-1 pl-6">
+          <blockquote className="my-10 border-l-[3px] border-[#4ec9c0] py-1 pl-6">
             <p className="font-serif text-[1.2rem] italic leading-[1.65] text-[var(--ink)] sm:text-[1.3rem]">
               Feynman said calculus is the language God talks. Strogatz&apos;s
               book is the story of how humans learned to speak it, and what they
@@ -379,7 +379,7 @@ export default function InfinitePowersPage() {
 
           {/* ── AUTHOR NOTE ── */}
           <div className="my-10 flex gap-5 rounded-xl border border-[var(--line)] bg-white px-6 py-5 sm:px-7">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#090b1a] font-serif text-base italic text-[#8b7fdb]">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#090b1a] font-serif text-base italic text-[#4ec9c0]">
               S
             </div>
             <div>
@@ -441,7 +441,7 @@ export default function InfinitePowersPage() {
 
           {/* ── VERDICT ── */}
           <div className="mt-12 flex gap-5 rounded-xl border border-[var(--line)] bg-white px-6 py-6 sm:px-8 sm:py-7">
-            <span className="shrink-0 pt-0.5 text-2xl leading-none tracking-widest text-[#8b7fdb]">
+            <span className="shrink-0 pt-0.5 text-2xl leading-none tracking-widest text-[#4ec9c0]">
               ★★★★★
             </span>
             <div>
@@ -488,7 +488,7 @@ export default function InfinitePowersPage() {
               href="https://amzn.to/4dkHD3z"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:text-[#8b7fdb]"
+              className="underline underline-offset-2 hover:text-[#4ec9c0]"
             >
               <em>
                 Infinite Powers: How Calculus Reveals the Secrets of the
