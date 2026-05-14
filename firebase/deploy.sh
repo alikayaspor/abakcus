@@ -12,7 +12,6 @@ cleanup() {
   [ -f "$ROOT/next.config.ts.bak" ] && mv "$ROOT/next.config.ts.bak" "$ROOT/next.config.ts"
   [ -f "$ROOT/src/app/sitemap.ts.bak" ] && mv "$ROOT/src/app/sitemap.ts.bak" "$ROOT/src/app/sitemap.ts"
   [ -f "$ROOT/src/app/robots.ts.bak" ] && mv "$ROOT/src/app/robots.ts.bak" "$ROOT/src/app/robots.ts"
-  cd "$ROOT" && git checkout src/proxy.ts 2>/dev/null || true
   rm -f "$ROOT/firebase.json" "$ROOT/.firebaserc"
   echo "✓ Orijinal dosyalar geri yüklendi."
 }
@@ -27,9 +26,6 @@ echo "→ Firebase konfigürasyonu uygulanıyor..."
 cp "$FIREBASE_DIR/next.config.ts" "$ROOT/next.config.ts"
 cp "$FIREBASE_DIR/firebase.json" "$ROOT/firebase.json"
 cp "$FIREBASE_DIR/.firebaserc" "$ROOT/.firebaserc"
-
-# proxy.ts'i geçici olarak kaldır (Vercel-only)
-rm -f "$ROOT/src/proxy.ts"
 
 # sitemap.ts ve robots.ts'e static export direktifi ekle
 sed -i '' 's/^export default function sitemap/export const dynamic = "force-static";\nexport default function sitemap/' "$ROOT/src/app/sitemap.ts"
