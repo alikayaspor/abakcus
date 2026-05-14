@@ -132,6 +132,19 @@ const ALL_BOOKS: Book[] = [
     section: "other" as const,
     publishedAt: "2026-05-08",
   },
+  {
+    slug: "overview-benjamin-grant",
+    title: "Overview: A New Perspective of Earth",
+    author: "Benjamin Grant",
+    year: "2016",
+    publisher: "Ten Speed Press",
+    dek: "200 satellite images from DigitalGlobe. Beauty first, then the caption. The gap between those two things is where the book actually lives.",
+    href: "/books/overview-benjamin-grant",
+    image:
+      "https://pub-20a4177bffe64c589df64f56f79e9127.r2.dev/A%20New%20Perspective%20of%20Earth%20by%20Benjamin%20Grant.webp",
+    section: "other" as const,
+    publishedAt: "2026-05-13",
+  },
   // ── Physics ──────────────────────────────────────────────────────────────
   {
     slug: "when-einstein-walked-with-godel",
@@ -225,6 +238,7 @@ function BookCard({ book, index }: { book: Book; index: number }) {
   return (
     <Link
       href={book.href}
+      prefetch={false}
       className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] bg-white shadow-[var(--shadow-soft)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
       style={{ border: `2px solid ${borderColor}` }}
     >

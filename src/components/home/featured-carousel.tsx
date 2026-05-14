@@ -86,6 +86,7 @@ export function FeaturedCarousel() {
           >
             <Link
               href={pick.href}
+              prefetch={false}
               className="group flex min-h-full flex-col overflow-hidden rounded-[var(--radius-card)] p-3 sm:p-4 md:p-5"
               style={{ backgroundColor: pick.pageColor }}
             >

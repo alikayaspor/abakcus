@@ -19,6 +19,7 @@ function ToolCard({
   return (
     <Link
       href={href}
+      prefetch={false}
       className="group flex h-full min-h-0 flex-col overflow-hidden rounded-[var(--radius-card)] p-3 shadow-[var(--shadow-card)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_56px_-32px_rgba(0,0,0,0.22)] sm:p-4"
       style={{ backgroundColor: INTERNET_TOOLS_CARD_COLOR }}
     >

@@ -30,6 +30,7 @@ function ShelfCard({
   return (
     <Link
       href={href}
+      prefetch={false}
       className={`group flex h-full min-h-0 flex-col overflow-hidden rounded-[var(--radius-card)] shadow-[var(--shadow-soft)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] ${
         compact ? "p-3 sm:p-4" : "p-4 sm:p-5 md:p-6"
       }`}

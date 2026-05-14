@@ -9,6 +9,7 @@ function VideoCard({ title, dek, tag, href, image, pageColor }: VideoPick) {
   return (
     <Link
       href={href}
+      prefetch={false}
       className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] shadow-[var(--shadow-soft)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
       style={{ backgroundColor: pageColor }}
     >
@@ -42,6 +43,7 @@ function FilmCard(props: VideoPick) {
   return (
     <Link
       href={href}
+      prefetch={false}
       className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] shadow-[var(--shadow-soft)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
       style={{ backgroundColor: pageColor }}
     >

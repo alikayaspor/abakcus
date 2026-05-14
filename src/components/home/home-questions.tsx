@@ -49,6 +49,7 @@ export function HomeQuestions() {
         <div className="mx-auto max-w-3xl">
           <Link
             href={featured.href}
+            prefetch={false}
             className="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-white/60 bg-white/80 shadow-[var(--shadow-card)] backdrop-blur-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_28px_56px_-28px_rgba(0,0,0,0.18)] sm:flex-row"
           >
             <div className="relative aspect-[16/10] w-full shrink-0 sm:aspect-auto sm:w-[min(46%,280px)] sm:min-h-[220px] md:min-h-[240px]">

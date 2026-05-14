@@ -30,6 +30,7 @@ function ArticleArchiveCard({
       <article className="h-full">
       <Link
         href={href}
+        prefetch={false}
         className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-[var(--line-soft)] bg-white/95 shadow-[var(--shadow-soft)] outline-none transition-[transform,box-shadow,border-color] duration-300 ease-out will-change-transform hover:-translate-y-1.5 hover:border-[var(--line)] hover:shadow-[var(--shadow-card)] focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2"
       >
         {/* Soft brand ribbon — same on every card, ties the grid together */}

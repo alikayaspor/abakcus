@@ -13,7 +13,7 @@ export function ArticleReadMore({ currentSlug }: { currentSlug: string }) {
       className="border-t border-[var(--line-soft)] bg-[color-mix(in_srgb,var(--pastel-lavender)_18%,var(--tonal))]"
       aria-labelledby="read-more-heading"
     >
-      <div className="mx-auto max-w-[var(--page-max)] px-[var(--page-pad)] py-12 md:py-16">
+      <div className="mx-auto w-full px-[var(--page-pad)] py-12 md:py-16">
         <div className="mb-8 text-center">
           <div
             className="mb-3 flex items-center justify-center gap-3"
@@ -54,6 +54,7 @@ export function ArticleReadMore({ currentSlug }: { currentSlug: string }) {
             <li key={article.slug} className="flex">
               <Link
                 href={article.href}
+                prefetch={false}
                 className="group flex h-full w-full gap-4 overflow-hidden rounded-[var(--radius-card)] border border-[var(--line-soft)] bg-white/90 p-3 pr-4 shadow-[var(--shadow-soft)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-0.5 hover:border-[var(--ink)]/10 hover:shadow-[var(--shadow-card)] sm:gap-5 sm:p-4"
               >
                 <div

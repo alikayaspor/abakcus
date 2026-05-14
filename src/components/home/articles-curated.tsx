@@ -27,6 +27,7 @@ function ArticleCard({
     >
       <Link
         href={href}
+        prefetch={false}
         className="group flex flex-col overflow-hidden rounded-[var(--radius-card)] p-4 shadow-[var(--shadow-soft)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] sm:p-5"
         style={{ backgroundColor: pageColor }}
       >
